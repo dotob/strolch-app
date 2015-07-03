@@ -1,0 +1,64 @@
+.container-fluid
+	.row
+		form
+			.form-group
+				.input-group
+					.input-group-addon
+						i.glyphicon.glyphicon-search
+					input.form-control(type="text", placeholder="suchen...", ng-model="search")
+
+		table.table.table-bordered.table-striped
+			thead
+				tr
+					td
+						a(href='#', ng-click="sortType = 'mama.nachname'; sortReverse = !sortReverse")
+							| Eltern 
+							span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'mama.nachname' && !sortReverse")
+							span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'mama.nachname' && sortReverse")
+					td
+						a(href='#', ng-click="sortType = 'kinder[0].nachname'; sortReverse = !sortReverse")
+							| Kinder 
+							span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'nameChild' && !sortReverse")
+							span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'nameChild' && sortReverse")
+					td Adresse
+					td Telefon
+					td Email
+					td
+			tbody
+				tr(ng-repeat='family in families | orderBy:sortType:sortReverse | filter:search')
+					td 
+						div(ng-show="family.mama.nachname") {{ family.mama.nachname }}, {{ family.mama.vorname }}
+							span.small.text-muted (
+							span.small.text-muted.tag-name(ng-repeat="tag in family.mama.tags") {{ tag.name }}
+							span.small.text-muted )
+						div(ng-show="family.papa.nachname") {{ family.papa.nachname }}, {{ family.papa.vorname }}
+							span.small.text-muted (
+							span.small.text-muted.tag-name(ng-repeat="tag in family.papa.tags") {{ tag.name }}
+							span.small.text-muted )
+					td 
+						div(ng-repeat="kind in family.kinder", ng-show="kind.nachname") {{ kind.nachname }}, {{ kind.vorname }} ({{ kind.dob }})
+							span.small.text-muted (
+							span.small.text-muted.tag-name(ng-repeat="tag in kind.tags") {{ tag.name }} 
+							span.small.text-muted )
+					td
+						div {{ family.adresse.strasse }}
+						div {{ family.adresse.stadt }}
+					td
+						div(ng-show="family.mama.fon")
+							a(href="tel://{{ family.mama.fon }}") {{ family.mama.fon }} ({{ family.mama.vorname }})
+						div(ng-show="family.mama.handy")
+							a(href="tel://{{ family.mama.handy }}") {{ family.mama.handy }} ({{ family.mama.vorname }})
+						div(ng-show="family.papa.fon")
+							a(href="tel://{{ family.papa.fon }}") {{ family.papa.fon }} ({{ family.papa.vorname }})
+						div(ng-show="family.papa.handy")
+							a(href="tel://{{ family.papa.handy }}") {{ family.papa.handy }} ({{ family.papa.vorname }})
+					td
+						div(ng-show="family.mama.email")
+							a(href="mailto://{{ family.mama.email }}") {{ family.mama.email }} ({{ family.mama.vorname }})
+						div(ng-show="family.papa.email")
+							a(href="mailto://{{ family.papa.email }}") {{ family.papa.email }} ({{ family.papa.vorname }})
+					td
+						a.btn.btn-primary.btn-sm(href="/eine/{{family._id}}")
+							span.glyphicon.glyphicon-pencil 
+						button.btn.btn-danger.btn-sm(ng-click="deleteFamily(family)")
+							span.glyphicon.glyphicon-trash 

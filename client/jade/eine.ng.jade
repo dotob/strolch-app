@@ -1,0 +1,82 @@
+.container
+	.row
+		.panel.panel-primary
+			.panel-heading Mama 
+			.panel-body
+				form 
+					.form-group
+						label(for='mamaVorname') Vorname 
+						input#mamaVorname.form-control(type='text', placeholder='Vorname', ng-model="family.mama.vorname") 
+					.form-group
+						label(for='mamaNachname') Nachname 
+						input#mamaNachname.form-control(type='text', placeholder='Nachname', ng-model="family.mama.nachname") 
+					.form-group
+						label(for='mamaEmail') Email 
+						input#mamaEmail.form-control(type='email', placeholder='Email', ng-model="family.mama.email") 
+					.form-group
+						label(for='mamaTelefon') Telefon (mit Ortsvowahl)
+						input#mamaTelefon.form-control(type='tel', placeholder='Telefon', ng-model="family.mama.fon")
+					.form-group
+						label(for='mamaHandy') Handy 
+						input#mamaHandy.form-control(type='tel', placeholder='Handy', ng-model="family.mama.handy")
+					.form-group
+						label(for='mamaTags') Tags 
+						tags-input(ng-model="family.mama.tags", display-property="name", placeholder="Neues Tag", replace-spaces-with-dashes="false")
+							auto-complete(source="loadTags($query)", min-length="0", load-on-focus="true", load-on-empty="true", max-results-to-show="32")
+
+		.panel.panel-primary
+			.panel-heading Papa 
+			.panel-body
+				form 
+					.form-group
+						label(for='papaVorname') Vorname 
+						input#papaVorname.form-control(type='text', placeholder='Vorname', ng-model="family.papa.vorname") 
+					.form-group
+						label(for='papaNachname') Nachname 
+						input#papaNachname.form-control(type='text', placeholder='Nachname', ng-model="family.papa.nachname") 
+					.form-group
+						label(for='papaEmail') Email 
+						input#papaEmail.form-control(type='email', placeholder='Email', ng-model="family.papa.email") 
+					.form-group
+						label(for='papaTelefon') Telefon (mit Ortsvowahl)
+						input#papaTelefon.form-control(type='tel', placeholder='Telefon', ng-model="family.papa.fon")
+					.form-group
+						label(for='papaHandy') Handy 
+						input#papaHandy.form-control(type='tel', placeholder='Handy', ng-model="family.papa.handy")
+					.form-group
+						label(for='papaTags') Tags 
+						tags-input(ng-model="family.papa.tags", display-property="name", placeholder="Neues Tag", replace-spaces-with-dashes="false")
+							auto-complete(source="loadTags($query)", min-length="0", load-on-focus="true", load-on-empty="true", max-results-to-show="32")
+
+		.panel.panel-primary
+			.panel-heading Adresse 
+			.panel-body
+				form 
+					.form-group
+						label(for='Strasse') Strasse und Hausnummer
+						input#Strasse.form-control(type='text', placeholder='Strasse', ng-model="family.adresse.strasse") 
+					.form-group
+						label(for='Stadt') PLZ und Stadt 
+						input#Stadt.form-control(type='text', placeholder='Stadt', ng-model="family.adresse.stadt") 
+
+		.panel.panel-primary(ng-repeat="idx in [0,1,2]")
+			.panel-heading Kind {{idx+1}}
+			.panel-body
+				form 
+					.form-group
+						label(for='kindVorname') Vorname 
+						input#kindVorname.form-control(type='text', placeholder='Vorname', ng-model="family.kinder[idx].vorname") 
+					.form-group
+						label(for='kindNachname') Nachname 
+						input#kindNachname.form-control(type='text', placeholder='Nachname', ng-model="family.kinder[idx].nachname") 
+					.form-group
+						label(for='kindGeburtstag') Geburtstag 
+						input#kindGeburtstag.form-control(type='text', placeholder='Geburtstag', ng-model="family.kinder[idx].dob") 
+					.form-group
+						label(for='kindTags') Tags 
+						tags-input(ng-model="family.kinder[idx].tags", display-property="name", placeholder="Neues Tag", replace-spaces-with-dashes="false")
+							auto-complete(source="loadTags($query)", min-length="0", load-on-focus="true", load-on-empty="true", max-results-to-show="32")
+
+	.row(ng-hide="_id")
+		.col-md-12
+			button.btn.btn-success#saveButton(ng-click="save()") Speichern

@@ -1,0 +1,32 @@
+head
+	base(href="/")
+	title kita familien
+
+body(ng-app="app")
+	nav#mainnav.navbar.navbar-inverse.navbar-fixed-top.animated.fadeInDown(role='navigation')
+		.container-fluid
+		// Brand and toggle get grouped for better mobile display
+		.navbar-header
+			button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+				span.sr-only toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand kita adressen
+
+		#navbar-collapse-1.collapse.navbar-collapse
+			ul.nav.navbar-nav
+				li(ui-sref-active="active")
+					a(ui-sref='alle')
+						span 
+						| alle
+				li(ui-sref-active="active")
+					a(ui-sref='neu')
+						span  
+						| neu					
+				li(ui-sref-active="active")
+					a(ui-sref='tags')
+						span  
+						| tags
+
+	.view(ui-view)

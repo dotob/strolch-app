@@ -1,0 +1,942 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fo",
+				"forin	Array Comprehension"
+			],
+			[
+				"CCS",
+				"CCSReleaseReservationNotification"
+			],
+			[
+				"CC",
+				"CCSWorkOrderUpdateNotification"
+			],
+			[
+				"cl",
+				"cleanContent"
+			],
+			[
+				"has",
+				"hasOne"
+			],
+			[
+				"cur",
+				"currentDocument"
+			],
+			[
+				"curr",
+				"currentDocument"
+			],
+			[
+				"gl",
+				"glyphicon-file"
+			],
+			[
+				"ver",
+				"version"
+			],
+			[
+				"versio",
+				"versions"
+			],
+			[
+				"doc",
+				"document"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"col",
+				"col-md-3"
+			],
+			[
+				"stat",
+				"stateParams"
+			],
+			[
+				"cu",
+				"currentDocument"
+			],
+			[
+				"docs",
+				"docsByKeyArray"
+			],
+			[
+				"s",
+				"selectedVersion"
+			],
+			[
+				"new",
+				"newDoc"
+			],
+			[
+				"unh",
+				"unhighlightAllComments"
+			],
+			[
+				"dia",
+				"dialogData"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"co",
+				"comments"
+			],
+			[
+				"comment",
+				"comments"
+			],
+			[
+				"comm",
+				"comment"
+			],
+			[
+				"re",
+				"resolve"
+			],
+			[
+				"defer",
+				"deferred"
+			],
+			[
+				"def",
+				"deferred"
+			],
+			[
+				"aut",
+				"autoSave"
+			],
+			[
+				"ch",
+				"chapters"
+			],
+			[
+				"ng-c",
+				"ng-click"
+			],
+			[
+				"sele",
+				"selectChapter"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"fil",
+				"filtered"
+			],
+			[
+				"val",
+				"validFrom"
+			],
+			[
+				"grou",
+				"groupedByExpansionType"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"vali",
+				"validShortCuts"
+			],
+			[
+				"gr",
+				"groupedByKey"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"sho",
+				"shortCuts"
+			],
+			[
+				"or",
+				"ordered"
+			],
+			[
+				"fin",
+				"findme"
+			],
+			[
+				"Sho",
+				"ShortCutHelper"
+			],
+			[
+				"pars",
+				"ParseData"
+			],
+			[
+				"WORKD",
+				"WORKDAY"
+			],
+			[
+				"special",
+				"specialDay"
+			],
+			[
+				"speci",
+				"specialDay"
+			],
+			[
+				"day",
+				"dayOfWeek"
+			],
+			[
+				"d",
+				"day"
+			],
+			[
+				"mo",
+				"month"
+			],
+			[
+				"des",
+				"DescriptionParser"
+			],
+			[
+				"Wo",
+				"WorkDayParser"
+			],
+			[
+				"Des",
+				"DescriptionParser"
+			],
+			[
+				"pro",
+				"projectPosDescString"
+			],
+			[
+				"ex",
+				"Expansion"
+			],
+			[
+				"work",
+				"workItem"
+			],
+			[
+				"ign",
+				"IgnoreRegion"
+			],
+			[
+				"Str",
+				"StringParserUtils"
+			],
+			[
+				"ir",
+				"irStack"
+			],
+			[
+				"sep",
+				"separator"
+			],
+			[
+				"us",
+				"userInput"
+			],
+			[
+				"min",
+				"minute"
+			],
+			[
+				"T",
+				"TimeItem"
+			],
+			[
+				"to",
+				"to_string"
+			],
+			[
+				"hou",
+				"hours"
+			],
+			[
+				"is_b",
+				"is_bigger_than"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					""
+				],
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					"JSON"
+				],
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					"Property List"
+				],
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					"YAML (Block Style)"
+				],
+				[
+					"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+					"YAML (Default Style)"
+				]
+			],
+			[
+				"Packages/AAAPackageDev/Support/Convert to ....sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 247.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 568.0
+	},
+	"console":
+	{
+		"height": 181.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/basti/Development/meteor/kita-families"
+	],
+	"file_history":
+	[
+		"/Users/basti/Development/angularJs/kitaadressen/gulpfile.coffee",
+		"/Users/basti/Development/angularJs/kitaadressen/bower.json",
+		"/Users/basti/Development/angularJs/kitaadressen/jade/index.jade",
+		"/Users/basti/Development/angularJs/kitaadressen/.bowerrc",
+		"/Users/basti/Development/angularJs/kitaadressen/package.json",
+		"/Users/basti/Development/angularJs/kitaadressen/public/index.html",
+		"/Users/basti/Development/web/mo-edit/bower.json",
+		"/Users/basti/Development/web/mo-edit/gulpfile.coffee",
+		"/Users/basti/Development/angularJs/kitaadressen/config.coffee",
+		"/Users/basti/Development/angularJs/kitaadressen/app/app.coffee",
+		"/Users/basti/Development/angularJs/kitaadressen/app/partials/alle.jade",
+		"/Users/basti/Development/angularJs/kitaadressen/app/index.jade",
+		"/Users/basti/Development/angularJs/kitaadressen/app/controllers.coffee",
+		"/Users/basti/Development/angularJs/kitaadressen/app/partials/einer.jade",
+		"/Users/basti/Development/angularJs/kitaadressen/app/assets/index.html",
+		"/Users/basti/Development/angularJs/kitaadressen/app/partials/view1.jade",
+		"/Users/basti/Development/angularJs/kitaadressen/app/partials/view2.jade",
+		"/Users/basti/Dropbox/tmp/loading.msc",
+		"/Users/basti/Dropbox/tmp/exception.msc",
+		"/Users/basti/Dropbox/tmp/unloading.msc",
+		"/Users/basti/Dropbox/tmp/cranewait.msc",
+		"/Users/basti/Dropbox/inform/docs/urlaubstool_ideen.md",
+		"/Users/basti/Dropbox/Basti/docs/2015_05_24_führung_für_eva.md",
+		"/Users/basti/Library/Application Support/Sublime Text 3/Packages/User/msc.YAML-tmLanguage",
+		"/Users/basti/Dropbox/Basti/docs/2015_05_24_führung_für_eva_raw.md",
+		"/Users/basti/Dropbox/Basti/docs/2015_05_24_führung_für_eva",
+		"/Users/basti/Documents/money/basti_und_schneggo_umsaetze.csv",
+		"/Users/basti/Documents/money/basti_und_schneggo_umsaetze_201505.csv",
+		"/Users/basti/Documents/money/Rakefile",
+		"/Users/basti/Development/web/mo-edit/client/styles/stylus/diff.styl",
+		"/Users/basti/Development/web/mo-edit/client/services/data.coffee",
+		"/Users/basti/Development/web/mo-edit/server/routes.coffee",
+		"/Users/basti/Development/web/mo-edit/server/documenthandling.coffee",
+		"/Users/basti/Development/web/mo-edit/client/controllers/list.coffee",
+		"/Users/basti/Development/web/mo-edit/client/styles/stylus/edit.styl",
+		"/Users/basti/Development/web/mo-edit/client/styles/stylus/list.styl",
+		"/Users/basti/Development/web/mo-edit/client/controllers/diff.coffee",
+		"/Users/basti/Development/web/mo-edit/client/views/partials/edit.jade",
+		"/Users/basti/Development/web/mo-edit/client/views/partials/list.jade",
+		"/Users/basti/Development/web/mo-edit/server/fakedata.coffee",
+		"/Users/basti/Development/web/mo-edit/client/controllers/edit.coffee",
+		"/Users/basti/tmp/public_html/wp-config.php",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_ia.js",
+		"/Users/basti/Development/web/mo-edit/client/views/partials/diff.jade",
+		"/Users/basti/Development/web/mo-edit/client/routes.coffee",
+		"/Users/basti/Development/web/mo-edit/README.md",
+		"/Users/basti/Development/web/mo-edit/client/config.coffee",
+		"/Users/basti/Development/web/mo-edit/client/app.coffee",
+		"/Users/basti/Development/web/mo-edit/server/models.coffee",
+		"/Users/basti/Development/web/mo-edit/client/public/partials/edit.html",
+		"/Users/basti/Development/web/mo-edit/client/controllers/login.coffee",
+		"/Users/basti/Development/web/mo-edit/client/views/index.jade",
+		"/Users/basti/Development/web/mo-edit/client/public/partials/list.html",
+		"/Users/basti/Development/web/mo-edit/mo-edit.sublime-project",
+		"/Users/basti/Development/web/mo-edit/index.coffee",
+		"/Users/basti/Development/web/mo-edit/client/public/index.html",
+		"/Users/basti/Development/web/mo-edit/client/services/socketio.coffee",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/jquery-ui/ui/i18n/datepicker-id.js",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pa-arab-pk.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/grunt/appveyor.yml",
+		"/Users/basti/Development/web/mo-edit/client/public/js/app.js",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pt-pt.js",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pl-pl.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/chai/lib/chai/utils/addProperty.js",
+		"/Users/basti/Development/web/mo-edit/client/services/auth.coffee",
+		"/Users/basti/tmp/textAngular/lib/globals.js",
+		"/Users/basti/tmp/textAngular/lib/factories.js",
+		"/Users/basti/tmp/textAngular/lib/DOM.js",
+		"/Users/basti/tmp/textAngular/lib/main.js",
+		"/Users/basti/tmp/textAngular/test/taRegisterTool.spec.js",
+		"/Users/basti/Development/web/mo-edit/server/pandoc.coffee",
+		"/Users/basti/Development/web/mo-edit/client/views/navbar.jade",
+		"/Users/basti/Development/web/mo-edit/client/controllers/navbar.coffee",
+		"/Users/basti/Development/web/mo-edit/client/filter/fromnow.coffee",
+		"/Users/basti/Development/web/mo-edit/package.json",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/ui-router/release/angular-ui-router.js",
+		"/Users/basti/Development/web/mo-edit/upstart.sh",
+		"/Users/basti/Development/web/mo-edit/client/styles/main.styl",
+		"/Users/basti/Development/web/mo-edit/server/template/footer.html",
+		"/Users/basti/Development/web/mo-edit/server/template/header.html",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_it-sm.js",
+		"/Users/basti/Development/web/mo-edit/client/public/navbar.html",
+		"/Users/basti/Development/web/mo-edit/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-codec.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/.bin/cake",
+		"/Users/basti/Development/web/mo-edit/node_modules/gulp-bower/node_modules/bower/node_modules/mout/lang/createObject.js",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/bootstrap/less/responsive-embed.less",
+		"/Users/basti/Development/web/mo-edit/node_modules/log4js/examples/flush-on-exit.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/connect-assets/node_modules/mincer/lib/mincer/engines/handlebars_engine.js",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/bootstrap/less/mixins/hide-text.less",
+		"/Users/basti/Development/web/mo-edit/node_modules/mocha/lib/reporters/html.js",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_os-ge.js",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_om.js",
+		"/Users/basti/Development/web/mo-edit/data/local.0",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/specials/rollOut.css",
+		"/Users/basti/Development/web/mo-edit/node_modules/gulp-stylus/node_modules/stylus/node_modules/sax/test/buffer-overrun.js",
+		"/Users/basti/Development/web/mo-edit/blabla.docx",
+		"/Users/basti/Development/web/mo-edit/node_modules/gulp-bower/node_modules/bower/lib/core/resolvers/FsResolver.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/log4js/test/dateFileAppender-test.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/moment/locale/de-at.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/connect-assets/test/assets/css/depends-on-blank.css",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/rotating_entrances/rotateInDownRight.css",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/rotating_entrances/rotateInDownLeft.css",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/bouncing_entrances/bounceInDown.css",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/fading_entrances/fadeInDownBig.css",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/zooming_entrances/zoomInDown.css",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/fading_entrances/fadeInDown.css",
+		"/Users/basti/Development/web/mo-edit/node_modules/gulp-util/lib/isNull.js",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/bootstrap/less/mixins/nav-vertical-align.less",
+		"/Users/basti/Development/web/mo-edit/server/test.html",
+		"/Users/basti/Development/web/mo-edit/node_modules/connect-assets/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/Users/basti/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/basti/Development/web/mo-edit/client/public/bower/jquery-ui/ui/effect-drop.js",
+		"/Users/basti/Development/web/mo-edit/server/controllers/documents/index.coffee",
+		"/Users/basti/Development/web/mo-edit/node_modules/mongoose/node_modules/mpromise/test/promises.Aplus.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/log4js/test/fileAppender-test.js",
+		"/Users/basti/Development/web/mo-edit/node_modules/gulp/node_modules/vinyl-fs/node_modules/graceful-fs/test/max-open.js",
+		"/Users/basti/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/basti/Development/web/mo-edit/node_modules/express-resource-new/index.js",
+		"/Users/basti/Documents/thalora_server_setup.md",
+		"/Users/basti/Documents/thalora_server_setup",
+		"/Users/basti/Development/coffee/monicore/settings.coffee",
+		"/Users/basti/Development/coffee/monicore/parser.coffee",
+		"/Users/basti/Development/coffee/monicore/shortcuthelper.js",
+		"/Users/basti/Development/coffee/monicore/node_modules/mocha/node_modules/jade/test.jade",
+		"/Users/basti/Development/coffee/monicore/node_modules/mocha/node_modules/growl/test.js",
+		"/Users/basti/Development/coffee/monicore/node_modules/mocha/lib/test.js",
+		"/Users/basti/Development/coffee/monicore/node_modules/mocha/lib/template.html",
+		"/Users/basti/Development/coffee/monicore/test/mocha.opts"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"//-",
+			"client/",
+			"\"}}",
+			"1RCF7nmo3h8RRQJsAFFw7eCfhr3YZUPZzOYj3boXgGqs",
+			"state",
+			"autonumber",
+			"title",
+			"print_statistics",
+			"analyse",
+			"\ntask :ausgaben => :tql do\n  analyse \"ausgaben\", [\"%\"], \"<\"\nend",
+			".jumbotron",
+			"md-3",
+			"hasPreviousVersion",
+			"button",
+			"primary",
+			"previousVersion",
+			"typ-",
+			"typbutton",
+			"center-block",
+			"detailaction",
+			".center",
+			"h1",
+			"md-3",
+			"Comment",
+			"comment",
+			"Comment",
+			"comment",
+			"$scope.currentComment",
+			".sidebar-button",
+			"value",
+			"newText",
+			"$scope.newCommentText",
+			"newCommentText",
+			"myScope",
+			"\"",
+			".detailactionbutton",
+			"TIME",
+			"colourRed",
+			"addComment",
+			"taSelection",
+			"docLastChangeDate",
+			"md-4",
+			"(++)\n",
+			".catch (e) ->",
+			"author.name",
+			"Author.name",
+			"author.name",
+			"author: chance.name()",
+			"log e",
+			"$rootScope.",
+			", ",
+			"		$scope.newChapter = (document) ->\n			# TODO\n",
+			"chapter",
+			"Chapter",
+			"chapter",
+			"checkbox",
+			"chapter",
+			"currentChapter",
+			"button",
+			"currentChapter",
+			"#chapter-list li\n	background: #eee",
+			"= module.exports.",
+			"\n		",
+			"\"",
+			"\n				",
+			"ks",
+			"keyedShortcut",
+			"from",
+			"lastOrDefault",
+			"ctb",
+			"_",
+			"ValidFrom",
+			"WholeDayExpansion",
+			"Key",
+			"testDate",
+			"allShortcuts",
+			"\"",
+			" { get; set; }",
+			"public ",
+			" { get; set; }",
+			"public ",
+			" = ",
+			"wdToFill",
+			"dateTime",
+			"wdToFill",
+			"Unknown",
+			" = ",
+			"require('./descriptionparser')",
+			"require('./stringparserutils')",
+			" { get; set; }",
+			"{ get; set; }",
+			"}\n",
+			"{ get; set; }",
+			"public",
+			"originalString",
+			"dayStartToken",
+			"wdItemString",
+			"projectPosDescString",
+			"TokenReturnInputIfFail",
+			"projectPosDescString",
+			"timeString",
+			"//",
+			"///",
+			";",
+			"WorkDayParserSettings",
+			"WorkDayParserSe",
+			"public static char ",
+			"to_string",
+			"monlist_",
+			"true",
+			"IsBetween",
+			")))",
+			"  new",
+			" , ",
+			", ",
+			", n",
+			"res.hour.should.equal(",
+			" - ",
+			"CompareTo",
+			",0)",
+			"new Tim",
+			"Assert.Greater",
+			"CompareTo",
+			"be.below(0)",
+			"CompareTo",
+			"least",
+			"Assert.Less(",
+			"Assert.IsFalse("
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.package_dev":
+	{
+		"height": 154.0
+	},
+	"pinned_build_system": "",
+	"project": "kita-families.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"html",
+				"public/index.html"
+			],
+			[
+				"pa",
+				"package.json"
+			],
+			[
+				"jad",
+				"jade/index.jade"
+			],
+			[
+				"ind",
+				"public/index.html"
+			],
+			[
+				"conf",
+				"config.coffee"
+			],
+			[
+				"list",
+				"client/views/partials/list.jade"
+			],
+			[
+				"doc",
+				"server/documenthandling.coffee"
+			],
+			[
+				"rout",
+				"server/routes.coffee"
+			],
+			[
+				"edi",
+				"client/styles/stylus/edit.styl"
+			],
+			[
+				"diff",
+				"client/controllers/diff.coffee"
+			],
+			[
+				"edit.co",
+				"client/controllers/edit.coffee"
+			],
+			[
+				"fak",
+				"server/fakedata.coffee"
+			],
+			[
+				"fake",
+				"server/fakedata.coffee"
+			],
+			[
+				"rou",
+				"server/routes.coffee"
+			],
+			[
+				"inde",
+				"client/views/index.jade"
+			],
+			[
+				"bow",
+				"bower.json"
+			],
+			[
+				"index",
+				"client/views/index.jade"
+			],
+			[
+				"edit.j",
+				"client/views/partials/edit.jade"
+			],
+			[
+				"mod",
+				"server/models.coffee"
+			],
+			[
+				"dif",
+				"client/views/partials/diff.jade"
+			],
+			[
+				"app",
+				"client/app.coffee"
+			],
+			[
+				"edit.c",
+				"client/controllers/edit.coffee"
+			],
+			[
+				"lis",
+				"client/views/partials/list.jade"
+			],
+			[
+				"data",
+				"client/services/data.coffee"
+			],
+			[
+				"model",
+				"server/models.coffee"
+			],
+			[
+				"edit",
+				"client/controllers/edit.coffee"
+			],
+			[
+				"pan",
+				"server/pandoc.coffee"
+			],
+			[
+				"pand",
+				"server/pandoc.coffee"
+			],
+			[
+				"from",
+				"client/filter/fromnow.coffee"
+			],
+			[
+				"auth",
+				"client/services/auth.coffee"
+			],
+			[
+				"navb",
+				"client/controllers/navbar.coffee"
+			],
+			[
+				"docu",
+				"server/documenthandling.coffee"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"navba",
+				"client/views/navbar.jade"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"re",
+				"README.md"
+			],
+			[
+				"route",
+				"server/routes.coffee"
+			],
+			[
+				"main",
+				"client/styles/main.styl"
+			],
+			[
+				"foot",
+				"server/template/footer.html"
+			],
+			[
+				"hea",
+				"server/template/header.html"
+			],
+			[
+				"login",
+				"client/controllers/login.coffee"
+			],
+			[
+				"edit.ja",
+				"client/views/partials/edit.jade"
+			],
+			[
+				"bowe",
+				"bower.json"
+			],
+			[
+				"fro",
+				"client/filter/fromnow.coffee"
+			],
+			[
+				"nav",
+				"client/views/navbar.jade"
+			],
+			[
+				"test",
+				"test/timeitem_test.coffee"
+			],
+			[
+				"tim",
+				"timeitem.coffee"
+			],
+			[
+				"satteli",
+				"client/sattelite.jade"
+			],
+			[
+				"client",
+				"client/client.coffee"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 163.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
