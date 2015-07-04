@@ -1,0 +1,1 @@
+mongoexport --db meteor --collection families -h localhost:3001 --jsonArray > families.json

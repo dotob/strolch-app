@@ -1,0 +1,1 @@
+mongoimport --db meteor --collection families -h localhost:3001 --drop --jsonArray --file families.json

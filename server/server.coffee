@@ -2,7 +2,7 @@ Families = new Mongo.Collection 'families'
 Tags = new Mongo.Collection 'tags' 
 
 Meteor.startup () ->
-	if Families.find().count() == 0
+	if false & Families.find().count() == 0
 		fs = Npm.require 'fs'
 		path = Npm.require 'path'
 		basepath = path.resolve('.').split('.meteor')[0]
