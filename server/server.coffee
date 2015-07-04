@@ -1,14 +1,13 @@
-Families = new Mongo.Collection 'families' 
-Tags = new Mongo.Collection 'tags' 
-
 Meteor.startup () ->
 	# create default user
-	if !Meteor.users.find({username:"Eltern"})
+	stdUser = Meteor.users.findOne({username: "Eltern"})
+	if !stdUser
 		Accounts.createUser
 			username: "Eltern"
 			password: "Steppenberg"
 
-	if false & Families.find().count() == 0
+	# not used, was for init...
+	if false & share.Families.find().count() == 0
 		fs = Npm.require 'fs'
 		path = Npm.require 'path'
 		basepath = path.resolve('.').split('.meteor')[0]
@@ -17,8 +16,8 @@ Meteor.startup () ->
 		data = JSON.parse data_raw
 		for family in data.families
 			delete family.id
-			Families.insert family
-	if Tags.find().count() == 0
+			share.Families.insert family
+	if share.Tags.find().count() == 0
 		tags = ['gruppe1', 'gruppe2', 'gruppe3', 'hausmeister', 'garten', 'koop', 'küche', 'vorstand', 'nähen', 'newsletter']
 		for tag in tags
-			Tags.insert {name: tag}
+			share.Tags.insert {name: tag}
