@@ -53,6 +53,7 @@ app.run ['$rootScope', '$state', ($rootScope, $state) ->
 ]
 
 app.controller 'neuCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
+	$scope.isNew = true
 	$scope.family = {}
 	$scope.save = () ->
 		$meteor.collection(share.Families).save $scope.family

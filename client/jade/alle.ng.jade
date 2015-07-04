@@ -1,5 +1,5 @@
 .container-fluid
-	.row
+	.row.alle-table
 		form
 			.form-group
 				.input-group
@@ -7,7 +7,7 @@
 						i.glyphicon.glyphicon-search
 					input.form-control(type="text", placeholder="suchen...", ng-model="search")
 		.table-responsive
-			table.table.table-bordered.table-striped
+			table.table.table-bordered.table-striped.table-condensed
 				thead
 					tr
 						td
@@ -28,18 +28,21 @@
 					tr(ng-repeat='family in families | orderBy:sortType:sortReverse | filter:search')
 						td 
 							div(ng-show="family.mama.nachname") {{ family.mama.nachname }}, {{ family.mama.vorname }}
-								span.small.text-muted (
-								span.small.text-muted.tag-name(ng-repeat="tag in family.mama.tags") {{ tag.name }}
-								span.small.text-muted )
+								span(ng-show="family.mama.tags.length>0")
+									span.small.text-muted (
+									span.small.text-muted.tag-name(ng-repeat="tag in family.mama.tags") {{ tag.name }}
+									span.small.text-muted )
 							div(ng-show="family.papa.nachname") {{ family.papa.nachname }}, {{ family.papa.vorname }}
-								span.small.text-muted (
-								span.small.text-muted.tag-name(ng-repeat="tag in family.papa.tags") {{ tag.name }}
-								span.small.text-muted )
+								span(ng-show="family.papa.tags.length>0")
+									span.small.text-muted (
+									span.small.text-muted.tag-name(ng-repeat="tag in family.papa.tags") {{ tag.name }}
+									span.small.text-muted )
 						td 
 							div(ng-repeat="kind in family.kinder", ng-show="kind.nachname") {{ kind.nachname }}, {{ kind.vorname }} ({{ kind.dob }})
-								span.small.text-muted (
-								span.small.text-muted.tag-name(ng-repeat="tag in kind.tags") {{ tag.name }} 
-								span.small.text-muted )
+								span(ng-show="kind.tags.length>0")
+									span.small.text-muted (
+									span.small.text-muted.tag-name(ng-repeat="tag in kind.tags") {{ tag.name }} 
+									span.small.text-muted )
 						td
 							div {{ family.adresse.strasse }}
 							div {{ family.adresse.stadt }}

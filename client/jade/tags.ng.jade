@@ -1,15 +1,16 @@
 .container
-	.row(ng-repeat="tag in tags")
-		.col-md-10
+	.row.tag-edit(ng-repeat="tag in tags")
+		.col-md-5.col-md-offset-3
 			input.form-control(type="text", ng-model="tag.name")
-		.col-md-2
-			button.btn.btn-danger.btn-sm(ng-click="deleteTag(tag)")
+		.col-md-1
+			button.btn.btn-danger.btn-sm.form-control(ng-click="deleteTag(tag)")
 				span.glyphicon.glyphicon-trash
-	.row
-		.col-md-10
+	
+	.row.tag-edit
+		.col-md-5.col-md-offset-3
 			input.form-control(type="text", ng-model="newName", placeholder="Neues Tag...")
-		.col-md-2
-			button.btn.btn-success.btn-sm(ng-click="addTag(newName)")
+		.col-md-1
+			button.btn.btn-success.btn-sm.form-control(ng-click="addTag(newName)")
 				span.glyphicon.glyphicon-plus
 
 
