@@ -12,7 +12,8 @@ body(ng-app="app")
 				span.icon-bar
 				span.icon-bar
 				span.icon-bar
-			a.navbar-brand kita adressen
+			a.navbar-brand kita familien
+
 
 		#navbar-collapse-1.collapse.navbar-collapse
 			ul.nav.navbar-nav
@@ -28,5 +29,7 @@ body(ng-app="app")
 					a(ui-sref='tags')
 						span  
 						| tags
+			ul.nav.navbar-nav.navbar-right
+				+loginButtons
 
 	.view(ui-view)

@@ -15,3 +15,6 @@ mquandalle:jade
 twbs:bootstrap
 civilframe:angular-jade
 mbenford:ng-tags-input
+accounts-password
+ian:accounts-ui-bootstrap-3
+mizzao:user-status

@@ -2,6 +2,12 @@ Families = new Mongo.Collection 'families'
 Tags = new Mongo.Collection 'tags' 
 
 Meteor.startup () ->
+	# create default user
+	if !Meteor.users.find({username:"Eltern"})
+		Accounts.createUser
+			username: "Eltern"
+			password: "Steppenberg"
+
 	if false & Families.find().count() == 0
 		fs = Npm.require 'fs'
 		path = Npm.require 'path'
