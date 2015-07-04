@@ -60,6 +60,7 @@ app.controller 'neuCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
 ]
 
 app.controller 'alleCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
+	$scope.sortType = 'mama.nachname'
 	$scope.families = $meteor.collection(share.Families)
 	$scope.deleteFamily = (family) ->
 		console.log "delete id: #{family._id}"
