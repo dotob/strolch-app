@@ -18,8 +18,8 @@
 						td
 							a(href='#', ng-click="sortType = 'kinder[0].nachname'; sortReverse = !sortReverse")
 								| Kinder 
-								span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'nameChild' && !sortReverse")
-								span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'nameChild' && sortReverse")
+								span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'kinder[0].nachname' && !sortReverse")
+								span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'kinder[0].nachname' && sortReverse")
 						td Adresse
 						td Telefon
 						td Email
@@ -27,22 +27,35 @@
 				tbody
 					tr(ng-repeat='family in families | orderBy:sortType:sortReverse | filter:search')
 						td 
-							div(ng-show="family.mama.nachname") {{ family.mama.nachname }}, {{ family.mama.vorname }}
+							div(ng-show="family.mama.nachname") 
+								strong {{ family.mama.nachname }}
+								span , {{ family.mama.vorname }}
 								span(ng-show="family.mama.tags.length>0")
-									span.small.text-muted (
-									span.small.text-muted.tag-name(ng-repeat="tag in family.mama.tags") {{ tag.name }}
-									span.small.text-muted )
-							div(ng-show="family.papa.nachname") {{ family.papa.nachname }}, {{ family.papa.vorname }}
+									span.small.text-info.tag-start (
+									span.small.text-info(ng-repeat="tag in family.mama.tags")
+										span.tag-name(ng-if="$last || family.mama.tags.length==1") {{ tag.name }}
+										span.tag-name(ng-if="!$last && family.mama.tags.length>0") {{ tag.name }}, 
+									span.small.text-info )
+							div(ng-show="family.papa.nachname") 
+								strong {{ family.papa.nachname }}
+								span , {{ family.papa.vorname }}
 								span(ng-show="family.papa.tags.length>0")
-									span.small.text-muted (
-									span.small.text-muted.tag-name(ng-repeat="tag in family.papa.tags") {{ tag.name }}
-									span.small.text-muted )
+									span.small.text-info.tag-start (
+									span.small.text-info(ng-repeat="tag in family.papa.tags")
+										span.tag-name(ng-if="$last || family.mama.tags.length==1") {{ tag.name }}
+										span.tag-name(ng-if="!$last && family.mama.tags.length>0") {{ tag.name }}, 
+									span.small.text-info )
 						td 
-							div(ng-repeat="kind in family.kinder", ng-show="kind.nachname") {{ kind.nachname }}, {{ kind.vorname }} ({{ kind.dob }})
+							div(ng-repeat="kind in family.kinder", ng-show="kind.nachname") 
+								strong {{ kind.nachname }}
+								span , {{ kind.vorname }} 
+								span.text-muted ({{ kind.dob }})
 								span(ng-show="kind.tags.length>0")
-									span.small.text-muted (
-									span.small.text-muted.tag-name(ng-repeat="tag in kind.tags") {{ tag.name }} 
-									span.small.text-muted )
+									span.small.text-info.tag-start (
+									span.small.text-info(ng-repeat="tag in kind.tags")
+										span.tag-name(ng-if="$last || family.mama.tags.length==1") {{ tag.name }}
+										span.tag-name(ng-if="!$last && family.mama.tags.length>0") {{ tag.name }}, 
+									span.small.text-info )
 						td
 							div {{ family.adresse.strasse }}
 							div {{ family.adresse.stadt }}

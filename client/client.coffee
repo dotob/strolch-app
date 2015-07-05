@@ -60,12 +60,13 @@ app.controller 'neuCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
 		#todo
 ]
 
-app.controller 'alleCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
+app.controller 'alleCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
 	$scope.sortType = 'mama.nachname'
 	$scope.families = $meteor.collection(share.Families)
 	$scope.deleteFamily = (family) ->
-		console.log "delete id: #{family._id}"
-		$scope.families.remove family
+		if $window.confirm 'Wirklich löschen?'
+			console.log "delete id: #{family._id}"
+			$scope.families.remove family
 ]
 
 app.controller 'tagsCtrl', ['$scope', '$meteor', ($scope, $meteor) ->

@@ -1,6 +1,7 @@
 head
 	base(href="/")
-	title kita familien
+	title KiTa Kleine Strolche Familien
+	meta(name="viewport", content="width=device-width, initial-scale=1")
 
 body(ng-app="app")
 	nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
@@ -12,22 +13,22 @@ body(ng-app="app")
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a.navbar-brand kita familien
+				a.navbar-brand KiTa Familien
 
 			.collapse.navbar-collapse
 				ul.nav.navbar-nav(ng-show="currentUser")
 					li(ui-sref-active="active")
 						a(ui-sref='alle')
 							span 
-							| alle
+							| Alle
 					li(ui-sref-active="active")
 						a(ui-sref='neu')
 							span  
-							| neu					
+							| Neue Familie				
 					li(ui-sref-active="active")
 						a(ui-sref='tags')
 							span  
-							| tags
+							| Tags
 				ul.nav.navbar-nav.navbar-right
 					+loginButtons
 
