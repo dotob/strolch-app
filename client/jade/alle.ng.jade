@@ -47,15 +47,20 @@
 									span.small.text-info )
 						td 
 							div(ng-repeat="kind in family.kinder", ng-show="kind.nachname") 
-								strong {{ kind.nachname }}
-								span , {{ kind.vorname }} 
-								span.text-muted ({{ kind.dob }})
-								span(ng-show="kind.tags.length>0")
-									span.small.text-info.tag-start (
-									span.small.text-info(ng-repeat="tag in kind.tags")
-										span.tag-name(ng-if="$last || family.mama.tags.length==1") {{ tag.name }}
-										span.tag-name(ng-if="!$last && family.mama.tags.length>0") {{ tag.name }}, 
-									span.small.text-info )
+								div
+									strong {{ kind.nachname }}
+									span , {{ kind.vorname }} 
+									span.text-muted ({{ kind.dob }})
+									span(ng-show="kind.tags.length>0")
+										span.small.text-info.tag-start (
+										span.small.text-info(ng-repeat="tag in kind.tags")
+											span.tag-name(ng-if="$last || family.mama.tags.length==1") {{ tag.name }}
+											span.tag-name(ng-if="!$last && family.mama.tags.length>0") {{ tag.name }}, 
+										span.small.text-info )
+								div(ng-show="kind.allergies")
+									span.allergy-hint.glyphicon.glyphicon-exclamation-sign
+									span.small.text-danger {{ kind.allergies }}
+
 						td
 							div {{ family.adresse.strasse }}
 							div {{ family.adresse.stadt }}
@@ -68,6 +73,11 @@
 								a(href="tel://{{ family.papa.fon }}") {{ family.papa.fon }} ({{ family.papa.vorname }})
 							div(ng-show="family.papa.handy")
 								a(href="tel://{{ family.papa.handy }}") {{ family.papa.handy }} ({{ family.papa.vorname }})
+							div(ng-repeat="emergency in family.emergency")
+								div(ng-show="emergency.name")
+									a.text-warning(href="tel://{{ emergency.fon }}") {{ emergency.fon }} ({{ emergency.name }})
+								div(ng-show="emergency.name")
+									a.text-warning(href="tel://{{ emergency.handy }}") {{ emergency.handy }} ({{ emergency.name }})
 						td
 							div(ng-show="family.mama.email")
 								a(href="mailto://{{ family.mama.email }}") {{ family.mama.email }} ({{ family.mama.vorname }})
