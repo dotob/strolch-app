@@ -8,14 +8,14 @@ body(ng-app="app")
 		.container-fluid
 			// Brand and toggle get grouped for better mobile display
 			.navbar-header
-				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-part')
 					span.sr-only toggle navigation
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
 				a.navbar-brand KiTa Familien
 
-			.collapse.navbar-collapse
+			#navbar-collapse-part.collapse.navbar-collapse
 				ul.nav.navbar-nav(ng-show="currentUser")
 					li(ui-sref-active="active")
 						a(ui-sref='alle')
