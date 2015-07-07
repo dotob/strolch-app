@@ -78,9 +78,9 @@
 						.form-group
 							label(for='kindGeburtstag') Geburtstag 
 							input#kindGeburtstag.form-control(type='text', placeholder='Geburtstag', ng-model="family.kinder[idx].dob") 
-						.form-group
-							label.text-danger(for='kindAllergies') Allergiehinweise 
-							input#kindAllergies.form-control(type='text', placeholder='Allergiehinweise', ng-model="family.kinder[idx].allergies") 
+						//- .form-group
+						//- 	label.text-danger(for='kindAllergies') Allergiehinweise 
+						//- 	input#kindAllergies.form-control(type='text', placeholder='Allergiehinweise', ng-model="family.kinder[idx].allergies") 
 						.form-group
 							label(for='kindTags') Tags 
 							tags-input(ng-model="family.kinder[idx].tags", display-property="name", placeholder="Neues Tag", replace-spaces-with-dashes="false")
