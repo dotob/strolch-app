@@ -74,9 +74,9 @@
 							div(ng-show="family.papa.handy")
 								a(href="tel://{{ family.papa.handy }}") {{ family.papa.handy }} ({{ family.papa.vorname }})
 							div(ng-repeat="emergency in family.emergency")
-								div(ng-show="emergency.name")
+								div(ng-show="emergency.name && emergency.fon")
 									a.text-warning(href="tel://{{ emergency.fon }}") {{ emergency.fon }} ({{ emergency.name }})
-								div(ng-show="emergency.name")
+								div(ng-show="emergency.name && emergency.handy")
 									a.text-warning(href="tel://{{ emergency.handy }}") {{ emergency.handy }} ({{ emergency.name }})
 						td
 							div(ng-show="family.mama.email")
