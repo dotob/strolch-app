@@ -16,3 +16,6 @@ mbenford:ng-tags-input
 accounts-password
 ian:accounts-ui-bootstrap-3
 autopublish
+zimme:collection-timestampable
+matb33:collection-hooks
+stevezhu:lodash

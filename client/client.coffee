@@ -19,6 +19,11 @@ app.config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($state
 			templateUrl: 'client/jade/alle.html'
 			controller: 'alleCtrl'
 			resolve: userResolve
+		.state 'archived',
+			url: '/archived'
+			templateUrl: 'client/jade/alle.html'
+			controller: 'archivedCtrl'
+			resolve: userResolve
 		.state 'neu',
 			url: '/neu'
 			templateUrl: 'client/jade/eine.html'
@@ -57,16 +62,26 @@ app.controller 'neuCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
 	$scope.family = {}
 	$scope.save = () ->
 		$meteor.collection(share.Families).save $scope.family
-		#todo
 ]
 
 app.controller 'alleCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
 	$scope.sortType = 'mama.nachname'
+	$scope.showArchived = false
 	$scope.families = $meteor.collection(share.Families)
 	$scope.deleteFamily = (family) ->
-		if $window.confirm 'Wirklich löschen?'
-			console.log "delete id: #{family._id}"
-			$scope.families.remove family
+		if $window.confirm 'Wirklich archivieren?'
+			console.log "archive id: #{family._id}"
+			family.archived = true
+]
+
+app.controller 'archivedCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
+	$scope.sortType = 'mama.nachname'
+	$scope.showArchived = true
+	$scope.families = $meteor.collection(share.Families)
+	$scope.undeleteFamily = (family) ->
+		if $window.confirm 'Wirklich wiederherstellen?'
+			console.log "unarchive id: #{family._id}"
+			family.archived = false
 ]
 
 app.controller 'tagsCtrl', ['$scope', '$meteor', ($scope, $meteor) ->

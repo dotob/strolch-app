@@ -25,7 +25,7 @@
 						td Email
 						td
 				tbody
-					tr(ng-repeat='family in families | orderBy:sortType:sortReverse | filter:search')
+					tr(ng-repeat='family in families | filter:{ archived: showArchived } | orderBy:sortType:sortReverse | filter:search')
 						td 
 							div(ng-show="family.mama.nachname") 
 								strong {{ family.mama.nachname }}
@@ -89,5 +89,7 @@
 						td
 							a.btn.btn-primary.btn-sm(href="/eine/{{family._id}}")
 								span.glyphicon.glyphicon-pencil 
-							button.btn.btn-danger.btn-sm(ng-click="deleteFamily(family)")
+							button.btn.btn-danger.btn-sm(ng-click="deleteFamily(family)", ng-if="!showArchived")
+								span.glyphicon.glyphicon-trash 
+							button.btn.btn-warning.btn-sm(ng-click="undeleteFamily(family)", ng-if="showArchived")
 								span.glyphicon.glyphicon-trash 
