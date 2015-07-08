@@ -81,6 +81,10 @@
 						//- .form-group
 						//- 	label.text-danger(for='kindAllergies') Allergiehinweise 
 						//- 	input#kindAllergies.form-control(type='text', placeholder='Allergiehinweise', ng-model="family.kinder[idx].allergies") 
+						.checkbox
+							label
+								input(type="checkbox", ng-model="family.kinder[idx].hasAllergies")
+								| Allergien vorhanden
 						.form-group
 							label(for='kindTags') Tags 
 							tags-input(ng-model="family.kinder[idx].tags", display-property="name", placeholder="Neues Tag", replace-spaces-with-dashes="false")

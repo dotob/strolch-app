@@ -60,6 +60,9 @@
 								//- div(ng-show="kind.allergies")
 								//- 	span.allergy-hint.glyphicon.glyphicon-exclamation-sign
 								//- 	span.small.text-danger {{ kind.allergies }}
+								div(ng-show="kind.hasAllergies")
+									span.allergy-hint.glyphicon.glyphicon-exclamation-sign
+									span.small.text-danger Allergie
 
 						td
 							div {{ family.adresse.strasse }}
