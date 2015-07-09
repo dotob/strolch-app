@@ -57,6 +57,36 @@ app.run ['$rootScope', '$state', ($rootScope, $state) ->
 			$state.go 'login'
 ]
 
+# fix tags 
+fixtags = (whos, tags, changetag) ->
+	fixed = false
+	for t in tags
+		if t._id == changetag._id
+			oldname = t.name
+			t.name = changetag.name
+			console.log "tagupdate from #{oldname} to #{changetag.name} of #{whos}"
+			fixed = true
+	fixed
+
+app.run ['$meteor', ($meteor) ->
+	share.Tags.after.update (userId, tag) ->
+		families = $meteor.collection(share.Families)
+		console.log "updated tag"
+		for f in families
+			fixed = false
+			if f.mama and f.mama.tags
+				fixed |= fixtags "#{f.mama.vorname} #{f.mama.nachname}", f.mama.tags, tag
+			if f.papa and f.papa.tags
+				fixed |= fixtags "#{f.papa.vorname} #{f.papa.nachname}", f.papa.tags, tag
+			for k in f.kinder
+				if k and k.tags
+					fixed |= fixtags "#{k.vorname} #{k.nachname}", k.tags, tag
+			if fixed
+				console.log f
+
+		$meteor.collection(share.Families).save()
+]
+
 app.controller 'neuCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
 	$scope.isNew = true
 	$scope.family = {}
