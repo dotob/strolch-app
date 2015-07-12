@@ -1,0 +1,51 @@
+.container
+	.row
+		.col-md-12
+			h1 Stunden eintragen für Familie {{familyName}}
+	.row
+		.col-md-12
+			.panel.panel-primary
+				.panel-heading 
+					h3.panel-title Neue Stunden
+				.panel-body
+					form 
+						.form-group
+							label(for='activity') Tätigkeit 
+							input#activity.form-control(type='text', placeholder='Tätigkeit', ng-model="newWork") 
+						.form-group
+							label(for='date') Datum 
+							.input-group
+								input#date.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDate", is-open="opened", datepicker-options="dateOptions", close-text="Close")
+								span.input-group-btn
+									button.btn.btn-default(ng-click="open($event)")
+										i.glyphicon.glyphicon-calendar
+
+						.form-group
+							label(for='hours') Stundenzahl 
+							input#hours.form-control(type='number', placeholder='Stunden', ng-model="newHours") 
+						button.btn.btn-primary.form-control(ng-click="addHours(newWork, newDate, newHours)") Speichern
+	.row
+		.col-md-12
+			.panel.panel-primary
+				.panel-heading 
+					h3.panel-title Stundenübersicht
+				.panel-body
+					.table-responsive
+						table.table.table-bordered.table-striped.table-condensed
+							thead
+								tr
+									td Tätigkeit
+									td Datum
+									td Stundenzahl
+							tfoot
+								tr
+									td(colspan="2") 
+										strong Summe
+									td 
+										strong {{ hoursSum }}
+							tbody
+								tr(ng-repeat='hour in hours | filter:{ family: familyId }')
+									td {{hour.activity}}
+									td {{hour.date | date : format}}
+									td {{hour.hours}}
+

@@ -1,0 +1,24 @@
+.container
+	.row
+		.col-md-12
+			.panel.panel-primary
+				.panel-heading 
+					h3.panel-title Stundenübersicht
+				.panel-body
+					.table-responsive
+						table.table.table-bordered.table-striped.table-condensed
+							thead
+								tr
+									td Familie
+									td Stundenzahl
+							tfoot
+								tr
+									td
+										strong Summe
+									td 
+										strong {{ hoursSum }}
+							tbody
+								tr(ng-repeat='hour in hours')
+									td {{hour.family}}
+									td {{hour.hourSum}}
+

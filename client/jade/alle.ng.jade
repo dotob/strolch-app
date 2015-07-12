@@ -87,8 +87,10 @@
 							div(ng-show="family.papa.email")
 								a(href="mailto://{{ family.papa.email }}") {{ family.papa.email }} ({{ family.papa.vorname }})
 						td
-							a.btn.btn-primary.btn-sm(href="/eine/{{family._id}}", title="Bearbeiten")
+							a.edit-family-link.btn.btn-primary.btn-sm(href="/eine/{{family._id}}", title="Bearbeiten")
 								span.glyphicon.glyphicon-pencil 
+							a.add-hours-link.btn.btn-primary.btn-sm(href="/add-hours/{{family._id}}", title="Stunden eintragen")
+								span.glyphicon.glyphicon-time 
 							button.btn.btn-danger.btn-sm(ng-click="deleteFamily(family)", ng-if="!showArchived", title="Archivieren")
 								span.glyphicon.glyphicon-trash 
 							button.btn.btn-warning.btn-sm(ng-click="undeleteFamily(family)", ng-if="showArchived", title="Wiederherstellen")
