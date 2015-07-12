@@ -5,7 +5,7 @@
 				.input-group
 					.input-group-addon
 						i.glyphicon.glyphicon-search
-					input.form-control(type="text", placeholder="suchen...", ng-model="search")
+					input.form-control(type="text", placeholder="Hier kannst du nach allem suchen. Namen, Gruppen, Kindern...", ng-model="search")
 		.table-responsive
 			table.table.table-bordered.table-striped.table-condensed
 				thead
@@ -87,9 +87,9 @@
 							div(ng-show="family.papa.email")
 								a(href="mailto://{{ family.papa.email }}") {{ family.papa.email }} ({{ family.papa.vorname }})
 						td
-							a.btn.btn-primary.btn-sm(href="/eine/{{family._id}}")
+							a.btn.btn-primary.btn-sm(href="/eine/{{family._id}}", title="Bearbeiten")
 								span.glyphicon.glyphicon-pencil 
-							button.btn.btn-danger.btn-sm(ng-click="deleteFamily(family)", ng-if="!showArchived")
+							button.btn.btn-danger.btn-sm(ng-click="deleteFamily(family)", ng-if="!showArchived", title="Archivieren")
 								span.glyphicon.glyphicon-trash 
-							button.btn.btn-warning.btn-sm(ng-click="undeleteFamily(family)", ng-if="showArchived")
+							button.btn.btn-warning.btn-sm(ng-click="undeleteFamily(family)", ng-if="showArchived", title="Wiederherstellen")
 								span.glyphicon.glyphicon-trash 

@@ -1,8 +1,14 @@
 .container
 	.row
+		.col-sm-12
+			.panel.panel-info
+				.panel-body
+					span Hier kannst du alle deine Details sehen und ändern. Alle Änderungen sind sofort gespeichert.
+
 		.col-md-6.col-sm-12
 			.panel.panel-primary
-				.panel-heading Mama 
+				.panel-heading 
+					h3.panel-title Mama 
 				.panel-body
 					form 
 						.form-group
@@ -21,13 +27,15 @@
 							label(for='mamaHandy') Handy 
 							input#mamaHandy.form-control(type='tel', placeholder='Handy', ng-model="family.mama.handy")
 						.form-group
-							label(for='mamaTags') Tags 
-							tags-input(ng-model="family.mama.tags", display-property="name", placeholder="Neues Tag", replace-spaces-with-dashes="false")
+							label(for='mamaTags') Gruppe(n)
+							tags-input(ng-model="family.mama.tags", display-property="name", placeholder="Neue Gruppe", replace-spaces-with-dashes="false")
 								auto-complete(source="loadTags($query)", min-length="0", load-on-focus="true", load-on-empty="true", max-results-to-show="32")
+							p.help-block Hier kannst du eine oder mehrere Gruppen zuweisen. Entweder per reinklicken oder tippen etwas auswählen.
 
 		.col-md-6.col-sm-12
 			.panel.panel-primary
-				.panel-heading Papa 
+				.panel-heading  
+					h3.panel-title Papa 
 				.panel-body
 					form 
 						.form-group
@@ -46,14 +54,16 @@
 							label(for='papaHandy') Handy 
 							input#papaHandy.form-control(type='tel', placeholder='Handy', ng-model="family.papa.handy")
 						.form-group
-							label(for='papaTags') Tags 
-							tags-input(ng-model="family.papa.tags", display-property="name", placeholder="Neues Tag", replace-spaces-with-dashes="false")
+							label(for='papaTags') Gruppe(n) 
+							tags-input(ng-model="family.papa.tags", display-property="name", placeholder="Neue Gruppe", replace-spaces-with-dashes="false")
 								auto-complete(source="loadTags($query)", min-length="0", load-on-focus="true", load-on-empty="true", max-results-to-show="32")
+							p.help-block Hier kannst du eine oder mehrere Gruppen zuweisen. Entweder per reinklicken oder tippen etwas auswählen.
 
 	.row
 		.col-md-12.col-sm-12
 			.panel.panel-primary
-				.panel-heading Adresse 
+				.panel-heading  
+					h3.panel-title Adresse 
 				.panel-body
 					form 
 						.form-group
@@ -66,7 +76,8 @@
 	.row
 		.col-md-4.col-sm-12(ng-repeat="idx in [0,1,2]")
 			.panel.panel-primary
-				.panel-heading Kind {{idx+1}}
+				.panel-heading  
+					h3.panel-title Kind {{idx+1}}
 				.panel-body
 					form 
 						.form-group
@@ -86,19 +97,21 @@
 								input(type="checkbox", ng-model="family.kinder[idx].hasAllergies")
 								| Allergien vorhanden
 						.form-group
-							label(for='kindTags') Tags 
-							tags-input(ng-model="family.kinder[idx].tags", display-property="name", placeholder="Neues Tag", replace-spaces-with-dashes="false")
+							label(for='kindTags') Gruppe(n) 
+							tags-input(ng-model="family.kinder[idx].tags", display-property="name", placeholder="Neue Gruppe", replace-spaces-with-dashes="false")
 								auto-complete(source="loadTags($query)", min-length="0", load-on-focus="true", load-on-empty="true", max-results-to-show="32")
+							p.help-block Hier kannst du eine oder mehrere Gruppen zuweisen. Entweder per reinklicken oder tippen etwas auswählen.
 
 	.row
 		.col-md-4.col-sm-12(ng-repeat="idx in [0,1,2]")
 			.panel.panel-danger
-				.panel-heading Notfall-Kontakt {{idx+1}}
+				.panel-heading  
+					h3.panel-title Notfall-Kontakt {{idx+1}}
 				.panel-body
 					form 
 						.form-group
-							label(for='emergencyname') Vor- und Nachname
-							input#emergencyname.form-control(type='text', placeholder='Vor- und Nachname', ng-model="family.emergency[idx].name") 
+							label(for='emergencyname') Name
+							input#emergencyname.form-control(type='text', placeholder='z.B. Oma, Opa Markus, Tante Anne, Hans Dampf...', ng-model="family.emergency[idx].name") 
 						.form-group
 							label(for='emergencyfon') Telefon (mit Ortsvowahl) 
 							input#emergencyfon.form-control(type='text', placeholder='Telefon', ng-model="family.emergency[idx].fon") 
