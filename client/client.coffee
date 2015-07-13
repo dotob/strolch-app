@@ -112,7 +112,7 @@ app.controller 'eineCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteo
 	$scope.tags = $scope.$meteorCollection(share.Tags)
 	$scope.loadTags = (query) ->
 		# filter
-		$scope.tags
+		_.filter $scope.tags, (t) -> t.name.toLowerCase().indexOf(query.toLowerCase()) >= 0
 ]
 
 app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
