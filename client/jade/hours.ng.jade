@@ -2,8 +2,16 @@
 	.row
 		.col-md-12
 			.panel.panel-primary
-				.panel-heading 
-					h3.panel-title Stundenübersicht
+				.panel-heading
+					h3.panel-title.pull-left Stundenübersicht
+					#yearPaging.input-group
+						span.input-group-btn
+							button.btn.btn-info(ng-click="goToPreviousYear()")
+								span.glyphicon.glyphicon-chevron-left
+						input.form-control(type="text", ng-model="currentYearString", readonly)
+						span.input-group-btn
+							button.btn.btn-info(ng-click="goToNextYear()")
+								span.glyphicon.glyphicon-chevron-right
 				.panel-body
 					.table-responsive
 						table.table.table-bordered.table-striped.table-condensed
@@ -19,6 +27,6 @@
 										strong {{ hoursSum }}
 							tbody
 								tr(ng-repeat='hour in hours')
-									td {{hour.family}}
-									td {{hour.hourSum}}
+									td {{ hour.familyName }}
+									td {{ hour.hours }}
 

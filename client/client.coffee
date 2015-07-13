@@ -1,6 +1,9 @@
 # meteor accounts config
 Accounts.ui.config
-  passwordSignupFields: 'USERNAME_ONLY'
+	passwordSignupFields: 'USERNAME_ONLY'
+
+# overwrite underscore with lodash
+_ = lodash
 
 # angular
 app = angular.module 'app', ['angular-meteor', 'ui.router', 'ngTagsInput', 'ui.bootstrap']
@@ -119,9 +122,7 @@ app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $m
 	else
 		$scope.familyName = "#{$scope.family.mama.nachname} && #{$scope.family.papa.nachname}"
 	$scope.hours = $scope.$meteorCollection(() -> share.Hours.find({family: $scope.family._id}))
-	$scope.hoursSum = 0
-	for h in $scope.hours
-		$scope.hoursSum += h.hours
+	$scope.hoursSum = _.sum($scope.hours, (h) -> h.hours)
 	
 	$scope.addHours = (newWork, newDate, newHours) ->
 		$scope.$meteorCollection(share.Hours).save 
@@ -147,6 +148,29 @@ app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $m
 ]
 
 app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
-	$scope.hours = $scope.$meteorCollection(share.Hours)
+	$scope.currentYear = 2014
 
+	updateHours = () ->
+		allHours = $scope.$meteorCollection () -> share.Hours.find
+			date:
+				$gte: new Date($scope.currentYear, 7, 1)
+				$lt:  new Date($scope.currentYear+1, 7, 31)
+
+		$scope.hours = []
+		for k, v of _.groupBy(allHours, (h) -> h.family)
+			$scope.hours.push
+				familyName: _.first(v)?.familyName
+				hours: _.sum(v, (h) -> h.hours)
+
+		ny = "#{$scope.currentYear+1}".substring 2 
+		$scope.currentYearString = "#{$scope.currentYear}/#{ny}"
+	
+	updateHours()
+
+	$scope.goToPreviousYear = () ->
+		$scope.currentYear--
+		updateHours()
+	$scope.goToNextYear = () ->
+		$scope.currentYear++
+		updateHours()
 ]
