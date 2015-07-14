@@ -13,12 +13,28 @@
 							button.btn.btn-info(ng-click="goToNextYear()")
 								span.glyphicon.glyphicon-chevron-right
 				.panel-body
+
+					form
+						.form-group
+							.input-group
+								.input-group-addon
+									i.glyphicon.glyphicon-search
+								input.form-control(type="text", placeholder="Hier kannst du suchen...", ng-model="search")
+
 					.table-responsive
 						table.table.table-bordered.table-striped.table-condensed
 							thead
 								tr
-									td Familie
-									td Stundenzahl
+									td.hours-family-column
+										a(href='#', ng-click="sortType = 'familyName'; sortReverse = !sortReverse")
+											| Familie 
+											span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'familyName' && sortReverse")
+											span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'familyName' && !sortReverse")
+									td.hours-hours-column
+										a(href='#', ng-click="sortType = 'hours'; sortReverse = !sortReverse")
+											| Stundenzahl
+											span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'hours' && sortReverse")
+											span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'hours' && !sortReverse")
 							tfoot
 								tr
 									td
@@ -26,7 +42,8 @@
 									td 
 										strong {{ hoursSum }}
 							tbody
-								tr(ng-repeat='hour in hours')
-									td {{ hour.familyName }}
-									td {{ hour.hours }}
+								tr(ng-repeat='hour in hours | orderBy:sortType:sortReverse | filter:search')
+									td.hours-family-column {{ hour.familyName }}
+									td.hours-hours-column
+										progressbar.hours-progress.progress-striped(value="hour.hoursPercentage", type="info") {{ hour.hours }}
 

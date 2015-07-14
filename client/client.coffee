@@ -153,6 +153,8 @@ app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $m
 
 app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	$scope.currentYear = 2014
+	$scope.sortType = 'hours'
+	$scope.sortReverse = true
 
 	updateHours = () ->
 		allHours = $scope.$meteorCollection () -> share.Hours.find
@@ -165,6 +167,11 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 			$scope.hours.push
 				familyName: _.first(v)?.familyName
 				hours: _.sum(v, (h) -> h.hours)
+
+		max = _.max $scope.hours, (h) -> h.hours
+
+		for h in $scope.hours
+			h.hoursPercentage = 100.0 / (max.hours / h.hours)
 
 		ny = "#{$scope.currentYear+1}".substring 2 
 		$scope.currentYearString = "#{$scope.currentYear}/#{ny}"

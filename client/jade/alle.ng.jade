@@ -13,13 +13,13 @@
 						td
 							a(href='#', ng-click="sortType = 'mama.nachname'; sortReverse = !sortReverse")
 								| Eltern 
-								span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'mama.nachname' && !sortReverse")
-								span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'mama.nachname' && sortReverse")
+								span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'mama.nachname' && sortReverse")
+								span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'mama.nachname' && !sortReverse")
 						td
 							a(href='#', ng-click="sortType = 'kinder[0].nachname'; sortReverse = !sortReverse")
 								| Kinder 
-								span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'kinder[0].nachname' && !sortReverse")
-								span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'kinder[0].nachname' && sortReverse")
+								span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'kinder[0].nachname' && sortReverse")
+								span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'kinder[0].nachname' && !sortReverse")
 						td Adresse
 						td Telefon
 						td Email
