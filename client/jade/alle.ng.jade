@@ -92,8 +92,8 @@
 							a.add-hours-link.btn.btn-info.btn-sm(href="/add-hours/{{family._id}}", title="Stunden eintragen")
 								span.glyphicon.glyphicon-time 
 							button.btn.btn-danger.btn-sm(ng-click="archiveFamily(family)", ng-if="!showArchived", title="Archivieren")
-								span.glyphicon.glyphicon-trash 
-							button.btn.btn-warning.btn-sm(ng-click="undeleteFamily(family)", ng-if="showArchived", title="Wiederherstellen")
-								span.glyphicon.glyphicon-trash 
+								span.glyphicon.glyphicon-save
+							button.btn.btn-success.btn-sm(ng-click="undeleteFamily(family)", ng-if="showArchived", title="Wiederherstellen")
+								span.glyphicon.glyphicon-open 
 							button.btn.btn-warning.btn-sm(ng-click="deleteFamily(family)", ng-if="showArchived", title="Endgültig löschen")
 								span.glyphicon.glyphicon-trash 

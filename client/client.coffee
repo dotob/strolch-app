@@ -85,10 +85,6 @@ app.controller 'alleCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $w
 		if $window.confirm 'Wirklich archivieren?'
 			console.log "archive id: #{family._id}"
 			family.archived = true
-	$scope.archiveFamily = (family) ->
-		if $window.confirm 'Wirklich endgültig löschen?'
-			console.log "delete id: #{family._id}"
-			$scope.families.remove family
 ]
 
 app.controller 'archivedCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
@@ -99,6 +95,10 @@ app.controller 'archivedCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor
 		if $window.confirm 'Wirklich wiederherstellen?'
 			console.log "unarchive id: #{family._id}"
 			family.archived = false
+	$scope.deleteFamily = (family) ->
+		if $window.confirm 'Wirklich endgültig löschen?'
+			console.log "delete id: #{family._id}"
+			$scope.families.remove family
 ]
 
 app.controller 'tagsCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
