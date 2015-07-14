@@ -271,6 +271,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "server/server.coffee",
+			"settings":
+			{
+				"buffer_size": 1366,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/jade/eine.ng.jade",
+			"settings":
+			{
+				"buffer_size": 5807,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/jade/alle.ng.jade",
+			"settings":
+			{
+				"buffer_size": 4958,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -354,10 +378,11 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/basti/Development/meteor/kita-families"
+		"/D/sync/_private/devel/kita-families-meteor"
 	],
 	"file_history":
 	[
+		"/D/sync/_private/devel/kita-families-meteor/server/db.json",
 		"/Users/basti/Development/angularJs/kitaadressen/gulpfile.coffee",
 		"/Users/basti/Development/angularJs/kitaadressen/bower.json",
 		"/Users/basti/Development/angularJs/kitaadressen/jade/index.jade",
@@ -484,8 +509,7 @@
 		"/Users/basti/Development/coffee/monicore/node_modules/mocha/node_modules/jade/test.jade",
 		"/Users/basti/Development/coffee/monicore/node_modules/mocha/node_modules/growl/test.js",
 		"/Users/basti/Development/coffee/monicore/node_modules/mocha/lib/test.js",
-		"/Users/basti/Development/coffee/monicore/node_modules/mocha/lib/template.html",
-		"/Users/basti/Development/coffee/monicore/test/mocha.opts"
+		"/Users/basti/Development/coffee/monicore/node_modules/mocha/lib/template.html"
 	],
 	"find":
 	{
@@ -503,6 +527,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"family.mama",
+			"mama",
 			"//-",
 			"client/",
 			"\"}}",
@@ -628,9 +654,7 @@
 			"CompareTo",
 			"be.below(0)",
 			"CompareTo",
-			"least",
-			"Assert.Less(",
-			"Assert.IsFalse("
+			"least"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -648,8 +672,96 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "server/server.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1366,
+								1366
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/jade/eine.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5807,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/jade/alle.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1420,
+								1420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 345.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -705,6 +817,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"all",
+				"client\\jade\\alle.ng.jade"
+			],
+			[
+				"ein",
+				"client\\jade\\eine.ng.jade"
+			],
+			[
+				"db",
+				"server\\db.json"
+			],
+			[
+				"server",
+				"server\\server.coffee"
+			],
 			[
 				"html",
 				"public/index.html"
@@ -914,6 +1042,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"T:\\Basti\\TSM-IF\\interface-trunk.sublime-workspace"
+			]
 		],
 		"width": 380.0
 	},

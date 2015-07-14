@@ -15,7 +15,7 @@ Meteor.startup () ->
 			password: "Steppenberg"
 
 	# not used, was for init...
-	if false & share.Families.find().count() == 0
+	if true || share.Families.find().count() == 0
 		fs = Npm.require 'fs'
 		path = Npm.require 'path'
 		basepath = path.resolve('.').split('.meteor')[0]

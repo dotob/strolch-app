@@ -81,10 +81,14 @@ app.controller 'alleCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $w
 	$scope.sortType = 'mama.nachname'
 	$scope.showArchived = false
 	$scope.families = $scope.$meteorCollection(share.Families)
-	$scope.deleteFamily = (family) ->
+	$scope.archiveFamily = (family) ->
 		if $window.confirm 'Wirklich archivieren?'
 			console.log "archive id: #{family._id}"
 			family.archived = true
+	$scope.archiveFamily = (family) ->
+		if $window.confirm 'Wirklich endgültig löschen?'
+			console.log "delete id: #{family._id}"
+			$scope.families.remove family
 ]
 
 app.controller 'archivedCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
