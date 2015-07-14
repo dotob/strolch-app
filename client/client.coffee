@@ -175,6 +175,8 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 
 		ny = "#{$scope.currentYear+1}".substring 2 
 		$scope.currentYearString = "#{$scope.currentYear}/#{ny}"
+
+		$scope.hoursSum = _.sum allHours, (h) -> h.hours
 	
 	updateHours()
 
