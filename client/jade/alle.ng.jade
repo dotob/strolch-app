@@ -42,8 +42,8 @@
 								span(ng-show="family.papa.tags.length>0")
 									span.small.text-info.tag-start (
 									span.small.text-info(ng-repeat="tag in family.papa.tags")
-										span.tag-name(ng-if="$last || family.mama.tags.length==1") {{ tag.name }}
-										span.tag-name(ng-if="!$last && family.mama.tags.length>0") {{ tag.name }}, 
+										span.tag-name(ng-if="$last || family.papa.tags.length==1") {{ tag.name }}
+										span.tag-name(ng-if="!$last && family.papa.tags.length>0") {{ tag.name }}, 
 									span.small.text-info )
 						td 
 							div(ng-repeat="kind in family.kinder", ng-show="kind.nachname") 
@@ -54,8 +54,8 @@
 									span(ng-show="kind.tags.length>0")
 										span.small.text-info.tag-start (
 										span.small.text-info(ng-repeat="tag in kind.tags")
-											span.tag-name(ng-if="$last || family.mama.tags.length==1") {{ tag.name }}
-											span.tag-name(ng-if="!$last && family.mama.tags.length>0") {{ tag.name }}, 
+											span.tag-name(ng-if="$last || kind.tags.length==1") {{ tag.name }}
+											span.tag-name(ng-if="!$last && kind.tags.length>0") {{ tag.name }}, 
 										span.small.text-info )
 								//- div(ng-show="kind.allergies")
 								//- 	span.allergy-hint.glyphicon.glyphicon-exclamation-sign
