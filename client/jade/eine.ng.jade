@@ -1,10 +1,17 @@
 .container
-	.row
+	.row(ng-hide="isNew")
 		.col-sm-12
 			.panel.panel-info
 				.panel-body
 					span Hier kannst du alle deine Details sehen und ändern. Alle Änderungen sind sofort gespeichert.
 
+	.row(ng-show="isNew")
+		.col-sm-12
+			.panel.panel-info
+				.panel-body
+					span Speichere deine Eingaben am Ende.
+
+	.row
 		.col-md-6.col-sm-12
 			.panel.panel-primary
 				.panel-heading 
