@@ -165,6 +165,7 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 			2
 
 	updateHours = () ->
+		$scope.warningLimit = 0.5
 		$scope.hoursPerMonth = 2.5
 		$scope.startOfKitaYear = moment({year: $scope.currentYear, month: 8, day: 1})
 		$scope.endOfKitaYear = moment($scope.startOfKitaYear).add(1, 'year')
@@ -192,7 +193,7 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 				familyName: _.first(v)?.familyName
 				hours: hoursSum
 				targetHours: th
-				severity: if hoursSum < th*0.5 then 'warning' else 'info'
+				severity: if hoursSum < th*$scope.warningLimit then 'warning' else 'info'
 
 		console.log $scope.hours
 
