@@ -186,10 +186,15 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 
 		$scope.hours = []
 		for k, v of _.groupBy(allHours, (h) -> h.family)
+			hoursSum = _.sum(v, (h) -> h.hours)
+			th = $scope.monthsOfKitaYear * parentCount($meteor.object(share.Families, k)) * $scope.hoursPerMonth
 			$scope.hours.push
 				familyName: _.first(v)?.familyName
-				hours: _.sum(v, (h) -> h.hours)
-				targetHours: $scope.monthsOfKitaYear * parentCount($meteor.object(share.Families, k)) * $scope.hoursPerMonth
+				hours: hoursSum
+				targetHours: th
+				severity: if hoursSum < th*0.5 then 'warning' else 'info'
+
+		console.log $scope.hours
 
 		max = _.max $scope.hours, (h) -> h.hours
 

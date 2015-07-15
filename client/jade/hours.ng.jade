@@ -49,5 +49,5 @@
 								tr(ng-repeat='hour in hours | orderBy:sortType:sortReverse | filter:search')
 									td.hours-family-column {{ hour.familyName }}
 									td.hours-hours-column
-										progressbar.hours-progress(value="hour.hoursPercentage", type="info") {{ hour.hours }}
+										progressbar.hours-progress(value="hour.hoursPercentage", type="{{hour.severity}}") {{ hour.hours }}
 
