@@ -124,7 +124,7 @@ app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $m
 	if $scope.family.mama.nachname == $scope.family.papa.nachname
 		$scope.familyName = $scope.family.papa.nachname
 	else
-		$scope.familyName = "#{$scope.family.mama.nachname} && #{$scope.family.papa.nachname}"
+		$scope.familyName = "#{$scope.family.mama.nachname} & #{$scope.family.papa.nachname}"
 	$scope.hours = $scope.$meteorCollection(() -> share.Hours.find({family: $scope.family._id}))
 	$scope.hoursSum = _.sum($scope.hours, (h) -> h.hours)
 	
