@@ -123,10 +123,12 @@ app.controller 'eineCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteo
 
 app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	$scope.family = $meteor.object(share.Families, $stateParams.id)
-	if $scope.family.mama.nachname == $scope.family.papa.nachname
+	if !$scope.family.mama?.nachname or !$scope.family.papa?.nachname
+		$scope.familyName = $scope.family.papa?.nachname || $scope.family.mama?.nachname
+	else if $scope.family.mama.nachname == $scope.family.papa.nachname
 		$scope.familyName = $scope.family.papa.nachname
 	else
-		$scope.familyName = "#{$scope.family.mama.nachname} && #{$scope.family.papa.nachname}"
+		$scope.familyName = "#{$scope.family.mama.nachname} & #{$scope.family.papa.nachname}"
 	$scope.hours = $scope.$meteorCollection(() -> share.Hours.find({family: $scope.family._id}))
 	$scope.hoursSum = _.sum($scope.hours, (h) -> h.hours)
 	
@@ -138,6 +140,10 @@ app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $m
 			family: $scope.family._id
 			familyName: $scope.familyName
 		$scope.hoursSum += newHours
+
+	$scope.deleteHour = (hour) ->
+		console.log "delete hour: #{hour._id}"
+		$scope.$meteorCollection(share.Hours).remove hour
 
 
 	$scope.newDate = new Date()
@@ -167,7 +173,7 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 	updateHours = () ->
 		$scope.warningLimit = 0.5
 		$scope.hoursPerMonth = 2.5
-		$scope.startOfKitaYear = moment({year: $scope.currentYear, month: 8, day: 1})
+		$scope.startOfKitaYear = moment({year: $scope.currentYear, month: 7, day: 1})
 		$scope.endOfKitaYear = moment($scope.startOfKitaYear).add(1, 'year')
 
 		now = moment()
