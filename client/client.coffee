@@ -74,6 +74,8 @@ app.controller 'neuCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
 	$scope.isNew = true
 	$scope.family = {}
 	$scope.save = () ->
+		$scope.family.archived = false
+		console.log "save new family: #{JSON.stringify($scope.family)}"
 		$scope.$meteorCollection(share.Families).save $scope.family
 ]
 
@@ -121,7 +123,9 @@ app.controller 'eineCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteo
 
 app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	$scope.family = $meteor.object(share.Families, $stateParams.id)
-	if $scope.family.mama.nachname == $scope.family.papa.nachname
+	if !$scope.family.mama?.nachname or !$scope.family.papa?.nachname
+		$scope.familyName = $scope.family.papa?.nachname || $scope.family.mama?.nachname
+	else if $scope.family.mama.nachname == $scope.family.papa.nachname
 		$scope.familyName = $scope.family.papa.nachname
 	else
 		$scope.familyName = "#{$scope.family.mama.nachname} & #{$scope.family.papa.nachname}"
@@ -136,6 +140,10 @@ app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $m
 			family: $scope.family._id
 			familyName: $scope.familyName
 		$scope.hoursSum += newHours
+
+	$scope.deleteHour = (hour) ->
+		console.log "delete hour: #{hour._id}"
+		$scope.$meteorCollection(share.Hours).remove hour
 
 
 	$scope.newDate = new Date()
@@ -156,27 +164,56 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 	$scope.sortType = 'hours'
 	$scope.sortReverse = true
 
+	parentCount = (family) ->
+		if !family.mama.nachname or !family.papa.nachname
+			1
+		else
+			2
+
 	updateHours = () ->
+		$scope.warningLimit = 0.5
+		$scope.hoursPerMonth = 2.5
+		$scope.startOfKitaYear = moment({year: $scope.currentYear, month: 7, day: 1})
+		$scope.endOfKitaYear = moment($scope.startOfKitaYear).add(1, 'year')
+
+		now = moment()
+		if now.isBefore($scope.startOfKitaYear)
+			$scope.monthsOfKitaYear = 0
+		else if now.isAfter($scope.endOfKitaYear)
+			$scope.monthsOfKitaYear = 12
+		else # is between
+			$scope.monthsOfKitaYear = moment.duration(now.diff($scope.startOfKitaYear)).months()
+
+		console.log "kitajahr: #{$scope.startOfKitaYear.format()} => #{$scope.endOfKitaYear.format()}"
+
 		allHours = $scope.$meteorCollection () -> share.Hours.find
 			date:
-				$gte: new Date($scope.currentYear, 7, 1)
-				$lt:  new Date($scope.currentYear+1, 7, 31)
+				$gte: $scope.startOfKitaYear.toDate()
+				$lt:  $scope.endOfKitaYear.toDate()
 
 		$scope.hours = []
 		for k, v of _.groupBy(allHours, (h) -> h.family)
+			hoursSum = _.sum(v, (h) -> h.hours)
+			th = $scope.monthsOfKitaYear * parentCount($meteor.object(share.Families, k)) * $scope.hoursPerMonth
 			$scope.hours.push
 				familyName: _.first(v)?.familyName
-				hours: _.sum(v, (h) -> h.hours)
+				hours: hoursSum
+				targetHours: th
+				severity: if hoursSum < th*$scope.warningLimit then 'warning' else 'info'
+
+		console.log $scope.hours
 
 		max = _.max $scope.hours, (h) -> h.hours
 
 		for h in $scope.hours
-			h.hoursPercentage = 100.0 / (max.hours / h.hours)
+			#h.hoursPercentage = 100.0 / (max.hours / h.hours)
+			h.hoursPercentage = 100.0 / (h.targetHours / h.hours)
 
 		ny = "#{$scope.currentYear+1}".substring 2 
 		$scope.currentYearString = "#{$scope.currentYear}/#{ny}"
 
 		$scope.hoursSum = _.sum allHours, (h) -> h.hours
+
 	
 	updateHours()
 

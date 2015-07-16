@@ -8,10 +8,10 @@
 				.panel-heading 
 					h3.panel-title Neue Stunden
 				.panel-body
-					form 
+					form(name="addHoursForm", novalidate)
 						.form-group
 							label(for='activity') Tätigkeit 
-							input#activity.form-control(type='text', placeholder='Tätigkeit', ng-model="newWork") 
+							input#activity.form-control(type='text', placeholder='Tätigkeit', ng-model="newWork", required) 
 						.form-group
 							label(for='date') Datum 
 							.input-group
@@ -22,8 +22,8 @@
 
 						.form-group
 							label(for='hours') Stundenzahl 
-							input#hours.form-control(type='number', placeholder='Stunden', ng-model="newHours") 
-						button.btn.btn-primary.form-control(ng-click="addHours(newWork, newDate, newHours)") Speichern
+							input#hours.form-control(type='number', placeholder='Stunden', ng-model="newHours", min="0", max="100", required) 
+						input.btn.btn-primary.form-control(type="submit", ng-click="addHours(newWork, newDate, newHours)", value="Speichern", ng-disabled="addHoursForm.$invalid")
 	.row
 		.col-md-12
 			.panel.panel-primary
@@ -31,21 +31,26 @@
 					h3.panel-title Stundenübersicht
 				.panel-body
 					.table-responsive
-						table.table.table-bordered.table-striped.table-condensed
+						table.table.table-striped.table-condensed
 							thead
 								tr
 									td Tätigkeit
 									td Datum
 									td Stundenzahl
+									td 
 							tfoot
 								tr
 									td(colspan="2") 
 										strong Summe
 									td 
 										strong {{ hoursSum }}
+									td
 							tbody
 								tr(ng-repeat='hour in hours | filter:{ family: familyId }')
 									td {{hour.activity}}
 									td {{hour.date | date : format}}
 									td {{hour.hours}}
+									td
+										button.btn.btn-warning.btn-sm(ng-click="deleteHour(hour)", title="Eintrag löschen")
+											span.glyphicon.glyphicon-trash 
 
