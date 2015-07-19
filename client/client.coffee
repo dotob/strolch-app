@@ -86,6 +86,8 @@ app.controller 'alleCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $w
 	$scope.sortType = 'mama.nachname'
 	$scope.showArchived = false
 	$scope.families = $scope.$meteorCollection(share.Families)
+	$scope.getFamilyName = (family) ->
+		getFamilyName(family)
 	$scope.archiveFamily = (family) ->
 		if $window.confirm 'Wirklich archivieren?'
 			console.log "archive id: #{family._id}"
@@ -124,14 +126,23 @@ app.controller 'eineCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteo
 		_.filter $scope.tags, (t) -> t.name.toLowerCase().indexOf(query.toLowerCase()) >= 0
 ]
 
+getFamilyName = (family) ->
+	if !family.mama?.nachname or !family.papa?.nachname
+		family.papa?.nachname || family.mama?.nachname
+	else if family.mama.nachname == family.papa.nachname
+		family.papa.nachname
+	else
+		"#{family.mama.nachname} & #{family.papa.nachname}"
+
+parentCount = (family) ->
+	if !family.mama.nachname or !family.papa.nachname
+		1
+	else
+		2
+
 app.controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	$scope.family = $meteor.object(share.Families, $stateParams.id)
-	if !$scope.family.mama?.nachname or !$scope.family.papa?.nachname
-		$scope.familyName = $scope.family.papa?.nachname || $scope.family.mama?.nachname
-	else if $scope.family.mama.nachname == $scope.family.papa.nachname
-		$scope.familyName = $scope.family.papa.nachname
-	else
-		$scope.familyName = "#{$scope.family.mama.nachname} & #{$scope.family.papa.nachname}"
+	$scope.familyName = getFamilyName $scope.family
 	$scope.hours = $scope.$meteorCollection(() -> share.Hours.find({family: $scope.family._id}))
 	$scope.hoursSum = _.sum($scope.hours, (h) -> h.hours)
 	
@@ -166,12 +177,6 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 	$scope.currentYear = 2014
 	$scope.sortType = 'hours'
 	$scope.sortReverse = true
-
-	parentCount = (family) ->
-		if !family.mama.nachname or !family.papa.nachname
-			1
-		else
-			2
 
 	updateHours = () ->
 		$scope.warningLimit = 0.5

@@ -8,7 +8,7 @@ body(ng-app="app")
 		.container-fluid
 			// Brand and toggle get grouped for better mobile display
 			.navbar-header
-				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-part')
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse-part', aria-expanded='false')
 					span.sr-only toggle navigation
 					span.icon-bar
 					span.icon-bar
@@ -19,24 +19,19 @@ body(ng-app="app")
 				ul.nav.navbar-nav(ng-show="currentUser")
 					li(ui-sref-active="active")
 						a(ui-sref='alle')
-							span 
-							| Alle
+							span Alle
 					li(ui-sref-active="active")
 						a(ui-sref='archived')
-							span 
-							| Archiv
+							span Archiv
 					li(ui-sref-active="active")
 						a(ui-sref='neu')
-							span  
-							| Neue Familie				
+							span Neue Familie
 					li(ui-sref-active="active")
 						a(ui-sref='tags')
-							span  
-							| Gruppen
+							span Gruppen
 					li(ui-sref-active="active")
 						a(ui-sref='hours')
-							span  
-							| Stunden-Übersicht
+							span Stunden-Übersicht
 				ul.nav.navbar-nav.navbar-right
 					+loginButtons
 
