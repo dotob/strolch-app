@@ -73,8 +73,8 @@
 									span.left-space-5.label.label-default(ng-repeat="tag in kind.tags") {{ tag.name }}
 
 				.col-md-3
-					.top-space-5.emergency-contacts(ng-repeat="emergency in family.emergency")
-						div(ng-show="emergency.name")
+					.top-space-5.emergency-contacts(ng-repeat="emergency in family.emergency", ng-show="emergency.name")
+						div
 							span.fa.fa-medkit.fa-fw
 							span {{ emergency.name }}
 						.left-space-5(ng-show="emergency.name && emergency.fon")
