@@ -74,12 +74,12 @@
 
 				.col-md-3
 					.top-space-5.emergency-contacts(ng-repeat="emergency in family.emergency")
-						div
+						div(ng-show="emergency.name")
 							span.fa.fa-medkit.fa-fw
 							span {{ emergency.name }}
-						.left-space-5
+						.left-space-5(ng-show="emergency.name && emergency.fon")
 							span.fa.fa-phone.fa-fw
-							a(ng-show="emergency.name && emergency.fon", href="tel://{{ emergency.fon }}") {{ emergency.fon }}
-						.left-space-5
+							a(href="tel://{{ emergency.fon }}") {{ emergency.fon }}
+						.left-space-5(ng-show="emergency.name && emergency.handy")
 							span.fa.fa-mobile.fa-fw
-							a(ng-show="emergency.name && emergency.handy", href="tel://{{ emergency.handy }}") {{ emergency.handy }}
+							a(href="tel://{{ emergency.handy }}") {{ emergency.handy }}
