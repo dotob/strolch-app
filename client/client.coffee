@@ -1,4 +1,5 @@
 # meteor accounts config
+accountsUIBootstrap3.setLanguage 'de'
 Accounts.ui.config
 	passwordSignupFields: 'USERNAME_ONLY'
 
@@ -88,10 +89,17 @@ app.controller 'alleCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $w
 	$scope.families = $scope.$meteorCollection(share.Families)
 	$scope.getFamilyName = (family) ->
 		getFamilyName(family)
+	
 	$scope.archiveFamily = (family) ->
 		if $window.confirm 'Wirklich archivieren?'
 			console.log "archive id: #{family._id}"
 			family.archived = true
+	
+	$scope.dob2age = (dob, kind) ->
+		now = moment()
+		dobMoment = moment(dob, "DD.MM.YY")
+		age = moment.duration(now.diff(dobMoment)).years()
+		if age == 1 then "1 Jahr alt" else "#{age} Jahre alt"
 ]
 
 app.controller 'archivedCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->

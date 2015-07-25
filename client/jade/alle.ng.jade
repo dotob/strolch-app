@@ -63,12 +63,14 @@
 								span {{ family.adresse.stadt }}
 					.row
 						.col-md-12
-							.top-space-10(ng-repeat="kind in family.kinder", ng-show="kind.nachname") 
+							.top-space-10(ng-repeat="kind in family.kinder", ng-if="kind.nachname") 
 								div
 									i.fa.fa-child.fa-fw
 									strong {{ kind.nachname }}
 									span , {{ kind.vorname }} 
-									span.text-muted ({{ kind.dob }})
+									span.text-muted ( {{ kind.dob }}, 
+									span {{ dob2age(kind.dob) }}
+									span.text-muted  )
 									span.fa.fa-exclamation-triangle.fa-fw(ng-show="kind.hasAllergies", title="Hat Allergien")
 									span.left-space-5.label.label-default(ng-repeat="tag in kind.tags") {{ tag.name }}
 
