@@ -9,7 +9,7 @@
 
 		.well(ng-repeat='family in families | filter:{ archived: showArchived } | orderBy:sortType:sortReverse | filter:search')
 			div
-				span.family-name {{ getFamilyName(family) }}
+				span.family-name {{ share.getFamilyName(family) }}
 				i.left-space-5.fa.fa-key.fa.fa-fw(ng-show="family.keys.maindoor", title="Haben einen Schlüssel")
 				.alle-action-buttons.btn-group(role="group")
 					a.edit-family-link.btn.btn-primary.btn-xs(href="/eine/{{family._id}}", title="Bearbeiten")
