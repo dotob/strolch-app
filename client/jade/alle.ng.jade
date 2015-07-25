@@ -65,7 +65,8 @@
 						.col-md-12
 							.top-space-10(ng-repeat="kind in family.kinder", ng-if="kind.nachname") 
 								div
-									i.fa.fa-child.fa-fw
+									i(ng-if="kind.gender=='m'").fa.fa-mars.fa-fw
+									i(ng-if="kind.gender=='f'").fa.fa-venus.fa-fw
 									strong {{ kind.nachname }}
 									span , {{ kind.vorname }} 
 									span.text-muted ( {{ kind.dob }}, 

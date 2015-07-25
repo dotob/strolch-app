@@ -25,7 +25,37 @@ Meteor.startup () ->
 		for family in data.families
 			delete family.id
 			share.Families.insert family
+
 	if share.Tags.find().count() == 0
-		tags = ['gruppe1', 'gruppe2', 'gruppe3', 'hausmeister', 'garten', 'koop', 'küche', 'vorstand', 'nähen', 'newsletter']
-		for tag in tags
-			share.Tags.insert {name: tag}
+		share.Tags.insert
+			name: 'Gruppe1'
+			canEdit: false
+			type: 'child'
+		share.Tags.insert
+			name: 'Gruppe2'
+			canEdit: false
+			type: 'child'
+		share.Tags.insert
+			name: 'Gruppe3'
+			canEdit: false
+			type: 'child'
+		share.Tags.insert
+			name: 'Vorstand'
+			canEdit: false
+			type: 'work'
+		share.Tags.insert
+			name: 'Garten'
+			canEdit: false
+			type: 'work'
+		share.Tags.insert
+			name: 'Koop'
+			canEdit: false
+			type: 'work'
+		share.Tags.insert
+			name: 'Hausmeister'
+			canEdit: false
+			type: 'work'
+		share.Tags.insert
+			name: 'Küche'
+			canEdit: false
+			type: 'work'

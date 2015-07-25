@@ -53,6 +53,11 @@ app.config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($state
 			templateUrl: 'client/jade/add-hours.html'
 			controller: 'addHoursCtrl'
 			resolve: userResolve
+		.state 'ang',
+			url: '/ang'
+			templateUrl: 'client/jade/ang.html'
+			controller: 'angCtrl'
+			resolve: userResolve
 		.state 'login',
 			url: '/login'
 			templateUrl: 'client/jade/login.html'
@@ -91,9 +96,8 @@ app.controller 'alleCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $w
 		getFamilyName(family)
 	
 	$scope.archiveFamily = (family) ->
-		if $window.confirm 'Wirklich archivieren?'
-			console.log "archive id: #{family._id}"
-			family.archived = true
+		console.log "archive id: #{family._id}"
+		family.archived = true
 	
 	$scope.dob2age = (dob, kind) ->
 		now = moment()
@@ -107,9 +111,8 @@ app.controller 'archivedCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor
 	$scope.showArchived = true
 	$scope.families = $scope.$meteorCollection(share.Families)
 	$scope.undeleteFamily = (family) ->
-		if $window.confirm 'Wirklich wiederherstellen?'
-			console.log "unarchive id: #{family._id}"
-			family.archived = false
+		console.log "unarchive id: #{family._id}"
+		family.archived = false
 	$scope.deleteFamily = (family) ->
 		if $window.confirm 'Wirklich endgültig löschen?'
 			console.log "delete id: #{family._id}"
@@ -128,6 +131,7 @@ app.controller 'tagsCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
 
 app.controller 'eineCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	$scope.family = $meteor.object(share.Families, $stateParams.id)
+	console.log $scope.family
 	$scope.tags = $scope.$meteorCollection(share.Tags)
 	$scope.loadTags = (query) ->
 		# filter
@@ -230,7 +234,6 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 
 		$scope.hoursSum = _.sum allHours, (h) -> h.hours
 
-	
 	updateHours()
 
 	$scope.goToPreviousYear = () ->
@@ -239,4 +242,49 @@ app.controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $mete
 	$scope.goToNextYear = () ->
 		$scope.currentYear++
 		updateHours()
+]
+
+app.controller 'angCtrl', ['$scope', '$meteor', ($scope, $meteor) ->
+	$scope.families = $scope.$meteorCollection(share.Families)
+	# collect all childs
+	allekinder = []
+	for familie in $scope.families
+		for kind in familie.kinder
+			k = kind
+			if k.vorname?
+				dobMoment = moment(k.dob, "DD.MM.YY")
+				k.dobMoment = dobMoment
+				console.log k
+				allekinder.push k
+	
+	# create ang object with empty groups
+	KJ = share.KiTaJahr
+	currentYear = KJ.current()
+	$scope.currentKiTaJahr = new KJ currentYear
+	$scope.ang = []
+	for i in [0...5]
+		kj = new KJ currentYear + i
+		$scope.ang.push
+			year: kj.toString()
+			startdate: kj.startDate()
+			enddate: kj.endDate()
+			birthDateStart: kj.birthDateStart() 
+			birthDateEnd: kj.birthDateEnd() 
+			groups: []
+
+	# get child groups
+	tags = $scope.$meteorCollection(share.Tags)
+	$scope.childGroups = _.chain(tags).filter((t) -> t.type == 'child').map((t) -> t.name).value()
+	console.log $scope.childGroups
+
+	# collect childs into year groups
+	for g in $scope.ang
+		for cg in $scope.childGroups
+			allOfYearAndGroup = _.filter(allekinder, (k) -> k.dobMoment.isBetween(g.birthDateStart, g.birthDateEnd) && _.some(k.tags, (t) -> t.name == cg))
+			g.groups.push
+				name: cg
+				boys: _.filter(allOfYearAndGroup, (k) -> k.gender == 'm')
+				girls: _.filter(allOfYearAndGroup, (k) -> k.gender == 'f')
+
+	console.log $scope.ang
 ]
