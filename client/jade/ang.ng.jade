@@ -1,0 +1,35 @@
+.container-fluid
+	.row.ang-table
+		.table-responsive
+			table.table.table-bordered.table-striped.table-condensed
+				thead
+					tr
+						td Jahrgang
+						td(colspan="2", ng-repeat='cg in childGroups') {{ cg }}
+						td
+						td
+						td
+				tfoot
+					tr
+						td Gesamt
+						td(ng-repeat="sg in sumGroups['all']") {{ sg.sum }}
+				tbody
+					tr
+						td
+						td(ng-repeat='sg in sumGroups[ang[0].year]') {{ sg.name }}
+
+					tr(ng-repeat-start='a in ang')
+						td(rowspan="2")
+							div {{ a.year }}
+							.text-muted {{ a.birthDateStart.format('DD.MM.YY') }} - {{ a.birthDateEnd.format('DD.MM.YY') }}
+						td(ng-repeat='s in sumGroups[a.year]') 
+							span.text-muted {{ s.sum }}
+
+					tr(ng-repeat-end)
+						td(ng-repeat='g in a.groups')
+							.child(ng-repeat='k in g.kids')
+								div {{ k.vorname }} {{ k.nachname }}
+								div {{ k.dob }}
+						td
+						td
+						td

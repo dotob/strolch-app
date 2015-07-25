@@ -16,7 +16,7 @@ share.KiTaJahr = class KiTaJahr
 		moment({year: @year, month: 7, day: 1})
 
 	endDate: ->
-		moment(@startDate(@year)).add(1, 'year')
+		moment(@startDate(@year)).add(1, 'year').subtract(1, 'day')
 
 	toString: ->
 		ny = "#{@year+1}".substring 2 
@@ -27,5 +27,5 @@ share.KiTaJahr = class KiTaJahr
 		moment({year: @year-7, month: 9, day: 1})
 
 	birthDateEnd: ->
-		moment(@birthDateStart(@year)).add(1, 'year')
+		moment(@birthDateStart(@year)).add(1, 'year').subtract(1, 'day')
 
