@@ -1,3 +1,5 @@
+_ = lodash
+
 angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	KJ = share.KiTaJahr
 	currentYear = KJ.current()

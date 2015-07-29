@@ -1,3 +1,5 @@
+_ = lodash
+
 angular.module('app').controller 'angCtrl', ['$scope', ($scope) ->
 	$scope.families = $scope.$meteorCollection(share.Families)
 	# collect all childs

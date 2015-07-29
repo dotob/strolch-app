@@ -1,3 +1,5 @@
+_ = lodash
+
 angular.module('app').controller 'addHoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	$scope.family = $meteor.object(share.Families, $stateParams.id)
 	$scope.familyName = share.getFamilyName $scope.family

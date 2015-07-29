@@ -3,7 +3,7 @@ angular.module('app').controller 'alleCtrl', ['$scope', '$meteor', '$window', ($
 	$scope.showArchived = false
 	$scope.families = $scope.$meteorCollection(share.Families)
 	$scope.getFamilyName = (family) ->
-		getFamilyName(family)
+		share.getFamilyName(family)
 	
 	$scope.archiveFamily = (family) ->
 		console.log "archive id: #{family._id}"

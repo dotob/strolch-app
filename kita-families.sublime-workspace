@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"hour",
+				"hoursSum"
+			],
+			[
+				"all",
+				"allHours"
+			],
+			[
+				"ma",
+				"mama"
+			],
+			[
+				"to",
+				"toDate"
+			],
+			[
+				"end",
+				"endOfKitaYear"
+			],
+			[
+				"start",
+				"startOfKitaYear"
+			],
+			[
 				"fo",
 				"forin	Array Comprehension"
 			],
@@ -256,10 +280,6 @@
 				"TimeItem"
 			],
 			[
-				"to",
-				"to_string"
-			],
-			[
 				"hou",
 				"hours"
 			],
@@ -275,7 +295,7 @@
 			"file": "server/server.coffee",
 			"settings":
 			{
-				"buffer_size": 1366,
+				"buffer_size": 1367,
 				"line_ending": "Windows"
 			}
 		},
@@ -283,7 +303,7 @@
 			"file": "client/jade/eine.ng.jade",
 			"settings":
 			{
-				"buffer_size": 5807,
+				"buffer_size": 5948,
 				"line_ending": "Windows"
 			}
 		},
@@ -291,7 +311,79 @@
 			"file": "client/jade/alle.ng.jade",
 			"settings":
 			{
-				"buffer_size": 4958,
+				"buffer_size": 5112,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/client.coffee",
+			"settings":
+			{
+				"buffer_size": 7063,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/tmp/_20150720.log.1",
+			"settings":
+			{
+				"buffer_size": 1292459,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
+			"settings":
+			{
+				"buffer_size": 961,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/Status.xsd",
+			"settings":
+			{
+				"buffer_size": 1921,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/commonTypes.xsd",
+			"settings":
+			{
+				"buffer_size": 10345,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/CreateClassFromXSD.bat",
+			"settings":
+			{
+				"buffer_size": 46,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/jade/tags.ng.jade",
+			"settings":
+			{
+				"buffer_size": 506,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/jade/hours.ng.jade",
+			"settings":
+			{
+				"buffer_size": 2163,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/jade/add-hours.ng.jade",
+			"settings":
+			{
+				"buffer_size": 1852,
 				"line_ending": "Windows"
 			}
 		}
@@ -378,10 +470,14 @@
 	},
 	"expanded_folders":
 	[
-		"/D/sync/_private/devel/kita-families-meteor"
+		"/D/sync/_private/devel/kita-families-meteor",
+		"/D/sync/_private/devel/kita-families-meteor/client"
 	],
 	"file_history":
 	[
+		"/D/projects/CTB/vc/TwinVC-trunk/Client/VCClient/bin/Debug/Log/VCClient_FN199_20150717.log.1",
+		"/D/sync/_private/devel/kita-families-meteor/client/jade/add-hours.ng.jade",
+		"/D/projects/CTB/vc/TwinVC-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
 		"/D/sync/_private/devel/kita-families-meteor/server/db.json",
 		"/Users/basti/Development/angularJs/kitaadressen/gulpfile.coffee",
 		"/Users/basti/Development/angularJs/kitaadressen/bower.json",
@@ -506,14 +602,11 @@
 		"/Users/basti/Development/coffee/monicore/settings.coffee",
 		"/Users/basti/Development/coffee/monicore/parser.coffee",
 		"/Users/basti/Development/coffee/monicore/shortcuthelper.js",
-		"/Users/basti/Development/coffee/monicore/node_modules/mocha/node_modules/jade/test.jade",
-		"/Users/basti/Development/coffee/monicore/node_modules/mocha/node_modules/growl/test.js",
-		"/Users/basti/Development/coffee/monicore/node_modules/mocha/lib/test.js",
-		"/Users/basti/Development/coffee/monicore/node_modules/mocha/lib/template.html"
+		"/Users/basti/Development/coffee/monicore/node_modules/mocha/node_modules/jade/test.jade"
 	],
 	"find":
 	{
-		"height": 29.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -527,6 +620,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"CanEditBlockPlatzEbene",
+			"<Status",
+			"xml version=",
+			"remove",
+			"papa",
+			"Tag",
+			"\"",
+			"mama",
+			"yera",
 			"family.mama",
 			"mama",
 			"//-",
@@ -645,16 +747,7 @@
 			" , ",
 			", ",
 			", n",
-			"res.hour.should.equal(",
-			" - ",
-			"CompareTo",
-			",0)",
-			"new Tim",
-			"Assert.Greater",
-			"CompareTo",
-			"be.below(0)",
-			"CompareTo",
-			"least"
+			"res.hour.should.equal("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -672,7 +765,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -681,7 +774,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1366,
+						"buffer_size": 1367,
 						"regions":
 						{
 						},
@@ -701,7 +794,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -710,7 +803,208 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5807,
+						"buffer_size": 5948,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1816,
+								1816
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 483.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/jade/alle.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5111,
+								4953
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1518.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/client.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7063,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2792,
+								2792
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1932.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/tmp/_20150720.log.1",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1292459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1835,
+								1835
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								961,
+								961
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/Status.xsd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1921,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1921,
+								1921
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/commonTypes.xsd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10345,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5226,
+								5226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3474.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/CreateClassFromXSD.bat",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 46,
 						"regions":
 						{
 						},
@@ -723,31 +1017,30 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Batch File/Batch File.tmLanguage"
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "client/jade/alle.ng.jade",
+					"buffer": 9,
+					"file": "client/jade/tags.ng.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4958,
+						"buffer_size": 506,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1420,
-								1420
+								371,
+								371
 							]
 						],
 						"settings":
@@ -755,11 +1048,70 @@
 							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 345.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "client/jade/hours.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2140,
+								2140
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 69.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "client/jade/add-hours.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1477,
+								1477
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -767,7 +1119,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 29.0
+		"height": 39.0
 	},
 	"input":
 	{
@@ -817,6 +1169,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"ad",
+				"client\\jade\\add-hours.ng.jade"
+			],
+			[
+				"add",
+				"client\\jade\\add-hours.ng.jade"
+			],
+			[
+				"tag",
+				"client\\jade\\tags.ng.jade"
+			],
+			[
+				"hour",
+				"client\\jade\\hours.ng.jade"
+			],
+			[
+				"clien",
+				"client\\client.coffee"
+			],
 			[
 				"all",
 				"client\\jade\\alle.ng.jade"
