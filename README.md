@@ -6,8 +6,6 @@ a family has two parents and up to 3 kids. both parents and the kids can be grou
 
 # roadmap
 
-//- created at field
-//- changed at field
-//- do not delete, but archive
-- excel export?
-- keys
+- keys (eg: / for search)
+- semantic ui
+- use directive for contactdata
