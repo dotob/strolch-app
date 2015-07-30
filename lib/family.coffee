@@ -6,7 +6,7 @@ share.getFamilyName = (family) ->
 	else
 		"#{family.mama.nachname} & #{family.papa.nachname}"
 
-share.familyNameCount = (family) ->
+share.getFamilyNameCount = (family) ->
 	if !family.mama?.nachname or !family.papa?.nachname
 		1
 	else if family.mama.nachname == family.papa.nachname
