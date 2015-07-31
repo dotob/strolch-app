@@ -1,4 +1,4 @@
-.container-fluid
+.container
 	.row.alle-table
 		form
 			.form-group
@@ -9,7 +9,7 @@
 
 		.well(ng-repeat='family in families | filter:{ archived: showArchived } | orderBy:sortType:sortReverse | filter:search')
 			div
-				span.family-name {{ share.getFamilyName(family) }}
+				span.family-name {{ getFamilyName(family) }}
 				i.left-space-5.fa.fa-key.fa.fa-fw(ng-show="family.keys.maindoor", title="Haben einen Schlüssel")
 				.alle-action-buttons.btn-group(role="group")
 					a.edit-family-link.btn.btn-primary.btn-xs(href="/eine/{{family._id}}", title="Bearbeiten")
@@ -28,8 +28,8 @@
 						.col-md-6
 							div.top-space-10
 								i.fa.fa-female.fa-fw
-								strong {{ family.mama.nachname }}
-								span , {{ family.mama.vorname }}
+								strong(ng-if="getFamilyNameCount(family)==2") {{ family.mama.nachname }}, 
+								strong {{ family.mama.vorname }}
 								span(ng-repeat="tag in family.mama.tags").left-space-5.label.label-default {{ tag.name }}
 							.left-space-5(ng-show="family.mama.fon")
 								i.fa.fa-phone.fa-fw
@@ -43,8 +43,8 @@
 						.col-md-6
 							div.top-space-10
 								i.fa.fa-male.fa-fw
-								strong {{ family.papa.nachname }}
-								span , {{ family.papa.vorname }}
+								strong(ng-if="getFamilyNameCount(family)==2") {{ family.papa.nachname }}, 
+								strong {{ family.papa.vorname }}
 								span.left-space-5.label.label-default(ng-repeat="tag in family.papa.tags") {{ tag.name }}
 							.left-space-5(ng-show="family.papa.fon")
 								i.fa.fa-phone.fa-fw
@@ -67,8 +67,8 @@
 								div
 									i(ng-if="kind.gender=='m'").fa.fa-mars.fa-fw
 									i(ng-if="kind.gender=='f'").fa.fa-venus.fa-fw
-									strong {{ kind.nachname }}
-									span , {{ kind.vorname }} 
+									strong(ng-if="getFamilyNameCount(family)==2") {{ kind.nachname }}, 
+									strong {{ kind.vorname }} 
 									span.text-muted ( {{ kind.dob }}, 
 									span {{ dob2age(kind.dob) }}
 									span.text-muted  )
