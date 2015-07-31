@@ -27,9 +27,10 @@
 
 					tr(ng-repeat-end)
 						td(ng-repeat='g in a.groups')
-							.child(ng-repeat='k in g.kids')
-								div {{ k.vorname }} {{ k.nachname }}
-								div {{ k.dob }}
+							ul.list-unstyled
+								li.child(ng-repeat='k in g.kids')
+									div {{ k.vorname }} {{ k.nachname }}
+									div {{ k.dob }}
 						td
 						td
 						td
