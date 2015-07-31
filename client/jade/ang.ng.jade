@@ -11,8 +11,10 @@
 						td
 				tfoot
 					tr
-						td Gesamt
-						td(ng-repeat="sg in sumGroups['all']") {{ sg.sum }}
+						td 
+							strong Gesamt
+						td(ng-repeat="sg in sumGroups['all']") 
+							strong {{ sg.sum }}
 				tbody
 					tr
 						td
