@@ -4,32 +4,156 @@
 		"selected_items":
 		[
 			[
-				"hour",
-				"hoursSum"
+				"fo",
+				"forx	Range Comprehension (exclusive)"
 			],
 			[
-				"all",
-				"allHours"
-			],
-			[
-				"ma",
-				"mama"
-			],
-			[
-				"to",
-				"toDate"
+				"su",
+				"sumGroups"
 			],
 			[
 				"end",
-				"endOfKitaYear"
+				"endDate"
 			],
 			[
 				"start",
-				"startOfKitaYear"
+				"startDate"
 			],
 			[
-				"fo",
+				"chi",
+				"childGroups"
+			],
+			[
+				"al",
+				"allOfYear"
+			],
+			[
+				"birt",
+				"birthDateEnd"
+			],
+			[
+				"alle",
+				"allekinder"
+			],
+			[
+				"for",
 				"forin	Array Comprehension"
+			],
+			[
+				"birth",
+				"birthDateStart"
+			],
+			[
+				"curr",
+				"currentYear"
+			],
+			[
+				"cur",
+				"currentYear"
+			],
+			[
+				"dob",
+				"dobMoment"
+			],
+			[
+				"all",
+				"allekinder"
+			],
+			[
+				"fami",
+				"familie"
+			],
+			[
+				"grou",
+				"groupsCtrl"
+			],
+			[
+				"text",
+				"text-muted"
+			],
+			[
+				"le",
+				"left-space-5"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"col",
+				"col-md-12"
+			],
+			[
+				"f",
+				"family"
+			],
+			[
+				"family",
+				"familyName"
+			],
+			[
+				"ins",
+				"inserts"
+			],
+			[
+				"hou",
+				"hours"
+			],
+			[
+				"hours",
+				"hoursSum"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"fa",
+				"familyName"
+			],
+			[
+				"new",
+				"newWork"
+			],
+			[
+				"sat",
+				"stateParams"
+			],
+			[
+				"stat",
+				"stateParams"
+			],
+			[
+				"add",
+				"addHoursCtrl"
+			],
+			[
+				"fix",
+				"fixtags"
+			],
+			[
+				"fam",
+				"Families"
+			],
+			[
+				"gl",
+				"glyphicon-pencil"
+			],
+			[
+				"cl",
+				"client"
+			],
+			[
+				"us",
+				"userResolve"
+			],
+			[
+				"nav",
+				"navbar-nav"
+			],
+			[
+				"tem",
+				"templateCache"
 			],
 			[
 				"CCS",
@@ -40,24 +164,8 @@
 				"CCSWorkOrderUpdateNotification"
 			],
 			[
-				"cl",
-				"cleanContent"
-			],
-			[
 				"has",
 				"hasOne"
-			],
-			[
-				"cur",
-				"currentDocument"
-			],
-			[
-				"curr",
-				"currentDocument"
-			],
-			[
-				"gl",
-				"glyphicon-file"
 			],
 			[
 				"ver",
@@ -76,14 +184,6 @@
 				"title"
 			],
 			[
-				"col",
-				"col-md-3"
-			],
-			[
-				"stat",
-				"stateParams"
-			],
-			[
 				"cu",
 				"currentDocument"
 			],
@@ -94,10 +194,6 @@
 			[
 				"s",
 				"selectedVersion"
-			],
-			[
-				"new",
-				"newDoc"
 			],
 			[
 				"unh",
@@ -162,10 +258,6 @@
 			[
 				"val",
 				"validFrom"
-			],
-			[
-				"grou",
-				"groupedByExpansionType"
 			],
 			[
 				"va",
@@ -268,10 +360,6 @@
 				"separator"
 			],
 			[
-				"us",
-				"userInput"
-			],
-			[
 				"min",
 				"minute"
 			],
@@ -280,8 +368,8 @@
 				"TimeItem"
 			],
 			[
-				"hou",
-				"hours"
+				"to",
+				"to_string"
 			],
 			[
 				"is_b",
@@ -292,99 +380,35 @@
 	"buffers":
 	[
 		{
-			"file": "server/server.coffee",
-			"settings":
-			{
-				"buffer_size": 1367,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/jade/eine.ng.jade",
-			"settings":
-			{
-				"buffer_size": 5948,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "client/jade/alle.ng.jade",
 			"settings":
 			{
-				"buffer_size": 5112,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/client.coffee",
-			"settings":
-			{
-				"buffer_size": 7063,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/tmp/_20150720.log.1",
-			"settings":
-			{
-				"buffer_size": 1292459,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
-			"settings":
-			{
-				"buffer_size": 961,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/Status.xsd",
-			"settings":
-			{
-				"buffer_size": 1921,
+				"buffer_size": 4153,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/commonTypes.xsd",
+			"file": "private/getDataFromProdToLocal.coffee",
 			"settings":
 			{
-				"buffer_size": 10345,
+				"buffer_size": 1276,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/CreateClassFromXSD.bat",
+			"file": "client/jade/ang.ng.jade",
 			"settings":
 			{
-				"buffer_size": 46,
-				"line_ending": "Windows"
+				"buffer_size": 942,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "client/jade/tags.ng.jade",
+			"file": "client/styles/main.styl",
 			"settings":
 			{
-				"buffer_size": 506,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/jade/hours.ng.jade",
-			"settings":
-			{
-				"buffer_size": 2163,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/jade/add-hours.ng.jade",
-			"settings":
-			{
-				"buffer_size": 1852,
-				"line_ending": "Windows"
+				"buffer_size": 1566,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -423,7 +447,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 247.0,
+		"height": 367.0,
 		"last_filter": "inst",
 		"selected_items":
 		[
@@ -448,7 +472,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 568.0
+		"width": 584.0
 	},
 	"console":
 	{
@@ -470,15 +494,49 @@
 	},
 	"expanded_folders":
 	[
-		"/D/sync/_private/devel/kita-families-meteor",
-		"/D/sync/_private/devel/kita-families-meteor/client"
+		"/Users/basti/Development/meteor/kita-families",
+		"/Users/basti/Development/meteor/kita-families/.meteor",
+		"/Users/basti/Development/meteor/kita-families/client",
+		"/Users/basti/Development/meteor/kita-families/client/controllers",
+		"/Users/basti/Development/meteor/kita-families/client/jade",
+		"/Users/basti/Development/meteor/kita-families/client/styles",
+		"/Users/basti/Development/meteor/kita-families/lib",
+		"/Users/basti/Development/meteor/kita-families/server"
 	],
 	"file_history":
 	[
-		"/D/projects/CTB/vc/TwinVC-trunk/Client/VCClient/bin/Debug/Log/VCClient_FN199_20150717.log.1",
-		"/D/sync/_private/devel/kita-families-meteor/client/jade/add-hours.ng.jade",
-		"/D/projects/CTB/vc/TwinVC-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
-		"/D/sync/_private/devel/kita-families-meteor/server/db.json",
+		"/Users/basti/Development/meteor/kita-families/client/jade/tags.ng.jade",
+		"/Users/basti/Development/meteor/kita-families/client/jade/index.jade",
+		"/Users/basti/Development/meteor/kita-families/client/jade/eine.ng.jade",
+		"/Users/basti/Development/meteor/kita-families/client/jade/add-hours.ng.jade",
+		"/Users/basti/Development/meteor/kita-families/client/jade/hours.ng.jade",
+		"/Users/basti/Development/meteor/kita-families/lib/family.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/lib/app.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/controllers/ang.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/controllers/hours.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/controllers/addHours.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/controllers/eine.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/controllers/tags.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/controllers/archived.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/controllers/alle.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/controllers/neu.coffee",
+		"/Users/basti/Development/meteor/kita-families/server/server.coffee",
+		"/Users/basti/Development/meteor/kita-families/lib/kita-jahr.coffee",
+		"/Users/basti/Development/meteor/kita-families/client/jade/ang.ng.jade",
+		"/Users/basti/Development/meteor/kita-families/client/client.coffee",
+		"/Users/basti/Development/meteor/kita-families/lib/config.coffee",
+		"/Users/basti/Development/meteor/kita-families/README.md",
+		"/Users/basti/Development/meteor/kita-families/mongo_import.sh",
+		"/Users/basti/Development/meteor/kita-families/client/jade/login.ng.jade",
+		"/Users/basti/Development/meteor/kita-families/fix-fon.coffee",
+		"/Users/basti/Development/meteor/kita-families/.meteor/local/build/programs/server/npm/mongo/node_modules/mongodb/node_modules/readable-stream/transform.js",
+		"/Users/basti/Development/meteor/kita-families/families.json",
+		"/Users/basti/Development/meteor/kita-families/server/db.json",
+		"/Users/basti/Development/meteor/kita-families/client/jade/eine.tpl.jade",
+		"/Users/basti/Development/meteor/kita-families/client/jade/alle.tpl.jade",
+		"/Users/basti/Development/meteor/kita-families/client/jade/head.tpl.jade",
+		"/Users/basti/Development/meteor/kita-families/client/jade/neu.tpl.jade",
+		"/Users/basti/Development/meteor/kita-families/client/jade/navbar.jade",
 		"/Users/basti/Development/angularJs/kitaadressen/gulpfile.coffee",
 		"/Users/basti/Development/angularJs/kitaadressen/bower.json",
 		"/Users/basti/Development/angularJs/kitaadressen/jade/index.jade",
@@ -574,39 +632,11 @@
 		"/Users/basti/Development/web/mo-edit/data/local.0",
 		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/specials/rollOut.css",
 		"/Users/basti/Development/web/mo-edit/node_modules/gulp-stylus/node_modules/stylus/node_modules/sax/test/buffer-overrun.js",
-		"/Users/basti/Development/web/mo-edit/blabla.docx",
-		"/Users/basti/Development/web/mo-edit/node_modules/gulp-bower/node_modules/bower/lib/core/resolvers/FsResolver.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/log4js/test/dateFileAppender-test.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/moment/locale/de-at.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/connect-assets/test/assets/css/depends-on-blank.css",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/rotating_entrances/rotateInDownRight.css",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/rotating_entrances/rotateInDownLeft.css",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/bouncing_entrances/bounceInDown.css",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/fading_entrances/fadeInDownBig.css",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/zooming_entrances/zoomInDown.css",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/animate-css/source/fading_entrances/fadeInDown.css",
-		"/Users/basti/Development/web/mo-edit/node_modules/gulp-util/lib/isNull.js",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/bootstrap/less/mixins/nav-vertical-align.less",
-		"/Users/basti/Development/web/mo-edit/server/test.html",
-		"/Users/basti/Development/web/mo-edit/node_modules/connect-assets/node_modules/uglify-js/lib/mozilla-ast.js",
-		"/Users/basti/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/jquery-ui/ui/effect-drop.js",
-		"/Users/basti/Development/web/mo-edit/server/controllers/documents/index.coffee",
-		"/Users/basti/Development/web/mo-edit/node_modules/mongoose/node_modules/mpromise/test/promises.Aplus.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/log4js/test/fileAppender-test.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/gulp/node_modules/vinyl-fs/node_modules/graceful-fs/test/max-open.js",
-		"/Users/basti/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/basti/Development/web/mo-edit/node_modules/express-resource-new/index.js",
-		"/Users/basti/Documents/thalora_server_setup.md",
-		"/Users/basti/Documents/thalora_server_setup",
-		"/Users/basti/Development/coffee/monicore/settings.coffee",
-		"/Users/basti/Development/coffee/monicore/parser.coffee",
-		"/Users/basti/Development/coffee/monicore/shortcuthelper.js",
-		"/Users/basti/Development/coffee/monicore/node_modules/mocha/node_modules/jade/test.jade"
+		"/Users/basti/Development/web/mo-edit/blabla.docx"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -620,134 +650,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"CanEditBlockPlatzEbene",
-			"<Status",
-			"xml version=",
-			"remove",
+			"dummyGroups",
+			"Mädchen",
+			"app.",
+			"_.find",
+			"groups",
+			"Start",
+			"share.KiTaJahr",
+			"kj",
+			"child",
+			"Gruppe1",
+			"child",
+			"Gruppe1",
+			"child",
+			"Gruppe1",
+			"child",
+			"Gruppe1",
+			", '",
+			"k",
+			"array",
+			"tagsCtrl",
+			"name",
+			"diff",
+			"div",
+			"i.left-space-5",
+			"fon",
+			"i.fa",
+			"i.fa.",
+			".fa.fa.",
+			".fa.",
+			".mama.",
+			"btn-sm",
+			"$scope.",
+			"| ",
+			"text-warning",
+			"hour.",
+			"hours",
+			"familyName",
+			"warning",
+			"2014",
+			"default",
+			"Families",
+			"mama",
+			"$meteor.collection",
+			"tätigkeit",
+			"Tags",
+			"tags",
+			"Tags",
+			"addHoursCtrl",
+			"eineCtrl",
+			"Tätigkeit",
+			"tätigkeit",
+			"mamaNachname",
+			"text",
+			"Nachname",
+			"Vorname",
+			"mamaVorname",
+			"hours",
+			"tags",
+			"Archivieren",
+			"eine mehrere",
+			"Neues Tag",
+			"Tags",
+			".0",
 			"papa",
-			"Tag",
-			"\"",
 			"mama",
-			"yera",
-			"family.mama",
+			"f.mama",
 			"mama",
-			"//-",
-			"client/",
-			"\"}}",
-			"1RCF7nmo3h8RRQJsAFFw7eCfhr3YZUPZzOYj3boXgGqs",
-			"state",
-			"autonumber",
-			"title",
-			"print_statistics",
-			"analyse",
-			"\ntask :ausgaben => :tql do\n  analyse \"ausgaben\", [\"%\"], \"<\"\nend",
-			".jumbotron",
-			"md-3",
-			"hasPreviousVersion",
-			"button",
-			"primary",
-			"previousVersion",
-			"typ-",
-			"typbutton",
-			"center-block",
-			"detailaction",
-			".center",
-			"h1",
-			"md-3",
-			"Comment",
-			"comment",
-			"Comment",
-			"comment",
-			"$scope.currentComment",
-			".sidebar-button",
-			"value",
-			"newText",
-			"$scope.newCommentText",
-			"newCommentText",
-			"myScope",
-			"\"",
-			".detailactionbutton",
-			"TIME",
-			"colourRed",
-			"addComment",
-			"taSelection",
-			"docLastChangeDate",
-			"md-4",
-			"(++)\n",
-			".catch (e) ->",
-			"author.name",
-			"Author.name",
-			"author.name",
-			"author: chance.name()",
-			"log e",
-			"$rootScope.",
-			", ",
-			"		$scope.newChapter = (document) ->\n			# TODO\n",
-			"chapter",
-			"Chapter",
-			"chapter",
-			"checkbox",
-			"chapter",
-			"currentChapter",
-			"button",
-			"currentChapter",
-			"#chapter-list li\n	background: #eee",
-			"= module.exports.",
-			"\n		",
-			"\"",
-			"\n				",
-			"ks",
-			"keyedShortcut",
-			"from",
-			"lastOrDefault",
-			"ctb",
-			"_",
-			"ValidFrom",
-			"WholeDayExpansion",
-			"Key",
-			"testDate",
-			"allShortcuts",
-			"\"",
-			" { get; set; }",
-			"public ",
-			" { get; set; }",
-			"public ",
-			" = ",
-			"wdToFill",
-			"dateTime",
-			"wdToFill",
-			"Unknown",
-			" = ",
-			"require('./descriptionparser')",
-			"require('./stringparserutils')",
-			" { get; set; }",
-			"{ get; set; }",
-			"}\n",
-			"{ get; set; }",
-			"public",
-			"originalString",
-			"dayStartToken",
-			"wdItemString",
-			"projectPosDescString",
-			"TokenReturnInputIfFail",
-			"projectPosDescString",
-			"timeString",
-			"//",
-			"///",
-			";",
-			"WorkDayParserSettings",
-			"WorkDayParserSe",
-			"public static char ",
-			"to_string",
-			"monlist_",
+			"tag",
+			"rootScope",
+			"mama",
+			"((",
+			"insert",
+			"falstruee",
+			"delete",
 			"true",
-			"IsBetween",
-			")))",
-			"  new",
-			" , ",
-			", ",
-			", n",
-			"res.hour.should.equal("
+			"alleCtrl",
+			"archivedCtrl",
+			"family.",
+			"fon",
+			"4px",
+			"Geburtstag",
+			"kindGeburtstag",
+			"Telefon",
+			"Stadt",
+			"Strasse",
+			"mama",
+			".fon",
+			"fon",
+			"data",
+			"primary",
+			"muted",
+			"span",
+			"vorname",
+			"mama",
+			"offset-3",
+			" and party.owner == userId",
+			", party",
+			"Families",
+			"alle",
+			"angular",
+			"save",
+			"Families",
+			"family",
+			"Families",
+			"handy",
+			"papa",
+			"mama",
+			"tagName",
+			"mama",
+			"fon",
+			"mama",
+			"handy",
+			"d",
+			"papa",
+			"[\n  ]",
+			"\"gruppe\"",
+			"mama",
+			"tags",
+			" ",
+			"html",
+			"templateCache",
+			"client/jade/",
+			"client/",
+			"template",
+			"share.",
+			"Families",
+			"share.",
+			"Families"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -765,173 +795,59 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server/server.coffee",
+					"file": "client/jade/alle.ng.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1367,
+						"buffer_size": 4153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1366,
-								1366
+								0,
+								34
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/jade/eine.ng.jade",
+					"file": "private/getDataFromProdToLocal.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5948,
+						"buffer_size": 1276,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1816,
-								1816
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 483.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/jade/alle.ng.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5112,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5111,
-								4953
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1518.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/client.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7063,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2792,
-								2792
+								1276,
+								1276
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1932.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/tmp/_20150720.log.1",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1292459,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1835,
-								1835
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1380.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 961,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								961,
-								961
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -941,106 +857,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/Status.xsd",
+					"buffer": 2,
+					"file": "client/jade/ang.ng.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1921,
+						"buffer_size": 942,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1921,
-								1921
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/commonTypes.xsd",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10345,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5226,
-								5226
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3474.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/D/projects/CTB/vc/TwinVC-trunk/Client/VC_JMS/VCT/CreateClassFromXSD.bat",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 46,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Batch File/Batch File.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "client/jade/tags.ng.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 506,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								371,
-								371
+								347,
+								347
 							]
 						],
 						"settings":
@@ -1052,63 +882,34 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
-					"file": "client/jade/hours.ng.jade",
+					"buffer": 3,
+					"file": "client/styles/main.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2163,
+						"buffer_size": 1566,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2140,
-								2140
+								1334,
+								1334
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 69.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "client/jade/add-hours.ng.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1852,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1477,
-								1477
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1114.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1119,7 +920,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 39.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -1160,7 +961,7 @@
 	"project": "kita-families.sublime-project",
 	"replace":
 	{
-		"height": 54.0
+		"height": 110.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1170,40 +971,104 @@
 		"selected_items":
 		[
 			[
-				"ad",
-				"client\\jade\\add-hours.ng.jade"
+				"ang",
+				"client/jade/ang.ng.jade"
 			],
 			[
-				"add",
-				"client\\jade\\add-hours.ng.jade"
+				"get",
+				"private/getDataFromProdToLocal.coffee"
 			],
 			[
-				"tag",
-				"client\\jade\\tags.ng.jade"
+				"serv",
+				"server/server.coffee"
 			],
 			[
-				"hour",
-				"client\\jade\\hours.ng.jade"
+				"in",
+				"client/jade/index.jade"
 			],
 			[
-				"clien",
-				"client\\client.coffee"
+				"main",
+				"client/styles/main.styl"
 			],
 			[
 				"all",
-				"client\\jade\\alle.ng.jade"
+				"client/jade/alle.ng.jade"
+			],
+			[
+				"app",
+				"client/lib/app.coffee"
+			],
+			[
+				"ind",
+				"client/jade/index.jade"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"cli",
+				"client/client.coffee"
+			],
+			[
+				"hour",
+				"client/jade/hours.ng.jade"
+			],
+			[
+				"cl",
+				"client/client.coffee"
+			],
+			[
+				"tag",
+				"client/jade/tags.ng.jade"
+			],
+			[
+				"conf",
+				"lib/config.coffee"
+			],
+			[
+				"read",
+				"README.md"
 			],
 			[
 				"ein",
-				"client\\jade\\eine.ng.jade"
+				"client/jade/eine.ng.jade"
+			],
+			[
+				"re",
+				"README.md"
+			],
+			[
+				"transfor",
+				".meteor/local/build/programs/server/npm/mongo/node_modules/mongodb/node_modules/readable-stream/transform.js"
+			],
+			[
+				"co",
+				"lib/config.coffee"
+			],
+			[
+				"lo",
+				"client/jade/login.ng.jade"
+			],
+			[
+				"ser",
+				"server/server.coffee"
+			],
+			[
+				"fami",
+				"families.json"
+			],
+			[
+				"fam",
+				"families.json"
+			],
+			[
+				"navb",
+				"client/jade/navbar.jade"
 			],
 			[
 				"db",
-				"server\\db.json"
-			],
-			[
-				"server",
-				"server\\server.coffee"
+				"server/db.json"
 			],
 			[
 				"html",
@@ -1216,14 +1081,6 @@
 			[
 				"jad",
 				"jade/index.jade"
-			],
-			[
-				"ind",
-				"public/index.html"
-			],
-			[
-				"conf",
-				"config.coffee"
 			],
 			[
 				"list",
@@ -1286,10 +1143,6 @@
 				"client/views/partials/diff.jade"
 			],
 			[
-				"app",
-				"client/app.coffee"
-			],
-			[
 				"edit.c",
 				"client/controllers/edit.coffee"
 			],
@@ -1326,16 +1179,8 @@
 				"client/services/auth.coffee"
 			],
 			[
-				"navb",
-				"client/controllers/navbar.coffee"
-			],
-			[
 				"docu",
 				"server/documenthandling.coffee"
-			],
-			[
-				"read",
-				"README.md"
 			],
 			[
 				"navba",
@@ -1350,16 +1195,8 @@
 				"package.json"
 			],
 			[
-				"re",
-				"README.md"
-			],
-			[
 				"route",
 				"server/routes.coffee"
-			],
-			[
-				"main",
-				"client/styles/main.styl"
 			],
 			[
 				"foot",
@@ -1414,10 +1251,6 @@
 		"last_filter": "",
 		"selected_items":
 		[
-			[
-				"",
-				"T:\\Basti\\TSM-IF\\interface-trunk.sublime-workspace"
-			]
 		],
 		"width": 380.0
 	},
@@ -1438,7 +1271,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 163.0,
+	"side_bar_width": 204.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

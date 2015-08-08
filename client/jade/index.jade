@@ -1,6 +1,6 @@
 head
 	base(href="/")
-	title KiTa Kleine Strolche Familien
+	title strolch-app
 	meta(name="viewport", content="width=device-width, initial-scale=1")
 
 body(ng-app="app")
@@ -13,7 +13,11 @@ body(ng-app="app")
 					span.icon-bar
 					span.icon-bar
 					span.icon-bar
-				a.navbar-brand KiTa Familien
+				span.navbar-brand 
+					i.fa.fa-female.fa-lg
+					i.fa.fa-child.fa-lg
+					i.fa.fa-male.fa-lg
+					span strolch-app
 
 			#navbar-collapse-part.collapse.navbar-collapse
 				ul.nav.navbar-nav(ng-show="currentUser")

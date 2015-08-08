@@ -26,35 +26,35 @@
 				.col-md-9
 					.row
 						.col-md-6
-							div.top-space-10
+							div.top-space-10(ng-if="family.mama.nachname")
 								i.fa.fa-female.fa-fw
 								strong(ng-if="getFamilyNameCount(family)==2") {{ family.mama.nachname }}, 
 								strong {{ family.mama.vorname }}
 								span(ng-repeat="tag in family.mama.tags").left-space-5.label.label-default {{ tag.name }}
 							.left-space-5(ng-show="family.mama.fon")
 								i.fa.fa-phone.fa-fw
-								a(href="tel://{{ family.mama.fon }}") {{ family.mama.fon }}
+								a(href="tel:{{ family.mama.fon }}") {{ family.mama.fon }}
 							.left-space-5(ng-show="family.mama.handy")
 								i.fa.fa-mobile.fa-fw
-								a(href="tel://{{ family.mama.handy }}") {{ family.mama.handy }}
+								a(href="tel:{{ family.mama.handy }}") {{ family.mama.handy }}
 							.left-space-5(ng-show="family.mama.email")
 								i.fa.fa-envelope-o.fa-fw
-								a(href="mailto://{{ family.mama.email }}") {{ family.mama.email }}
+								a(href="mailto:{{ family.mama.email }}") {{ family.mama.email }}
 						.col-md-6
-							div.top-space-10
+							div.top-space-10(ng-if="family.papa.nachname")
 								i.fa.fa-male.fa-fw
 								strong(ng-if="getFamilyNameCount(family)==2") {{ family.papa.nachname }}, 
 								strong {{ family.papa.vorname }}
 								span.left-space-5.label.label-default(ng-repeat="tag in family.papa.tags") {{ tag.name }}
 							.left-space-5(ng-show="family.papa.fon")
 								i.fa.fa-phone.fa-fw
-								a(href="tel://{{ family.papa.fon }}") {{ family.papa.fon }}
+								a(href="tel:{{ family.papa.fon }}") {{ family.papa.fon }}
 							.left-space-5(ng-show="family.papa.handy")
 								i.fa.fa-mobile.fa-fw
-								a(href="tel://{{ family.papa.handy }}") {{ family.papa.handy }}
+								a(href="tel:{{ family.papa.handy }}") {{ family.papa.handy }}
 							.left-space-5(ng-show="family.papa.email")
 								i.fa.fa-envelope-o.fa-fw
-								a(href="mailto://{{ family.papa.email }}") {{ family.papa.email }}
+								a(href="mailto:{{ family.papa.email }}") {{ family.papa.email }}
 					.row
 						.col-md-12
 							.top-space-10
@@ -79,10 +79,10 @@
 					.top-space-5.emergency-contacts(ng-repeat="emergency in family.emergency", ng-show="emergency.name")
 						div
 							span.fa.fa-medkit.fa-fw
-							span {{ emergency.name }}
+							span.left-space-5 {{ emergency.name }}
 						.left-space-5(ng-show="emergency.name && emergency.fon")
 							span.fa.fa-phone.fa-fw
-							a(href="tel://{{ emergency.fon }}") {{ emergency.fon }}
+							a(href="tel:{{ emergency.fon }}") {{ emergency.fon }}
 						.left-space-5(ng-show="emergency.name && emergency.handy")
 							span.fa.fa-mobile.fa-fw
-							a(href="tel://{{ emergency.handy }}") {{ emergency.handy }}
+							a(href="tel:{{ emergency.handy }}") {{ emergency.handy }}
