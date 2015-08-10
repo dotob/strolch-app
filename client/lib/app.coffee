@@ -23,6 +23,11 @@ angular.module('app').config ['$stateProvider', '$urlRouterProvider', '$location
 			templateUrl: 'client/jade/alle.html'
 			controller: 'alleCtrl'
 			resolve: userResolve
+		.state 'print',
+			url: '/print'
+			templateUrl: 'client/jade/print.html'
+			controller: 'printCtrl'
+			resolve: userResolve
 		.state 'archived',
 			url: '/archived'
 			templateUrl: 'client/jade/alle.html'
