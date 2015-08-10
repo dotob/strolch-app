@@ -11,8 +11,10 @@
 						td
 				tfoot
 					tr
-						td Gesamt
-						td(ng-repeat="sg in sumGroups['all']") {{ sg.sum }}
+						td 
+							strong Gesamt
+						td(ng-repeat="sg in sumGroups['all']") 
+							strong {{ sg.sum }}
 				tbody
 					tr
 						td
@@ -27,9 +29,10 @@
 
 					tr(ng-repeat-end)
 						td(ng-repeat='g in a.groups')
-							.child(ng-repeat='k in g.kids')
-								div {{ k.vorname }} {{ k.nachname }}
-								div {{ k.dob }}
+							ul.list-unstyled
+								li.child(ng-repeat='k in g.kids')
+									div {{ k.vorname }} {{ k.nachname }}
+									div {{ k.dob }}
 						td
 						td
 						td
