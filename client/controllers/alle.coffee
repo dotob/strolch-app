@@ -8,8 +8,9 @@ angular.module('app').controller 'alleCtrl', ['$scope', '$meteor', '$window', ($
 		share.getFamilyNameCount(family)
 	
 	$scope.archiveFamily = (family) ->
-		console.log "archive id: #{family._id}"
-		family.archived = true
+		if $window.confirm 'Wirklich archivieren? Familie kann wieder aus dem Archiv geholt werden!'
+			console.log "archive id: #{family._id}"
+			family.archived = true
 	
 	$scope.dob2age = (dob, kind) ->
 		now = moment()
