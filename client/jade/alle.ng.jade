@@ -1,6 +1,6 @@
 .container
 	.row.alle-table
-		form
+		form.hidden-print
 			.form-group
 				.input-group
 					.input-group-addon
@@ -11,7 +11,7 @@
 			div
 				span.family-name {{ getFamilyName(family) }}
 				i.left-space-5.fa.fa-key.fa.fa-fw(ng-show="family.keys.maindoor", title="Haben einen Schlüssel")
-				.alle-action-buttons.btn-group(role="group")
+				.alle-action-buttons.btn-group.hidden-print(role="group")
 					a.edit-family-link.btn.btn-primary.btn-xs(href="/eine/{{family._id}}", title="Bearbeiten")
 						span.glyphicon.glyphicon-pencil 
 					a.add-hours-link.btn.btn-info.btn-xs(href="/add-hours/{{family._id}}", title="Stunden eintragen")
