@@ -5,4 +5,15 @@ angular.module('app').controller 'eineCtrl', ['$scope', '$meteor', '$stateParams
 	$scope.loadTags = (query) ->
 		# filter
 		_.filter $scope.tags, (t) -> t.name.toLowerCase().indexOf(query.toLowerCase()) >= 0
+
+	$scope.deleteChild = (idx) ->
+		console.log "delete child #{idx}"
+		delete $scope.family.kinder["#{idx}"]
+		if idx == 0
+			$scope.family.kinder['0'] = $scope.family.kinder['1']
+			delete $scope.family.kinder['1']
+		if idx <= 1
+			$scope.family.kinder['1'] = $scope.family.kinder['2']
+			delete $scope.family.kinder['2']
+
 ]

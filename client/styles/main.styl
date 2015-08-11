@@ -1,9 +1,16 @@
 body
   padding-top: 70px
 
+// do not show href url when printing
 @media print
   a[href]:after
     content: none
+
+// show click mouse when over ng-click element
+[ng-click]
+[data-ng-click]
+[x-ng-click]
+  cursor: pointer
 
 .left-space-5
   margin-left: 5px
