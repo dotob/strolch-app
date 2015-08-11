@@ -11,7 +11,12 @@
 								label
 									input(type="checkbox", ng-model="showEmail")
 									| EMails anzeigen
-						.col-md-10
+						.col-md-2
+							.checkbox
+								label
+									input(type="checkbox", ng-model="showAge")
+									| Alter anzeigen
+						.col-md-8
 							.form-group
 								.input-group
 									.input-group-addon
@@ -19,124 +24,118 @@
 									input.form-control(type="text", placeholder="Hier kannst du nach allem suchen. Namen, Gruppen, Kindern...", ng-model="search")
 
 	.row
-		table.table.table-bordered.table-striped.table-condensed
-			thead
-				tr
-					td
-						i.fa.fa-female.fa-fw
-						i.fa.fa-male.fa-fw
-						i.fa.fa-child.fa-fw
-					td
-						i.fa.fa-female.fa-fw
-					td
-						i.fa.fa-male.fa-fw
-					td 
-						i.fa.fa-home.fa-fw
-					td
-						i.fa.fa-child.fa-fw
-					td
-						i.fa.fa-child.fa-fw
-					td
-						i.fa.fa-child.fa-fw
-					td
-						i.fa.fa-medkit.fa-fw
-					td
-						i.fa.fa-medkit.fa-fw
-					td
-						i.fa.fa-medkit.fa-fw
-			tbody
-				tr(ng-repeat='family in families | filter:{ archived: showArchived } | filter:search')
-					td 
-						span.family-name {{ getFamilyName(family) }}
-						i.left-space-5.fa.fa-key.fa.fa-fw(ng-show="family.keys.maindoor", title="Haben einen Schlüssel")
-					td			
-						div(ng-if="family.mama.nachname")
-							strong(ng-if="getFamilyNameCount(family)==2") {{ family.mama.nachname }}, 
-							strong {{ family.mama.vorname }}
-							span(ng-repeat="tag in family.mama.tags").left-space-5.label.label-default {{ tag.name }}
-						.left-space-5(ng-show="family.mama.fon")
-							i.fa.fa-phone.fa-fw
-							a(href="tel:{{ family.mama.fon }}") {{ family.mama.fon }}
-						.left-space-5(ng-show="family.mama.handy")
-							i.fa.fa-mobile.fa-fw
-							a(href="tel:{{ family.mama.handy }}") {{ family.mama.handy }}
-						.left-space-5(ng-show="family.mama.email && showEmail")
-							i.fa.fa-envelope-o.fa-fw
-							a(href="mailto:{{ family.mama.email }}") {{ family.mama.email }}
-					td			
-						div(ng-if="family.papa.nachname")
-							strong(ng-if="getFamilyNameCount(family)==2") {{ family.papa.nachname }}, 
-							strong {{ family.papa.vorname }}
-							span.left-space-5.label.label-default(ng-repeat="tag in family.papa.tags") {{ tag.name }}
-						.left-space-5(ng-show="family.papa.fon")
-							i.fa.fa-phone.fa-fw
-							a(href="tel:{{ family.papa.fon }}") {{ family.papa.fon }}
-						.left-space-5(ng-show="family.papa.handy")
-							i.fa.fa-mobile.fa-fw
-							a(href="tel:{{ family.papa.handy }}") {{ family.papa.handy }}
-						.left-space-5(ng-show="family.papa.email && showEmail")
-							i.fa.fa-envelope-o.fa-fw
-							a(href="mailto:{{ family.papa.email }}") {{ family.papa.email }}
-					td			
-						div {{ family.adresse.strasse }}
-						div {{ family.adresse.stadt }}
-					td			
-						div(ng-if="family.kinder[0].vorname")
-							div
-								i(ng-if="family.kinder[0].gender=='m'").fa.fa-mars.fa-fw
-								i(ng-if="family.kinder[0].gender=='f'").fa.fa-venus.fa-fw
-								strong(ng-if="getFamilyNameCount(family)==2") {{ family.kinder[0].nachname }}, 
-								strong {{ family.kinder[0].vorname }} 
-								span.fa.fa-exclamation-triangle.fa-fw(ng-show="family.kinder[0].hasAllergies", title="Hat Allergien")
-								span.label.label-default(ng-repeat="tag in family.kinder[0].tags") {{ tag.name }}
-							.text-muted {{ family.kinder[0].dob }}
-							div {{ dob2age(family.kinder[0].dob) }}
-					td			
-						div(ng-if="family.kinder[1].vorname")
-							div
-								i(ng-if="family.kinder[1].gender=='m'").fa.fa-mars.fa-fw
-								i(ng-if="family.kinder[1].gender=='f'").fa.fa-venus.fa-fw
-								strong(ng-if="getFamilyNameCount(family)==2") {{ family.kinder[1].nachname }}, 
-								strong {{ family.kinder[1].vorname }} 
-								span.fa.fa-exclamation-triangle.fa-fw(ng-show="family.kinder[1].hasAllergies", title="Hat Allergien")
-								span.label.label-default(ng-repeat="tag in family.kinder[1].tags") {{ tag.name }}
-							.text-muted {{ family.kinder[1].dob }}
-							div {{ dob2age(family.kinder[1].dob) }}
-					td			
-						div(ng-if="family.kinder[2].vorname")
-							div
-								i(ng-if="family.kinder[2].gender=='m'").fa.fa-mars.fa-fw
-								i(ng-if="family.kinder[2].gender=='f'").fa.fa-venus.fa-fw
-								strong(ng-if="getFamilyNameCount(family)==2") {{ family.kinder[2].nachname }}, 
-								strong {{ family.kinder[2].vorname }} 
-								span.fa.fa-exclamation-triangle.fa-fw(ng-show="family.kinder[2].hasAllergies", title="Hat Allergien")
-								span.label.label-default(ng-repeat="tag in family.kinder[2].tags") {{ tag.name }}
-							.text-muted {{ family.kinder[2].dob }}
-							div {{ dob2age(family.kinder[2].dob) }}
-					td
-						div(ng-if="family.emergency[0].name")
-							span.left-space-5 {{ family.emergency[0].name }}
-						.left-space-5(ng-show="family.emergency[0].name && family.emergency[0].fon")
-							span.fa.fa-phone.fa-fw
-							a(href="tel:{{ family.emergency[0].fon }}") {{ family.emergency[0].fon }}
-						.left-space-5(ng-show="family.emergency[0].name && family.emergency[0].handy")
-							span.fa.fa-mobile.fa-fw
-							a(href="tel:{{ family.emergency[0].handy }}") {{ family.emergency[0].handy }}
-					td
-						div(ng-if="family.emergency[1].name")
-							span.left-space-5 {{ family.emergency[1].name }}
-						.left-space-5(ng-show="family.emergency[1].name && family.emergency[1].fon")
-							span.fa.fa-phone.fa-fw
-							a(href="tel:{{ family.emergency[1].fon }}") {{ family.emergency[1].fon }}
-						.left-space-5(ng-show="family.emergency[1].name && family.emergency[1].handy")
-							span.fa.fa-mobile.fa-fw
-							a(href="tel:{{ family.emergency[1].handy }}") {{ family.emergency[1].handy }}
-					td
-						div(ng-if="family.emergency[2].name")
-							span.left-space-5 {{ family.emergency[2].name }}
-						.left-space-5(ng-show="family.emergency[2].name && family.emergency[2].fon")
-							span.fa.fa-phone.fa-fw
-							a(href="tel:{{ family.emergency[2].fon }}") {{ family.emergency[2].fon }}
-						.left-space-5(ng-show="family.emergency[2].name && family.emergency[2].handy")
-							span.fa.fa-mobile.fa-fw
-							a(href="tel:{{ family.emergency[2].handy }}") {{ family.emergency[2].handy }}
+		.col-md-12
+			table.table.table-bordered.table-striped.table-condensed
+				thead
+					tr
+						td
+							i.fa.fa-female.fa-fw
+						td
+							i.fa.fa-male.fa-fw
+						td 
+							i.fa.fa-home.fa-fw
+						td
+							i.fa.fa-child.fa-fw
+						td
+							i.fa.fa-child.fa-fw
+						td
+							i.fa.fa-child.fa-fw
+						td
+							i.fa.fa-medkit.fa-fw
+						td
+							i.fa.fa-medkit.fa-fw
+						td
+							i.fa.fa-medkit.fa-fw
+				tbody
+					tr(ng-repeat="family in families | filter:{ archived: false } | orderBy: 'mama.nachname' | filter:search")
+						td			
+							div(ng-if="family.mama.nachname")
+								strong {{ family.mama.nachname }}, 
+								strong {{ family.mama.vorname }}
+								span(ng-repeat="tag in family.mama.tags").left-space-5.label.label-default {{ tag.name }}
+							.left-space-5(ng-show="family.mama.fon")
+								i.fa.fa-phone.fa-fw
+								a(href="tel:{{ family.mama.fon }}") {{ family.mama.fon }}
+							.left-space-5(ng-show="family.mama.handy")
+								i.fa.fa-mobile.fa-fw
+								a(href="tel:{{ family.mama.handy }}") {{ family.mama.handy }}
+							.left-space-5(ng-show="family.mama.email && showEmail")
+								i.fa.fa-envelope-o.fa-fw
+								a(href="mailto:{{ family.mama.email }}") {{ family.mama.email }}
+						td			
+							div(ng-if="family.papa.nachname")
+								strong {{ family.papa.nachname }}, 
+								strong {{ family.papa.vorname }}
+								span.left-space-5.label.label-default(ng-repeat="tag in family.papa.tags") {{ tag.name }}
+							.left-space-5(ng-show="family.papa.fon")
+								i.fa.fa-phone.fa-fw
+								a(href="tel:{{ family.papa.fon }}") {{ family.papa.fon }}
+							.left-space-5(ng-show="family.papa.handy")
+								i.fa.fa-mobile.fa-fw
+								a(href="tel:{{ family.papa.handy }}") {{ family.papa.handy }}
+							.left-space-5(ng-show="family.papa.email && showEmail")
+								i.fa.fa-envelope-o.fa-fw
+								a(href="mailto:{{ family.papa.email }}") {{ family.papa.email }}
+						td			
+							div {{ family.adresse.strasse }}
+							div {{ family.adresse.stadt }}
+						td			
+							div(ng-if="family.kinder[0].vorname")
+								div
+									i(ng-if="family.kinder[0].gender=='m'").fa.fa-mars.fa-fw
+									i(ng-if="family.kinder[0].gender=='f'").fa.fa-venus.fa-fw
+									strong(ng-if="getFamilyNameCount(family)==2") {{ family.kinder[0].nachname }}, 
+									strong {{ family.kinder[0].vorname }} 
+									span.fa.fa-exclamation-triangle.fa-fw(ng-show="family.kinder[0].hasAllergies", title="Hat Allergien")
+									span.label.label-default(ng-repeat="tag in family.kinder[0].tags") {{ tag.name }}
+								.text-muted {{ family.kinder[0].dob }}
+								div(ng-if="showAge") {{ dob2age(family.kinder[0].dob) }}
+						td			
+							div(ng-if="family.kinder[1].vorname")
+								div
+									i(ng-if="family.kinder[1].gender=='m'").fa.fa-mars.fa-fw
+									i(ng-if="family.kinder[1].gender=='f'").fa.fa-venus.fa-fw
+									strong(ng-if="getFamilyNameCount(family)==2") {{ family.kinder[1].nachname }}, 
+									strong {{ family.kinder[1].vorname }} 
+									span.fa.fa-exclamation-triangle.fa-fw(ng-show="family.kinder[1].hasAllergies", title="Hat Allergien")
+									span.label.label-default(ng-repeat="tag in family.kinder[1].tags") {{ tag.name }}
+								.text-muted {{ family.kinder[1].dob }}
+								div(ng-if="showAge") {{ dob2age(family.kinder[1].dob) }}
+						td			
+							div(ng-if="family.kinder[2].vorname")
+								div
+									i(ng-if="family.kinder[2].gender=='m'").fa.fa-mars.fa-fw
+									i(ng-if="family.kinder[2].gender=='f'").fa.fa-venus.fa-fw
+									strong(ng-if="getFamilyNameCount(family)==2") {{ family.kinder[2].nachname }}, 
+									strong {{ family.kinder[2].vorname }} 
+									span.fa.fa-exclamation-triangle.fa-fw(ng-show="family.kinder[2].hasAllergies", title="Hat Allergien")
+									span.label.label-default(ng-repeat="tag in family.kinder[2].tags") {{ tag.name }}
+								.text-muted {{ family.kinder[2].dob }}
+								div(ng-if="showAge") {{ dob2age(family.kinder[2].dob) }}
+						td
+							div(ng-if="family.emergency[0].name")
+								span {{ family.emergency[0].name }}
+							div(ng-show="family.emergency[0].name && family.emergency[0].fon")
+								span.fa.fa-phone.fa-fw
+								a(href="tel:{{ family.emergency[0].fon }}") {{ family.emergency[0].fon }}
+							div(ng-show="family.emergency[0].name && family.emergency[0].handy")
+								span.fa.fa-mobile.fa-fw
+								a(href="tel:{{ family.emergency[0].handy }}") {{ family.emergency[0].handy }}
+						td
+							div(ng-if="family.emergency[1].name")
+								span {{ family.emergency[1].name }}
+							div(ng-show="family.emergency[1].name && family.emergency[1].fon")
+								span.fa.fa-phone.fa-fw
+								a(href="tel:{{ family.emergency[1].fon }}") {{ family.emergency[1].fon }}
+							div(ng-show="family.emergency[1].name && family.emergency[1].handy")
+								span.fa.fa-mobile.fa-fw
+								a(href="tel:{{ family.emergency[1].handy }}") {{ family.emergency[1].handy }}
+						td
+							div(ng-if="family.emergency[2].name")
+								span {{ family.emergency[2].name }}
+							div(ng-show="family.emergency[2].name && family.emergency[2].fon")
+								span.fa.fa-phone.fa-fw
+								a(href="tel:{{ family.emergency[2].fon }}") {{ family.emergency[2].fon }}
+							div(ng-show="family.emergency[2].name && family.emergency[2].handy")
+								span.fa.fa-mobile.fa-fw
+								a(href="tel:{{ family.emergency[2].handy }}") {{ family.emergency[2].handy }}

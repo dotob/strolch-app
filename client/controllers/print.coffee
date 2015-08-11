@@ -4,8 +4,10 @@ angular.module('app').controller 'printCtrl', ['$scope', '$meteor', '$window', (
 
 	$scope.getFamilyName = (family) ->
 		share.getFamilyName(family)
+		
 	$scope.getFamilyNameCount = (family) ->
 		share.getFamilyNameCount(family)
+
 	$scope.dob2age = (dob, kind) ->
 		now = moment()
 		dobMoment = moment(dob, "DD.MM.YY")

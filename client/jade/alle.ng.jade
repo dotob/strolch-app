@@ -7,7 +7,7 @@
 						i.glyphicon.glyphicon-search
 					input.form-control(type="text", placeholder="Hier kannst du nach allem suchen. Namen, Gruppen, Kindern...", ng-model="search")
 
-		.well(ng-repeat='family in families | filter:{ archived: showArchived } | orderBy:sortType:sortReverse | filter:search')
+		.well(ng-repeat="family in families | filter:{ archived: false } | orderBy:'mama.nachname' | filter:search")
 			div
 				span.family-name {{ getFamilyName(family) }}
 				i.left-space-5.fa.fa-key.fa.fa-fw(ng-show="family.keys.maindoor", title="Haben einen Schlüssel")
