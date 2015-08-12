@@ -38,6 +38,11 @@ angular.module('app').config ['$stateProvider', '$urlRouterProvider', '$location
 			templateUrl: 'client/jade/eine.html'
 			controller: 'neuCtrl'
 			resolve: userResolve
+		.state 'calendar',
+			url: '/calendar'
+			templateUrl: 'client/jade/calendar.html'
+			controller: 'calendarCtrl'
+			resolve: userResolve
 		.state 'eine',
 			url: '/eine/:id'
 			templateUrl: 'client/jade/eine.html'

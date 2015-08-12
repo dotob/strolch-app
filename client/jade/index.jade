@@ -25,6 +25,15 @@ body(ng-app="app")
 						a(ui-sref='alle')
 							span Alle
 					li(ui-sref-active="active")
+						a(ui-sref='calendar')
+							span Termine
+					li(ui-sref-active="active")
+						a(ui-sref='hours')
+							span Stunden-Übersicht
+					li(ui-sref-active="active")
+						a(ui-sref='ang')
+							span ANG-Übersicht	
+					li(ui-sref-active="active")
 						a(ui-sref='print')
 							span Alle drucken
 					li(ui-sref-active="active")
@@ -36,12 +45,6 @@ body(ng-app="app")
 					li(ui-sref-active="active")
 						a(ui-sref='tags')
 							span Gruppen
-					li(ui-sref-active="active")
-						a(ui-sref='hours')
-							span Stunden-Übersicht
-					li(ui-sref-active="active")
-						a(ui-sref='ang')
-							span ANG-Übersicht	
 				ul.nav.navbar-nav.navbar-right
 					+loginButtons
 
