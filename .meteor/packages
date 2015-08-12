@@ -22,3 +22,5 @@ stevezhu:lodash
 angularui:angular-ui-bootstrap
 momentjs:moment
 fortawesome:fontawesome
+angularui:ui-calendar
+planettraining:jquery-fullcalendar

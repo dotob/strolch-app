@@ -6,6 +6,7 @@ Accounts.config
 share.Families = new Mongo.Collection 'families' 
 share.Tags = new Mongo.Collection 'tags' 
 share.Hours = new Mongo.Collection 'hours' 
+share.Events = new Mongo.Collection 'events' 
 
 # add created, updated etc fields
 share.Families.attachBehaviour 'timestampable'
@@ -22,3 +23,4 @@ onlyUsers =
 share.Families.allow onlyUsers
 share.Tags.allow onlyUsers
 share.Hours.allow onlyUsers
+share.Events.allow onlyUsers

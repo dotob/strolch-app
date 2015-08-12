@@ -7,7 +7,7 @@ Accounts.ui.config
 _ = lodash
 
 # angular
-angular.module('app', ['angular-meteor', 'ui.router', 'ngTagsInput', 'ui.bootstrap'])
+angular.module('app', ['angular-meteor', 'ui.router', 'ngTagsInput', 'ui.bootstrap', 'ui.calendar'])
 
 # routes
 userResolve = 
