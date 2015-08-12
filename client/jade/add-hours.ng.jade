@@ -11,18 +11,20 @@
 					form(name="addHoursForm", novalidate)
 						.form-group
 							label(for='activity') Tätigkeit 
-							input#activity.form-control(type='text', placeholder='Tätigkeit', ng-model="newWork", required) 
+							input#activity.form-control(type='text', placeholder='Tätigkeit', ng-model="newWork", ng-required) 
 						.form-group
 							label(for='date') Datum 
 							.input-group
-								input#date.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDate", is-open="opened", datepicker-options="dateOptions", close-text="Close")
+								input#date.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDate", is-open="opened", datepicker-options="dateOptions", close-text="Close", ng-required)
 								span.input-group-btn
 									button.btn.btn-default(ng-click="open($event)")
 										i.glyphicon.glyphicon-calendar
 
 						.form-group
 							label(for='hours') Stundenzahl 
-							input#hours.form-control(type='number', placeholder='Stunden', ng-model="newHours", min="0", max="100", required) 
+							input#hours.form-control(type='number', placeholder='Stunden', ng-model="newHours", min="0", max="100", ng-required) 
+							p.help-block Hier bitte nur ganzzahlige Stunden eintragen
+
 						input.btn.btn-primary.form-control(type="submit", ng-click="addHours(newWork, newDate, newHours)", value="Speichern", ng-disabled="addHoursForm.$invalid")
 	.row
 		.col-md-12

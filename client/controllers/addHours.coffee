@@ -22,6 +22,7 @@ angular.module('app').controller 'addHoursCtrl', ['$scope', '$meteor', '$statePa
 
 	$scope.newDate = new Date()
 	$scope.format = 'dd.MM.yyyy'
+	$scope.opened = false
 
 	$scope.dateOptions =
 		formatYear: 'yy'
