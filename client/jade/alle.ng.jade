@@ -86,3 +86,8 @@
 						.left-space-5(ng-show="emergency.name && emergency.handy")
 							span.fa.fa-mobile.fa-fw
 							a(href="tel:{{ emergency.handy }}") {{ emergency.handy }}
+
+			.row
+				.col-md-12
+					.text-muted.small.pull-right {{ family.updatedAt | date:'dd.MM.yyyy'}}	
+					i.pull-right.text-muted.small.fa.fa-pencil.fa-fw
