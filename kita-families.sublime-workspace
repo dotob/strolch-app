@@ -315,7 +315,7 @@
 			"file": "client/styles/main.styl",
 			"settings":
 			{
-				"buffer_size": 1614,
+				"buffer_size": 1758,
 				"line_ending": "Windows"
 			}
 		},
@@ -323,7 +323,15 @@
 			"file": "client/jade/eine.ng.jade",
 			"settings":
 			{
-				"buffer_size": 6511,
+				"buffer_size": 6573,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/controllers/eine.coffee",
+			"settings":
+			{
+				"buffer_size": 713,
 				"line_ending": "Windows"
 			}
 		},
@@ -331,7 +339,7 @@
 			"file": "client/jade/alle.ng.jade",
 			"settings":
 			{
-				"buffer_size": 4236,
+				"buffer_size": 4224,
 				"line_ending": "Windows"
 			}
 		},
@@ -339,7 +347,7 @@
 			"file": "client/controllers/alle.coffee",
 			"settings":
 			{
-				"buffer_size": 779,
+				"buffer_size": 715,
 				"line_ending": "Windows"
 			}
 		},
@@ -349,6 +357,22 @@
 			{
 				"buffer_size": 1903,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lib/kita-jahr.coffee",
+			"settings":
+			{
+				"buffer_size": 801,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/projects/syncrotess/interface/trunk/ccs/ccs-messages.xsd",
+			"settings":
+			{
+				"buffer_size": 22391,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -363,7 +387,23 @@
 			"file": "client/jade/print.ng.jade",
 			"settings":
 			{
-				"buffer_size": 6203,
+				"buffer_size": 6099,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/server.coffee",
+			"settings":
+			{
+				"buffer_size": 1783,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/sync/_private/devel/ivo/server/gb20.json",
+			"settings":
+			{
+				"buffer_size": 5447,
 				"line_ending": "Windows"
 			}
 		},
@@ -411,10 +451,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 247.0,
-		"last_filter": "inst",
+		"height": 288.0,
+		"last_filter": "inden",
 		"selected_items":
 		[
+			[
+				"inden",
+				"Indent XML"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -436,7 +480,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 568.0
+		"width": 528.0
 	},
 	"console":
 	{
@@ -608,6 +652,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"kinder",
+			"idx",
+			"g-click",
+			"deleteChild",
 			"li",
 			"show",
 			"active=\"active\"",
@@ -731,11 +779,7 @@
 			"dayStartToken",
 			"wdItemString",
 			"projectPosDescString",
-			"TokenReturnInputIfFail",
-			"projectPosDescString",
-			"timeString",
-			"//",
-			"///"
+			"TokenReturnInputIfFail"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -762,15 +806,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1614,
+						"buffer_size": 1758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								73,
-								73
+								63,
+								63
 							]
 						],
 						"settings":
@@ -783,7 +827,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -792,15 +836,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6511,
+						"buffer_size": 6573,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1070,
-								1070
+								6262,
+								6271
 							]
 						],
 						"settings":
@@ -808,33 +852,33 @@
 							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 60.0,
+						"translation.x": 0.0,
+						"translation.y": 1980.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "client/jade/alle.ng.jade",
+					"file": "client/controllers/eine.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4236,
+						"buffer_size": 713,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								47,
-								47
+								390,
+								390
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -846,18 +890,47 @@
 				},
 				{
 					"buffer": 3,
-					"file": "client/controllers/alle.coffee",
+					"file": "client/jade/alle.ng.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 779,
+						"buffer_size": 4224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								777,
+								2540,
+								2521
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/controllers/alle.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								715,
 								579
 							]
 						],
@@ -870,11 +943,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "client/controllers/hours.coffee",
 					"semi_transient": false,
 					"settings":
@@ -895,15 +968,73 @@
 							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
+						"translation.x": -0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "lib/kita-jahr.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 801,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								512,
+								512
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
+					"file": "/D/projects/syncrotess/interface/trunk/ccs/ccs-messages.xsd",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1281,
+								1281
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "client/controllers/archived.coffee",
 					"semi_transient": false,
 					"settings":
@@ -928,16 +1059,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "client/jade/print.ng.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6203,
+						"buffer_size": 6099,
 						"regions":
 						{
 						},
@@ -957,11 +1088,69 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 10,
+					"file": "server/server.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								993,
+								993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/D/sync/_private/devel/ivo/server/gb20.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5447,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
 					"file": "client/controllers/neu.coffee",
 					"semi_transient": false,
 					"settings":
@@ -973,19 +1162,20 @@
 						"selection":
 						[
 							[
-								436,
-								246
+								438,
+								438
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1044,16 +1234,28 @@
 		"selected_items":
 		[
 			[
-				"print",
-				"client\\jade\\print.ng.jade"
+				"kita",
+				"lib\\kita-jahr.coffee"
 			],
 			[
-				"ein",
-				"client\\jade\\eine.ng.jade"
+				"neu",
+				"client\\controllers\\neu.coffee"
 			],
 			[
 				"main",
 				"client\\styles\\main.styl"
+			],
+			[
+				"ein",
+				"client\\controllers\\eine.coffee"
+			],
+			[
+				"server",
+				"server\\server.coffee"
+			],
+			[
+				"print",
+				"client\\jade\\print.ng.jade"
 			],
 			[
 				"hour",
@@ -1062,10 +1264,6 @@
 			[
 				"all",
 				"client\\controllers\\alle.coffee"
-			],
-			[
-				"neu",
-				"client\\controllers\\neu.coffee"
 			],
 			[
 				"arch",
@@ -1130,10 +1328,6 @@
 			[
 				"db",
 				"server\\db.json"
-			],
-			[
-				"server",
-				"server\\server.coffee"
 			],
 			[
 				"html",
