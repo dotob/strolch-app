@@ -10,14 +10,35 @@
 							label(for='activity') Titel
 							input#activity.form-control(type='text', placeholder='Titel', ng-model="newTitle", ng-required) 
 						.form-group
-							label(for='date') Datum 
+							label Terminart
+							.radio
+								label
+									input(type="radio", name="optionsEventType", value="CLOSED", ng-model="newEventType")
+									| Schließzeit
+							.radio
+								label
+									input(type="radio", name="optionsEventType", value="EVENT", ng-model="newEventType")
+									| Event
+							.radio
+								label
+									input(type="radio", name="optionsEventType", value="JUBI", ng-model="newEventType")
+									| Jubiläum
+						.form-group
+							label Von
 							.input-group
-								input#date.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDate", is-open="opened", datepicker-options="dateOptions", close-text="Close", ng-required)
+								input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateFrom", is-open="openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
 								span.input-group-btn
-									button.btn.btn-default(ng-click="open($event)")
+									button.btn.btn-default(ng-click="openFrom($event)")
+										i.glyphicon.glyphicon-calendar
+						.form-group
+							label Bis
+							.input-group
+								input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close", ng-required)
+								span.input-group-btn
+									button.btn.btn-default(ng-click="openTo($event)")
 										i.glyphicon.glyphicon-calendar
 
-						input.btn.btn-primary.form-control(type="submit", ng-click="addHours(newWork, newDate, newHours)", value="Speichern", ng-disabled="addEventForm.$invalid")
+						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent()", value="Speichern", ng-disabled="addEventForm.$invalid")
 
 			.panel.panel-primary
 				.panel-heading 
