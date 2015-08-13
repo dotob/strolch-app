@@ -28,23 +28,23 @@
 			table.table.table-bordered.table-striped.table-condensed
 				thead
 					tr
-						td
+						th
 							i.fa.fa-female.fa-fw
-						td
+						th
 							i.fa.fa-male.fa-fw
-						td 
+						th 
 							i.fa.fa-home.fa-fw
-						td
+						th
 							i.fa.fa-child.fa-fw
-						td
+						th
 							i.fa.fa-child.fa-fw
-						td
+						th
 							i.fa.fa-child.fa-fw
-						td
+						th
 							i.fa.fa-medkit.fa-fw
-						td
+						th
 							i.fa.fa-medkit.fa-fw
-						td
+						th
 							i.fa.fa-medkit.fa-fw
 				tbody
 					tr(ng-repeat="family in families | filter:{ archived: false } | orderBy: 'mama.nachname' | filter:search")
