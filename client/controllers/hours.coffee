@@ -2,18 +2,16 @@ _ = lodash
 
 angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	KJ = share.KiTaJahr
-	currentYear = KJ.current()
-	kj = new KJ currentYear
-
 	$scope.currentYear = KJ.current()
 	$scope.sortType = 'hours'
 	$scope.sortReverse = true
 
 	updateHours = () ->
+		$scope.kj = new KJ $scope.currentYear
 		$scope.warningLimit = 0.5
 		$scope.hoursPerMonth = 2.5
-		$scope.startOfKitaYear = kj.startDate()
-		$scope.endOfKitaYear = kj.endDate()
+		$scope.startOfKitaYear = $scope.kj.startDate()
+		$scope.endOfKitaYear = $scope.kj.endDate()
 
 		now = moment()
 		if now.isBefore($scope.startOfKitaYear)
@@ -58,6 +56,7 @@ angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParam
 	$scope.goToPreviousYear = () ->
 		$scope.currentYear--
 		updateHours()
+
 	$scope.goToNextYear = () ->
 		$scope.currentYear++
 		updateHours()
