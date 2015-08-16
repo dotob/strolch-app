@@ -1,6 +1,6 @@
-.container
+.container-fluid
 	.row
-		.col-md-3.col-sm-12
+		.col-md-4.col-sm-12
 			.panel.panel-primary
 				.panel-heading 
 					h3.panel-title Neuer Termin
@@ -12,32 +12,41 @@
 						.form-group
 							label Terminart
 							.radio
-								label
+								label#radioCLOSED
 									input(type="radio", name="optionsEventType", value="CLOSED", ng-model="newEventType")
 									| Schließzeit
 							.radio
-								label
+								label#radioEVENT
 									input(type="radio", name="optionsEventType", value="EVENT", ng-model="newEventType")
 									| Event
 							.radio
-								label
+								label#radioJUBI
 									input(type="radio", name="optionsEventType", value="JUBI", ng-model="newEventType")
 									| Jubiläum
 						.form-group
 							label Von
-							.input-group
-								input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateFrom", is-open="openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
-								span.input-group-btn
-									button.btn.btn-default(ng-click="openFrom($event)")
-										i.glyphicon.glyphicon-calendar
+							.row
+								.col-md-8
+									#dateFrom.input-group
+										input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateFrom", is-open="openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
+										span.input-group-btn
+											button.btn.btn-default(ng-click="openFrom($event)")
+												i.glyphicon.glyphicon-calendar
+								.col-md-4
+									timepicker(ng-model="newTimeFrom", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
+	
 						.form-group
 							label Bis
-							.input-group
-								input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close", ng-required)
-								span.input-group-btn
-									button.btn.btn-default(ng-click="openTo($event)")
-										i.glyphicon.glyphicon-calendar
-
+							.row
+								.col-md-8
+									#dateTo.input-group
+										input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close", ng-required)
+										span.input-group-btn
+											button.btn.btn-default(ng-click="openTo($event)")
+												i.glyphicon.glyphicon-calendar
+								.col-md-4
+									timepicker(ng-model="newTimeTo", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
+	
 						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent()", value="Speichern", ng-disabled="addEventForm.$invalid")
 
 			.panel.panel-primary
@@ -51,7 +60,7 @@
 									i.glyphicon.glyphicon-search
 								input.form-control(type="text", placeholder="Hier kannst du nach allem suchen. Namen, Gruppen, Kindern...", ng-model="search")
 
-		.col-md-9
+		.col-md-8.col-sm-12
 			.panel.panel-primary
 				.panel-heading 
 					h3.panel-title Kalender

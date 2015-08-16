@@ -1,11 +1,28 @@
 angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
 
+	updateEvents = () ->
+		console.log "update events"
+		closedEvents.events.splice(0, closedEvents.events.length)
+		eventEvents.events.splice(0, eventEvents.events.length)
+		jubiEvents.events.splice(0, jubiEvents.events.length)
+		closedEvents.events = $scope.$meteorCollection () -> share.Events.find {type: 'CLOSED'}
+		eventEvents.events = $scope.$meteorCollection () -> share.Events.find {type: 'EVENT'}
+		jubiEvents.events = $scope.$meteorCollection () -> share.Events.find {type: 'JUBI'}
+
 	$scope.newEventType = 'CLOSED'
 
 	# stuff for calendar
-	events = 
-		textColor: '#000'
-		color: '#efefef'
+	closedEvents = 
+		textColor: '#fff'
+		color: '#D46A6A'
+		events: []
+	eventEvents = 
+		textColor: '#fff'
+		color: '#A5C663'
+		events: []
+	jubiEvents = 
+		textColor: '#fff'
+		color: '#699'
 		events: []
 
 						# event = 
@@ -14,7 +31,7 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 						# start: r.from
 						# end: r.to
 						# allDay: true
-	$scope.requestEventSources = [events]
+	$scope.eventSources = [closedEvents, eventEvents, jubiEvents]
 	$scope.calendarConfig =
 		calendar:
 			height: 500
@@ -24,8 +41,11 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 				center: ''
 				right: 'today prev,next'
 
+	updateEvents()
+
 	# stuff for datepicker
-	$scope.newDate = new Date()
+	$scope.newDateFrom = new Date()
+	$scope.newDateTo = new Date()
 	$scope.format = 'dd.MM.yyyy'
 	$scope.openedFrom = false
 	$scope.openedTo = false
@@ -43,4 +63,16 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		$event.stopPropagation()
 		$scope.openedTo = true
 
+	$scope.addEvent = () ->
+		e = 
+			title: $scope.newTitle
+			start: $scope.newDateFrom
+			end: $scope.newDateTo
+			type: $scope.newEventType
+
+		$scope.$meteorCollection(share.Events).save(e).then (inserts) ->
+			e = _.first(inserts)
+			console.log "inserted new event with id: #{e._id}"
+			console.log e
+			updateEvents()
 ]
