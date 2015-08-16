@@ -1,5 +1,6 @@
 angular.module('app').controller 'alleCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
 	$scope.families = $scope.$meteorCollection(share.Families)
+	$scope.showArchived = false
 	
 	$scope.getFamilyName = (family) ->
 		share.getFamilyName(family)
