@@ -1,36 +1,20 @@
 angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
-
-	updateEvents = () ->
-		console.log "update events"
-		closedEvents.events.splice(0, closedEvents.events.length)
-		eventEvents.events.splice(0, eventEvents.events.length)
-		jubiEvents.events.splice(0, jubiEvents.events.length)
-		closedEvents.events = $scope.$meteorCollection () -> share.Events.find {type: 'CLOSED'}
-		eventEvents.events = $scope.$meteorCollection () -> share.Events.find {type: 'EVENT'}
-		jubiEvents.events = $scope.$meteorCollection () -> share.Events.find {type: 'JUBI'}
-
 	$scope.newEventType = 'CLOSED'
 
 	# stuff for calendar
 	closedEvents = 
 		textColor: '#fff'
 		color: '#D46A6A'
-		events: []
+		events: $scope.$meteorCollection () -> share.Events.find {type: 'CLOSED'}
 	eventEvents = 
 		textColor: '#fff'
 		color: '#A5C663'
-		events: []
+		events: $scope.$meteorCollection () -> share.Events.find {type: 'EVENT'}
 	jubiEvents = 
 		textColor: '#fff'
 		color: '#699'
-		events: []
+		events: $scope.$meteorCollection () -> share.Events.find {type: 'JUBI'}
 
-						# event = 
-						# id: r._id
-						# title: "#{r.name} (#{r.member.name})"
-						# start: r.from
-						# end: r.to
-						# allDay: true
 	$scope.eventSources = [closedEvents, eventEvents, jubiEvents]
 	$scope.calendarConfig =
 		calendar:
@@ -40,8 +24,6 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 				left: 'title'
 				center: ''
 				right: 'today prev,next'
-
-	updateEvents()
 
 	# stuff for datepicker
 	$scope.newDateFrom = new Date()
@@ -73,6 +55,4 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		$scope.$meteorCollection(share.Events).save(e).then (inserts) ->
 			e = _.first(inserts)
 			console.log "inserted new event with id: #{e._id}"
-			console.log e
-			updateEvents()
 ]
