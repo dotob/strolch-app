@@ -63,6 +63,7 @@
 					.event(ng-repeat="event in events | filter:search", ng-class="'event' + event.type")
 						div 
 							strong {{ event.title }}
+							i.fa.fa-lg.fa-trash-o.pull-right(ng-click="deleteEvent(event)")
 						div {{ event.start | date:'dd.MM.yy HH:mm' }} - {{ event.end | date:'dd.MM.yy HH:mm' }}
 
 

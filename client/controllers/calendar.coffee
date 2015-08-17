@@ -49,6 +49,10 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		$event.stopPropagation()
 		$scope.openedTo = true
 
+	$scope.deleteEvent = (event) ->
+		console.log "remove event: #{event.title}"
+		$scope.$meteorCollection(share.Events).remove event
+
 	$scope.addEvent = () ->
 		e = 
 			title: $scope.newTitle
