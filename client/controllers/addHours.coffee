@@ -19,7 +19,7 @@ angular.module('app').controller 'addHoursCtrl', ['$scope', '$meteor', '$statePa
 		console.log "delete hour: #{hour._id}"
 		$scope.$meteorCollection(share.Hours).remove hour
 
-
+	# stuff for datepicker
 	$scope.newDate = new Date()
 	$scope.format = 'dd.MM.yyyy'
 	$scope.opened = false

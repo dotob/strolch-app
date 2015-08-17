@@ -1,5 +1,6 @@
 angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
 	$scope.newEventType = 'CLOSED'
+	$scope.events = $scope.$meteorCollection () -> share.Events.find()
 
 	# stuff for calendar
 	closedEvents = 
@@ -20,6 +21,7 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		calendar:
 			height: 500
 			editable: false
+			timeFormat: 'H(:mm)'
 			header:
 				left: 'title'
 				center: ''
@@ -28,6 +30,8 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 	# stuff for datepicker
 	$scope.newDateFrom = new Date()
 	$scope.newDateTo = new Date()
+	$scope.newTimeFrom = new Date()
+	$scope.newTimeTo = new Date()
 	$scope.format = 'dd.MM.yyyy'
 	$scope.openedFrom = false
 	$scope.openedTo = false
@@ -48,10 +52,10 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 	$scope.addEvent = () ->
 		e = 
 			title: $scope.newTitle
-			start: $scope.newDateFrom
-			end: $scope.newDateTo
-			type: $scope.newEventType
-
+			start: new Date $scope.newDateFrom.getFullYear(), $scope.newDateFrom.getMonth(), $scope.newDateFrom.getDate(), $scope.newTimeFrom.getHours(), $scope.newTimeFrom.getMinutes()
+			end: new Date $scope.newDateTo.getFullYear(), $scope.newDateTo.getMonth(), $scope.newDateTo.getDate(), $scope.newTimeTo.getHours(), $scope.newTimeTo.getMinutes()
+			type: $scope.newEventType 
+		console.log e
 		$scope.$meteorCollection(share.Events).save(e).then (inserts) ->
 			e = _.first(inserts)
 			console.log "inserted new event with id: #{e._id}"

@@ -10,19 +10,20 @@
 							label(for='activity') Titel
 							input#activity.form-control(type='text', placeholder='Titel', ng-model="newTitle", ng-required) 
 						.form-group
-							label Terminart
-							.radio
-								label#radioCLOSED
+							div
+								label Terminart
+							.radio-inline
+								label.event-radio
 									input(type="radio", name="optionsEventType", value="CLOSED", ng-model="newEventType")
-									| Schließzeit
-							.radio
-								label#radioEVENT
+									span.eventCLOSED.event-radio-label Schließzeit
+							.radio-inline
+								label.event-radio
 									input(type="radio", name="optionsEventType", value="EVENT", ng-model="newEventType")
-									| Event
-							.radio
-								label#radioJUBI
+									span.eventEVENT.event-radio-label Event
+							.radio-inline
+								label.event-radio
 									input(type="radio", name="optionsEventType", value="JUBI", ng-model="newEventType")
-									| Jubiläum
+									span.eventJUBI.event-radio-label Jubiläum
 						.form-group
 							label Von
 							.row
@@ -58,7 +59,13 @@
 							.input-group
 								.input-group-addon
 									i.glyphicon.glyphicon-search
-								input.form-control(type="text", placeholder="Hier kannst du nach allem suchen. Namen, Gruppen, Kindern...", ng-model="search")
+								input.form-control(type="text", placeholder="Hier kannst du nach Terminen suchen", ng-model="search")
+					.event(ng-repeat="event in events | filter:search", ng-class="'event' + event.type")
+						div 
+							strong {{ event.title }}
+						div {{ event.start | date:'dd.MM.yy HH:mm' }} - {{ event.end | date:'dd.MM.yy HH:mm' }}
+
+
 
 		.col-md-8.col-sm-12
 			.panel.panel-primary
