@@ -7,7 +7,6 @@
 				.panel-body
 					form(name="addEventForm", novalidate)
 						.form-group
-							label(for='activity') Titel
 							input#activity.form-control(type='text', placeholder='Titel', ng-model="newTitle", ng-required) 
 						.form-group
 							div
@@ -24,29 +23,28 @@
 								label.event-radio
 									input(type="radio", name="optionsEventType", value="JUBI", ng-model="newEventType")
 									span.eventJUBI.event-radio-label Jubiläum
-						.form-group
-							label Von
-							.row
-								.col-md-8
-									#dateFrom.input-group
-										input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateFrom", is-open="openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
-										span.input-group-btn
-											button.btn.btn-default(ng-click="openFrom($event)")
-												i.glyphicon.glyphicon-calendar
-								.col-md-4
-									timepicker(ng-model="newTimeFrom", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
-	
-						.form-group
-							label Bis
-							.row
-								.col-md-8
-									#dateTo.input-group
-										input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close", ng-required)
-										span.input-group-btn
-											button.btn.btn-default(ng-click="openTo($event)")
-												i.glyphicon.glyphicon-calendar
-								.col-md-4
-									timepicker(ng-model="newTimeTo", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
+						.row
+							.col-md-2
+								label Von
+							.col-md-6
+								#dateFrom.input-group
+									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateFrom", is-open="openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
+									span.input-group-btn
+										button.btn.btn-default(ng-click="openFrom($event)")
+											i.glyphicon.glyphicon-calendar
+							.col-md-4
+								timepicker(ng-model="newTimeFrom", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
+						.row
+							.col-md-2
+								label Bis
+							.col-md-6
+								#dateTo.input-group
+									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close", ng-required)
+									span.input-group-btn
+										button.btn.btn-default(ng-click="openTo($event)")
+											i.glyphicon.glyphicon-calendar
+							.col-md-4
+								timepicker(ng-model="newTimeTo", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
 	
 						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent()", value="Speichern", ng-disabled="addEventForm.$invalid")
 
