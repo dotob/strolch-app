@@ -311,6 +311,64 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/jade/eine.ng.jade",
+			"settings":
+			{
+				"buffer_size": 6573,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/jade/add-hours.ng.jade",
+			"settings":
+			{
+				"buffer_size": 1937,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/lib/app.coffee",
+			"settings":
+			{
+				"buffer_size": 2443,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/projects/CTB/vc/twin-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
+			"settings":
+			{
+				"buffer_size": 961,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "      if (currrentADSignalInterpreter.TwlAuf && previousSpreaderSensorResponseObject != null && !previousSpreaderSensorResponseObject.TwlAuf) {\n        LOGGER.InfoFormat(\"|<AD-Signal>|: TWL-Opened\");\n        this.fireTWLStatusChanged(TWL.MITTE, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n        this.fireTWLStatusChanged(TWL.VORNE, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n        this.fireTWLStatusChanged(TWL.HINTEN, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n      }",
+			"settings":
+			{
+				"buffer_size": 544,
+				"line_ending": "Windows",
+				"name": "if (currrentADSignalInterpreter.TwlAuf && pr"
+			}
+		},
+		{
+			"file": "/D/Dropbox/Basti/programs/logmx/launcher.cfg",
+			"settings":
+			{
+				"buffer_size": 985,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program Files\\Java\\jre1.8.0_51\\bin\\;C:\\Ruby200\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files (x86)\\Novell\\ZENworks\\bin;C:\\Program Files (x86)\\Novell\\GroupWise;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Seapine\\TestTrack;C:\\Program Files (x86)\\Gow\\bin;C:\\Program Files (x86)\\VisualSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\DTS\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Go\\bin;d:\\Dropbox\\Basti\\programs\\putty\\,d:\\Dropbox\\Basti\\programs\\ffmpeg-20140919-git-33c752b-win64-static\\bin\\;c:\\Program Files\\apache-maven-3.2.3\\bin\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\GNU\\GnuPG\\pub;c:\\Python27\\;C:\\Program Files (x86)\\MiKTeX 2.9\\miktex\\bin\\;C:\\Users\\skraemer.INFORM\\AppData\\Local\\.meteor",
+			"settings":
+			{
+				"buffer_size": 1924,
+				"line_ending": "Windows",
+				"name": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -411,6 +469,7 @@
 	],
 	"file_history":
 	[
+		"/D/sync/TraPac/TraPac/sample_messages/woupdate.xml",
 		"/D/sync/_private/devel/kita-families-meteor/client/controllers/neu.coffee",
 		"/D/sync/_private/devel/ivo/server/gb20.json",
 		"/D/sync/_private/devel/kita-families-meteor/server/server.coffee",
@@ -537,12 +596,11 @@
 		"/Users/basti/Development/web/mo-edit/node_modules/chai/lib/chai/utils/addProperty.js",
 		"/Users/basti/Development/web/mo-edit/client/services/auth.coffee",
 		"/Users/basti/tmp/textAngular/lib/globals.js",
-		"/Users/basti/tmp/textAngular/lib/factories.js",
-		"/Users/basti/tmp/textAngular/lib/DOM.js"
+		"/Users/basti/tmp/textAngular/lib/factories.js"
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -556,6 +614,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"java",
+			"skraemer",
 			"td",
 			"kinder",
 			"idx",
@@ -681,9 +741,7 @@
 			"{ get; set; }",
 			"public",
 			"originalString",
-			"dayStartToken",
-			"wdItemString",
-			"projectPosDescString"
+			"dayStartToken"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -701,8 +759,208 @@
 	"groups":
 	[
 		{
+			"selected": 6,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/jade/eine.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6573,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								397
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2070.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/jade/add-hours.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1937,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								884,
+								884
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/lib/app.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1322,
+								1196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 552.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/projects/CTB/vc/twin-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								62
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								544,
+								544
+							]
+						],
+						"settings":
+						{
+							"auto_name": "if (currrentADSignalInterpreter.TwlAuf && pr",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/D/Dropbox/Basti/programs/logmx/launcher.cfg",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1924,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								61
+							]
+						],
+						"settings":
+						{
+							"auto_name": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -759,12 +1017,20 @@
 		"selected_items":
 		[
 			[
-				"print",
-				"client\\jade\\print.ng.jade"
+				"app",
+				"client\\lib\\app.coffee"
 			],
 			[
 				"add",
 				"client\\jade\\add-hours.ng.jade"
+			],
+			[
+				"ein",
+				"client\\jade\\eine.ng.jade"
+			],
+			[
+				"print",
+				"client\\jade\\print.ng.jade"
 			],
 			[
 				"kita",
@@ -777,10 +1043,6 @@
 			[
 				"main",
 				"client\\styles\\main.styl"
-			],
-			[
-				"ein",
-				"client\\controllers\\eine.coffee"
 			],
 			[
 				"server",
@@ -797,10 +1059,6 @@
 			[
 				"arch",
 				"client\\controllers\\archived.coffee"
-			],
-			[
-				"app",
-				"client\\lib\\app.coffee"
 			],
 			[
 				"ind",
