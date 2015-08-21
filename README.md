@@ -1,13 +1,24 @@
-# kita-families-meteor
+# strolch-app die einfache KiTa-Verwaltung
 
-this is a small tool to collect contact information for kindergardens or the like and keep it uptodate easily.
+Die strolch-app bietet Eltern die Möglichkeit ihre Daten selber zu pflegen und allen anderen Eltern zur Verfügung zu stellen. 
 
-a family has two parents and up to 3 kids. both parents and the kids can be grouped through tags (one can have multiple tags). every family can have up to 3 emergency contacts.
+# Features
 
-# roadmap
+- Eltern Kontaktdaten (Email, Telefon, Adresse)
+- Kinder Geburtstage und Alter
+- Notfall Kontakte
+- Schlüsselbesitz
+- Allergiehinweis
+- Gruppenzuweisung
+- Stundenermittlung
+- Kinder-Gruppen-Jahrgangs-Übersicht
+- Termin-Übersicht
 
-- keys (eg: / for search)
-- semantic ui
-- use directive for contactdata
-- calendar
-- show newest change date
+# screenshots
+![Familien Kontakt-Übersicht](doc/alle.png)
+![Familien bearbeiten](doc/einer.png)
+![Stunden erfassen](doc/add-hours.png)
+![Alle Stunden ansehen](doc/hours.png)
+![Termine](doc/calendar.png)
+![Gruppen-Jahrgangs-Übersicht](doc/ang.png)
+![Gruppen verwalten](doc/gruppen.png)
