@@ -7,25 +7,6 @@ share.Tags.after.update (userId, tag) ->
 	share.Families.update({'kinder.2.tags._id': tag._id}, {$set: {'kinder.2.tags.$.name': tag.name}}, {multi: true})
 
 Meteor.startup () ->
-	# create default user
-	stdUser = Meteor.users.findOne({username: "Eltern"})
-	if !stdUser
-		Accounts.createUser
-			username: "Eltern"
-			password: "Steppenberg"
-
-	# not used, was for init...
-	if false || share.Families.find().count() == 0
-		fs = Npm.require 'fs'
-		path = Npm.require 'path'
-		basepath = path.resolve('.').split('.meteor')[0]
-		file = basepath + "server/db.json"
-		data_raw = fs.readFileSync file, 'utf8'
-		data = JSON.parse data_raw
-		for family in data.families
-			delete family.id
-			share.Families.insert family
-
 	if share.Tags.find().count() == 0
 		share.Tags.insert
 			name: 'Gruppe1'
