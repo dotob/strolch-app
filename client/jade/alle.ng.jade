@@ -55,7 +55,7 @@
 							.left-space-5(ng-show="family.papa.email")
 								i.fa.fa-envelope-o.fa-fw
 								a(href="mailto:{{ family.papa.email }}") {{ family.papa.email }}
-					.row
+					.row(ng-if="family.adresse.strasse || family.adresse.stadt")
 						.col-md-12
 							.top-space-10
 								i.fa.fa-home.fa-fw
