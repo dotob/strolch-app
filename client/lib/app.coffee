@@ -11,10 +11,10 @@ angular.module('app', ['angular-meteor', 'ui.router', 'ngTagsInput', 'ui.bootstr
 
 # routes
 userResolve = 
-				"currentUser": [
-					"$meteor", ($meteor) ->
-						$meteor.requireUser()
-				]
+	"currentUser": [
+		"$meteor", ($meteor) ->
+			$meteor.requireUser()
+	]
 
 angular.module('app').config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($stateProvider, $urlRouterProvider, $locationProvider) ->
 	$stateProvider
@@ -67,6 +67,11 @@ angular.module('app').config ['$stateProvider', '$urlRouterProvider', '$location
 			url: '/ang'
 			templateUrl: 'client/jade/ang.html'
 			controller: 'angCtrl'
+			resolve: userResolve
+		.state 'admin',
+			url: '/admin'
+			templateUrl: 'client/jade/admin.html'
+			controller: 'adminCtrl'
 			resolve: userResolve
 		.state 'login',
 			url: '/login'

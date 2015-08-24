@@ -1,0 +1,103 @@
+.container
+	.row
+		.col-md-12
+			tabset
+				tab
+					tab-heading
+						i.fa.fa-key.fa.fa-fw
+						| Benutzer
+					
+					.panel.panel-primary.top-space-10
+						.panel-heading 
+							h3.panel-title Vorhandene Benutzer
+						.panel-body
+							.row(ng-repeat="user in users")
+								.col-md-6
+									.form-group
+										span {{ user.username }}
+								.col-md-6
+									button.left-space-5.btn.btn-danger.pull-right
+										i.fa.fa-trash.fa.fa-fw
+									button.left-space-5.btn.btn-primary.pull-right
+										i.fa.fa-user-secret.fa.fa-fw
+
+					
+					.panel.panel-primary
+						.panel-heading 
+							h3.panel-title Neuen Benutzer anlegen
+						.panel-body
+							.row
+								.col-md-3
+									.form-group
+										input#username.form-control(type='text', placeholder='Name', ng-model="newUserName") 
+								.col-md-3
+									.form-group
+										input#password.form-control(type='password', placeholder='Password', ng-model="newUserPassword") 
+								.col-md-3
+									.checkbox
+										label
+											input(type="checkbox", ng-model="newUserAdmin")
+											| Administrator
+								.col-md-3
+									button.left-space-5.btn.btn-primary.pull-right
+										| Anlegen
+
+
+				tab
+					tab-heading
+						i.fa.fa-sitemap.fa.fa-fw
+						| Gruppen
+					
+					.panel.panel-primary.top-space-10
+						.panel-heading 
+							h3.panel-title Vorhandene Gruppen
+						.panel-body
+							.row(ng-repeat="tag in tags")
+								.col-md-3
+									.form-group
+										span {{ tag.name }}
+								.col-md-3
+									.checkbox
+										label
+											input(type="checkbox", value="tag.type=='child'")
+											| Kindergruppe
+								.col-md-3
+									.checkbox
+										label
+											input(type="checkbox", ng-model="tag.canEdit")
+											| Editierbar
+								.col-md-3
+										button.left-space-5.btn.btn-danger.pull-right
+											i.fa.fa-trash.fa.fa-fw
+										button.left-space-5.btn.btn-primary.pull-right
+											i.fa.fa-user-secret.fa.fa-fw
+
+					.panel.panel-primary
+						.panel-heading 
+							h3.panel-title Neue Gruppe anlegen
+						.panel-body
+							.row
+								.col-md-3
+									.form-group
+										input#username.form-control(type='text', placeholder='Name', ng-model="newTagName") 
+								.col-md-3
+									.checkbox
+										label
+											input(type="checkbox", ng-model="newTagChildGroups")
+											| Kindergruppe
+										p.help-block Kinder dieser Gruppe werden im ANG Bereich berücksichtigt
+								.col-md-3
+									.checkbox
+										label
+											input(type="checkbox", ng-model="newTagCanEdit")
+											| Editierbar
+										p.help-block Diese Gruppe kann nicht gelöscht oder umbenannt werden
+								.col-md-3
+									button.left-space-5.btn.btn-primary.pull-right
+										| Anlegen
+
+				tab
+					tab-heading
+						i.fa.fa-wrench.fa.fa-fw
+						| Verschiedenes
+					| Content divers
