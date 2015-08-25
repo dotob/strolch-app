@@ -13,13 +13,15 @@
 						.panel-body
 							.row(ng-repeat="user in users")
 								.col-md-6
-									.form-group
-										span {{ user.username }}
+									.form-group 
+										p {{ user.username }}
 								.col-md-6
-									button.left-space-5.btn.btn-danger.pull-right
+									button.left-space-5.btn.btn-danger.pull-right(title="Benutzer löschen", ng-click="deleteUser(user)")
 										i.fa.fa-trash.fa.fa-fw
-									button.left-space-5.btn.btn-primary.pull-right
+										| Benutzer löschen
+									button.left-space-5.btn.btn-primary.pull-right(title="Passwort ändern", ng-click="changePasswort(user)")
 										i.fa.fa-user-secret.fa.fa-fw
+										| Passwort ändern
 
 					
 					.panel.panel-primary
@@ -39,7 +41,8 @@
 											input(type="checkbox", ng-model="newUserAdmin")
 											| Administrator
 								.col-md-3
-									button.left-space-5.btn.btn-primary.pull-right
+									button.left-space-5.btn.btn-primary.pull-right(title="Benutzer anlegen", ng-click="createUser()")
+										i.fa.fa-plus.fa.fa-fw
 										| Anlegen
 
 
@@ -67,10 +70,9 @@
 											input(type="checkbox", ng-model="tag.canEdit")
 											| Editierbar
 								.col-md-3
-										button.left-space-5.btn.btn-danger.pull-right
+										button.left-space-5.btn.btn-danger.pull-right(title="Gruppe löschen", ng-click="deleteTag(tag)")
 											i.fa.fa-trash.fa.fa-fw
-										button.left-space-5.btn.btn-primary.pull-right
-											i.fa.fa-user-secret.fa.fa-fw
+											| Gruppe löschen
 
 					.panel.panel-primary
 						.panel-heading 
@@ -83,7 +85,7 @@
 								.col-md-3
 									.checkbox
 										label
-											input(type="checkbox", ng-model="newTagChildGroups")
+											input(type="checkbox", ng-model="newTagChildGroup")
 											| Kindergruppe
 										p.help-block Kinder dieser Gruppe werden im ANG Bereich berücksichtigt
 								.col-md-3
@@ -93,7 +95,8 @@
 											| Editierbar
 										p.help-block Diese Gruppe kann nicht gelöscht oder umbenannt werden
 								.col-md-3
-									button.left-space-5.btn.btn-primary.pull-right
+									button.left-space-5.btn.btn-primary.pull-right(title="Gruppe anlegen", ng-click="createGroup()")
+										i.fa.fa-plus.fa.fa-fw
 										| Anlegen
 
 				tab
