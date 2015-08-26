@@ -2,6 +2,13 @@
 	.row
 		.col-md-12
 			tabset
+
+				tab
+					tab-heading
+						i.fa.fa-wrench.fa.fa-fw
+						| Einstellungen
+					| Content divers
+
 				tab
 					tab-heading
 						i.fa.fa-key.fa.fa-fw
@@ -14,7 +21,7 @@
 							.row(ng-repeat="user in users")
 								.col-md-6
 									.form-group 
-										p {{ user.username }}
+										input#username.form-control(type='text', placeholder='Name', ng-model="user.username", ng-readonly="true") 
 								.col-md-6
 									button.left-space-5.btn.btn-danger.pull-right(title="Benutzer löschen", ng-click="deleteUser(user)")
 										i.fa.fa-trash.fa.fa-fw
@@ -41,7 +48,7 @@
 											input(type="checkbox", ng-model="newUserAdmin")
 											| Administrator
 								.col-md-3
-									button.left-space-5.btn.btn-primary.pull-right(title="Benutzer anlegen", ng-click="createUser()")
+									button.left-space-5.btn.btn-primary.pull-right(title="Benutzer anlegen", ng-click="createUser(newUserName, newUserPassword, newUserAdmin)")
 										i.fa.fa-plus.fa.fa-fw
 										| Anlegen
 
@@ -58,11 +65,11 @@
 							.row(ng-repeat="tag in tags")
 								.col-md-3
 									.form-group
-										span {{ tag.name }}
+										input#username.form-control(type='text', placeholder='Name', ng-model="tag.name") 
 								.col-md-3
 									.checkbox
 										label
-											input(type="checkbox", value="tag.type=='child'")
+											input(type="checkbox", ng-true-value="'child'", ng-false-value="'parent'", ng-model="tag.type")
 											| Kindergruppe
 								.col-md-3
 									.checkbox
@@ -95,12 +102,6 @@
 											| Editierbar
 										p.help-block Diese Gruppe kann nicht gelöscht oder umbenannt werden
 								.col-md-3
-									button.left-space-5.btn.btn-primary.pull-right(title="Gruppe anlegen", ng-click="createGroup()")
+									button.left-space-5.btn.btn-primary.pull-right(title="Gruppe anlegen", ng-click="createTag(newTagName, newTagChildGroup, newTagCanEdit)")
 										i.fa.fa-plus.fa.fa-fw
 										| Anlegen
-
-				tab
-					tab-heading
-						i.fa.fa-wrench.fa.fa-fw
-						| Verschiedenes
-					| Content divers

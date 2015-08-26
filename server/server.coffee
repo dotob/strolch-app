@@ -1,3 +1,13 @@
+Meteor.methods
+	createNewUser: (newUserName, newUserPassword, newUserAdmin) ->
+		Accounts.createUser
+			username: newUserName
+			password: newUserPassword
+			profile:
+				isAdmin: newUserAdmin
+	setPassword: (id, pw) ->
+		Accounts.setPassword id, pw
+
 # fix tags 
 share.Tags.after.update (userId, tag) ->
 	share.Families.update({'mama.tags._id': tag._id}, {$set: {'mama.tags.$.name': tag.name}}, {multi: true})

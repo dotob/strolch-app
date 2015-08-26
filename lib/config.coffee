@@ -24,3 +24,8 @@ share.Families.allow onlyUsers
 share.Tags.allow onlyUsers
 share.Hours.allow onlyUsers
 share.Events.allow onlyUsers
+
+Meteor.users.allow
+	remove: (userId) ->
+		# better check for admin here??
+		userId?
