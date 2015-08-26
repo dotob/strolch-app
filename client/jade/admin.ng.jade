@@ -18,7 +18,7 @@
 						.panel-heading 
 							h3.panel-title Vorhandene Benutzer
 						.panel-body
-							.row(ng-repeat="user in users")
+							.row(ng-repeat="user in users | orderBy:'username'")
 								.col-md-6
 									.form-group 
 										input#username.form-control(type='text', placeholder='Name', ng-model="user.username", ng-readonly="true") 
@@ -62,7 +62,7 @@
 						.panel-heading 
 							h3.panel-title Vorhandene Gruppen
 						.panel-body
-							.row(ng-repeat="tag in tags")
+							.row(ng-repeat="tag in tags | orderBy:'name'")
 								.col-md-3
 									.form-group
 										input#username.form-control(type='text', placeholder='Name', ng-model="tag.name") 
