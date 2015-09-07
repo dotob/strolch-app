@@ -7,10 +7,11 @@
 				span.glyphicon.glyphicon-trash
 	
 	.row.tag-edit
-		.col-md-5.col-md-offset-3
-			input.form-control(type="text", ng-model="newName", placeholder="Neue Gruppe...")
-		.col-md-1
-			button.btn.btn-success.btn-sm.form-control(ng-click="addTag(newName)")
-				span.glyphicon.glyphicon-plus
+		form(name="addGroupForm", novalidate)
+			.col-md-5.col-md-offset-3
+				input.form-control(type="text", ng-model="newName", placeholder="Neue Gruppe...", required)
+			.col-md-1
+				button.btn.btn-success.btn-sm.form-control(type="submit", ng-click="addTag(newName)", ng-disabled="!addGroupForm.$valid")
+					span.glyphicon.glyphicon-plus
 
 
