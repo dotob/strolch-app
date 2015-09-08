@@ -48,7 +48,7 @@
 							i.fa.fa-medkit.fa-fw
 				tbody
 					tr(ng-repeat="family in families | filter:{ archived: false } | orderBy: 'mama.nachname' | filter:search")
-						td			
+						td
 							div(ng-if="family.mama.nachname")
 								strong {{ family.mama.nachname }}, 
 								strong {{ family.mama.vorname }}
@@ -62,7 +62,7 @@
 							.left-space-5(ng-show="family.mama.email && showEmail")
 								i.fa.fa-envelope-o.fa-fw
 								a(href="mailto:{{ family.mama.email }}") {{ family.mama.email }}
-						td			
+						td
 							div(ng-if="family.papa.nachname")
 								strong {{ family.papa.nachname }}, 
 								strong {{ family.papa.vorname }}
@@ -76,10 +76,10 @@
 							.left-space-5(ng-show="family.papa.email && showEmail")
 								i.fa.fa-envelope-o.fa-fw
 								a(href="mailto:{{ family.papa.email }}") {{ family.papa.email }}
-						td			
+						td
 							div {{ family.adresse.strasse }}
 							div {{ family.adresse.stadt }}
-						td			
+						td
 							div(ng-if="family.kinder[0].vorname")
 								div
 									i(ng-if="family.kinder[0].gender=='m'").fa.fa-mars.fa-fw
@@ -90,7 +90,7 @@
 									span.label.label-default(ng-repeat="tag in family.kinder[0].tags") {{ tag.name }}
 								.text-muted {{ family.kinder[0].dob }}
 								div(ng-if="showAge") {{ dob2age(family.kinder[0].dob) }}
-						td			
+						td
 							div(ng-if="family.kinder[1].vorname")
 								div
 									i(ng-if="family.kinder[1].gender=='m'").fa.fa-mars.fa-fw
@@ -101,7 +101,7 @@
 									span.label.label-default(ng-repeat="tag in family.kinder[1].tags") {{ tag.name }}
 								.text-muted {{ family.kinder[1].dob }}
 								div(ng-if="showAge") {{ dob2age(family.kinder[1].dob) }}
-						td			
+						td
 							div(ng-if="family.kinder[2].vorname")
 								div
 									i(ng-if="family.kinder[2].gender=='m'").fa.fa-mars.fa-fw
