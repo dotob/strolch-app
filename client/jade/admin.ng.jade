@@ -7,7 +7,23 @@
 					tab-heading
 						i.fa.fa-wrench.fa.fa-fw
 						| Einstellungen
-					| Content divers
+					.row.top-space-10
+						.col-md-12
+							.form-inline
+								.form-group
+									label(for="hoursPerFamilyAndMonth") Stunden pro Familie und Monat
+									input#hoursPerFamilyAndMonth.form-control(type='text', placeholder='h/Monat', ng-model="settings.hoursPerFamilyAndMonth") 
+					.row.top-space-10
+						.col-md-12
+							.form-inline
+								.form-group
+									label(for="kitaYearStartDay") KiTa-Jahreswechsel 
+									label.left-space-10(for="kitaYearStartDay") Tag
+									input#kitaYearStartDay.form-control(type='text', placeholder='Tag', ng-model="settings.kitaYearStartDay") 
+								.form-group
+									label(for="kitaYearStartMonth") Monat
+									input#kitaYearStartMonth.form-control(type='text', placeholder='Monat', ng-model="settings.kitaYearStartMonth") 
+
 
 				tab
 					tab-heading
@@ -19,10 +35,15 @@
 							h3.panel-title Vorhandene Benutzer
 						.panel-body
 							.row(ng-repeat="user in users | orderBy:'username'")
-								.col-md-6
+								.col-md-4
 									.form-group 
 										input#username.form-control(type='text', placeholder='Name', ng-model="user.username", ng-readonly="true") 
-								.col-md-6
+								.col-md-4
+									.checkbox
+										label
+											input(type="checkbox", ng-model="user.profile.isAdmin")
+											| Administrator
+								.col-md-4
 									button.left-space-5.btn.btn-danger.pull-right(title="Benutzer löschen", ng-click="deleteUser(user)")
 										i.fa.fa-trash.fa.fa-fw
 										| Benutzer löschen

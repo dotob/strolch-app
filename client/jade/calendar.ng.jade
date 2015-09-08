@@ -1,7 +1,7 @@
 .container-fluid
 	.row
 		.col-md-4.col-sm-12
-			.panel.panel-primary
+			.panel.panel-primary(ng-if="userIsAdmin")
 				.panel-heading 
 					h3.panel-title Neuer Termin
 				.panel-body

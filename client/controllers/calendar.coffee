@@ -1,6 +1,8 @@
 angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
 	$scope.newEventType = 'CLOSED'
 	$scope.events = $scope.$meteorCollection () -> share.Events.find()
+	$meteor.requireValidUser (user) ->
+		$scope.userIsAdmin = user?.profile?.isAdmin || false
 
 	# stuff for calendar
 	closedEvents = 

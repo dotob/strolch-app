@@ -16,6 +16,17 @@ userResolve =
 			$meteor.requireUser()
 	]
 
+adminResolve = 
+	"currentUser": [
+		"$meteor", ($meteor) ->
+			hasAdmin = Meteor.users.findOne {'profile.isAdmin': true}
+			if !hasAdmin
+				return true
+			else
+				return $meteor.requireValidUser (user) ->
+					user?.profile?.isAdmin
+	]
+
 angular.module('app').config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($stateProvider, $urlRouterProvider, $locationProvider) ->
 	$stateProvider
 		.state 'alle',
@@ -72,7 +83,7 @@ angular.module('app').config ['$stateProvider', '$urlRouterProvider', '$location
 			url: '/admin'
 			templateUrl: 'client/jade/admin.html'
 			controller: 'adminCtrl'
-			resolve: userResolve
+			resolve: adminResolve
 		.state 'login',
 			url: '/login'
 			templateUrl: 'client/jade/login.html'

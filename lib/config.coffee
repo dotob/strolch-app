@@ -7,6 +7,7 @@ share.Families = new Mongo.Collection 'families'
 share.Tags = new Mongo.Collection 'tags' 
 share.Hours = new Mongo.Collection 'hours' 
 share.Events = new Mongo.Collection 'events' 
+share.Settings = new Mongo.Collection 'settings' 
 
 # add created, updated etc fields
 share.Families.attachBehaviour 'timestampable'
@@ -19,13 +20,25 @@ onlyUsers =
 	remove: (userId) ->
 		userId?
 
+onlyAdmin = 
+	insert: (userId) ->
+		user = Meteor.users.findOne(userId)
+		user?.profile?.isAdmin
+	update: (userId) ->
+		user = Meteor.users.findOne(userId)
+		user?.profile?.isAdmin
+	remove: (userId) ->
+		user = Meteor.users.findOne(userId)
+		user?.profile?.isAdmin
+
 # user access config
 share.Families.allow onlyUsers
 share.Tags.allow onlyUsers
 share.Hours.allow onlyUsers
 share.Events.allow onlyUsers
+share.Settings.allow onlyAdmin
 
 Meteor.users.allow
 	remove: (userId) ->
-		# better check for admin here??
-		userId?
+		user = Meteor.users.findOne(userId)
+		user?.profile?.isAdmin

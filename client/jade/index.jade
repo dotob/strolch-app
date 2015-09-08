@@ -21,7 +21,7 @@ head
 	meta(name="theme-color", content="#ffffff")
 
 body(ng-app="app")
-	nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+	nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation', ng-controller="navCtrl")
 		.container-fluid
 			// Brand and toggle get grouped for better mobile display
 			.navbar-header
@@ -62,6 +62,9 @@ body(ng-app="app")
 					li(ui-sref-active="active")
 						a(ui-sref='tags')
 							span Gruppen
+					li(ui-sref-active="active", ng-if="userIsAdmin")
+						a(ui-sref='admin')
+							span.text-danger Admin
 				ul.nav.navbar-nav.navbar-right
 					+loginButtons
 
