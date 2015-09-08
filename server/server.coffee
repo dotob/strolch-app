@@ -17,6 +17,11 @@ share.Tags.after.update (userId, tag) ->
 	share.Families.update({'kinder.2.tags._id': tag._id}, {$set: {'kinder.2.tags.$.name': tag.name}}, {multi: true})
 
 Meteor.startup () ->
+	if share.Settings.find().count() == 0
+		share.Settings.insert
+			hoursPerFamilyAndMonth: 5
+			kitaYearStartDay: 1
+			kitaYearStartMonth: 8
 	if share.Tags.find().count() == 0
 		share.Tags.insert
 			name: 'Gruppe1'

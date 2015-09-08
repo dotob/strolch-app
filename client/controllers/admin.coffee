@@ -1,8 +1,10 @@
 _ = lodash
 
 angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
-	$scope.users = $scope.$meteorCollection(Meteor.users)	
-	$scope.tags = $scope.$meteorCollection(share.Tags)	
+	$scope.users = $scope.$meteorCollection Meteor.users
+	$scope.tags = $scope.$meteorCollection share.Tags
+	$scope.settings = $scope.$meteorObject share.Settings, {}
+	console.log $scope.settings
 
 	$scope.createUser = (newUserName, newUserPassword, newUserAdmin) ->
 		console.log "create new user #{newUserName}"
