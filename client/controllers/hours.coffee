@@ -2,12 +2,13 @@ _ = lodash
 
 angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParams', ($scope, $meteor, $stateParams) ->
 	KJ = share.KiTaJahr
-	$scope.currentYear = KJ.current()
+	$scope.settings = $scope.$meteorObject share.Settings, {}
+	$scope.currentYear = KJ.current $scope.settings
 	$scope.sortType = 'hours'
 	$scope.sortReverse = true
 
 	updateHours = () ->
-		$scope.kj = new KJ $scope.currentYear
+		$scope.kj = new KJ $scope.currentYear, $scope.settings
 		$scope.warningLimit = 0.5
 		$scope.hoursPerMonth = 2.5
 		$scope.startOfKitaYear = $scope.kj.startDate()

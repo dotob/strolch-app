@@ -1,6 +1,7 @@
 _ = lodash
 
 angular.module('app').controller 'angCtrl', ['$scope', ($scope) ->
+	$scope.settings = $scope.$meteorObject share.Settings, {}
 	$scope.families = $scope.$meteorCollection(share.Families)
 	# collect all childs
 	allekinder = []
@@ -10,16 +11,16 @@ angular.module('app').controller 'angCtrl', ['$scope', ($scope) ->
 			if k.vorname?
 				dobMoment = moment(k.dob, "DD.MM.YY")
 				k.dobMoment = dobMoment
-				console.log k
+				#console.log k
 				allekinder.push k
 	
 	# create ang object with empty groups
 	KJ = share.KiTaJahr
-	currentYear = KJ.current()
-	$scope.currentKiTaJahr = new KJ currentYear
+	currentYear = KJ.current $scope.settings
+	$scope.currentKiTaJahr = new KJ currentYear, $scope.settings
 	$scope.ang = []
 	for i in [0..5]
-		kj = new KJ currentYear + i
+		kj = new KJ currentYear + i, $scope.settings
 		$scope.ang.push
 			year: kj.toString()
 			startdate: kj.startDate()
