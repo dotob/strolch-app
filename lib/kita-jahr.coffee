@@ -4,7 +4,6 @@
 
 share.KiTaJahr = class KiTaJahr
 	constructor: (@year, @settings) ->
-		console.log @settings
 
 	@current: (settings) ->
 		now = moment()

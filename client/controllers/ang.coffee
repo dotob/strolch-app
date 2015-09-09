@@ -6,20 +6,25 @@ angular.module('app').controller 'angCtrl', ['$scope', ($scope) ->
 	# collect all childs
 	allekinder = []
 	for familie in $scope.families
-		for kind in familie.kinder
+		for x, kind of familie.kinder
 			k = kind
-			if k.vorname?
+			if k.vorname? && k.vorname.length > 0
 				dobMoment = moment(k.dob, "DD.MM.YY")
 				k.dobMoment = dobMoment
-				#console.log k
 				allekinder.push k
+				console.log "in: '#{k.vorname}' '#{k.nachname}' '#{familie.mama.nachname}'"
+			else
+				console.log "out: '#{k.vorname}' '#{k.nachname}' '#{familie.mama.nachname}'"
+
+	console.log "---"
+	#console.table allekinder
 	
 	# create ang object with empty groups
 	KJ = share.KiTaJahr
 	currentYear = KJ.current $scope.settings
 	$scope.currentKiTaJahr = new KJ currentYear, $scope.settings
 	$scope.ang = []
-	for i in [0..5]
+	for i in [0..6]
 		kj = new KJ currentYear + i, $scope.settings
 		$scope.ang.push
 			year: kj.toString()
@@ -32,7 +37,6 @@ angular.module('app').controller 'angCtrl', ['$scope', ($scope) ->
 	# get child groups
 	tags = $scope.$meteorCollection(share.Tags)
 	$scope.childGroups = _.chain(tags).filter((t) -> t.type == 'child').map((t) -> t.name).sortBy().value()
-	console.log $scope.childGroups
 
 	# collect childs into year groups
 	$scope.sumGroups = {}
