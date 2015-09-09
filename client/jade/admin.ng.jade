@@ -8,11 +8,11 @@
 						i.fa.fa-wrench.fa.fa-fw
 						| Einstellungen
 
-					.panel.panel-primary
+					.panel.panel-primary.top-space-10
 						.panel-heading 
 							h3.panel-title Stundenabrechnung
 						.panel-body
-							.row.top-space-10
+							.row
 								.col-md-12
 									.form-inline
 										.form-group
@@ -23,7 +23,7 @@
 						.panel-heading 
 							h3.panel-title KiTa-Jahreswechsel
 						.panel-body
-							.row.top-space-10
+							.row
 								.col-md-12
 									.form-inline
 										.form-group
@@ -147,11 +147,9 @@
 						.panel-body
 							.row
 								.col-md-12
-									button.left-space-5.btn.btn-primary.pull-right(title="Alle Daten exportieren", ng-click="export()")
+									button.btn.btn-success.form-control(title="Alle Daten exportieren", ng-click="export()")
 										i.fa.fa-plus.fa.fa-fw
 										| Alle Daten exportieren
-
-
 
 					.panel.panel-primary
 						.panel-heading 
@@ -159,7 +157,7 @@
 						.panel-body
 							.row
 								.col-md-12
-									button.left-space-5.btn.btn-primary.pull-right(title="Import-Datei auswählen", ng-click="openFileDialog()")
+									button.btn.btn-success.form-control(title="Import-Datei auswählen", ng-click="openFileDialog()")
 										i.fa.fa-plus.fa.fa-fw
 										| Import-Datei auswählen
 

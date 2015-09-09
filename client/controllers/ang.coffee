@@ -2,7 +2,7 @@ _ = lodash
 
 angular.module('app').controller 'angCtrl', ['$scope', ($scope) ->
 	$scope.settings = $scope.$meteorObject share.Settings, {}
-	$scope.families = $scope.$meteorCollection(share.Families)
+	$scope.families = $scope.$meteorCollection () -> share.Families.find {archived: false}
 	# collect all childs
 	allekinder = []
 	for familie in $scope.families

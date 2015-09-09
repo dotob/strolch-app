@@ -73,7 +73,7 @@
 									span {{ dob2age(kind.dob) }}
 									span.text-muted  )
 									span.fa.fa-exclamation-triangle.fa-fw(ng-show="kind.hasAllergies", title="Hat Allergien")
-									span.left-space-5.label.label-default(ng-repeat="tag in kind.tags") {{ tag.name }}
+									span.left-space-5.label.label-default(ng-repeat="tag in kind.tags") {{ tag.name }} {{ tag._id }}
 
 				.col-md-3
 					.top-space-5.emergency-contacts(ng-repeat="emergency in family.emergency", ng-show="emergency.name")
