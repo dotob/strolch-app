@@ -5,7 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-urigo:angular
 stylus
 coffeescript
 angularui:angular-ui-router
@@ -26,3 +25,4 @@ angularui:ui-calendar
 planettraining:jquery-fullcalendar
 cfs:standard-packages
 cfs:gridfs
+angular
