@@ -12,9 +12,9 @@ angular.module('app').controller 'angCtrl', ['$scope', ($scope) ->
 				dobMoment = moment(k.dob, "DD.MM.YY")
 				k.dobMoment = dobMoment
 				allekinder.push k
-				console.log "in: '#{k.vorname}' '#{k.nachname}' '#{familie.mama.nachname}'"
+				#console.log "in: '#{k.vorname}' '#{k.nachname}' '#{familie.mama.nachname}'"
 			else
-				console.log "out: '#{k.vorname}' '#{k.nachname}' '#{familie.mama.nachname}'"
+				#console.log "out: '#{k.vorname}' '#{k.nachname}' '#{familie.mama.nachname}'"
 
 	console.log "---"
 	#console.table allekinder
