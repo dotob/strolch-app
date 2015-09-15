@@ -7,7 +7,18 @@ Accounts.ui.config
 _ = lodash
 
 # angular
-angular.module('app', ['angular-meteor', 'ui.router', 'ngTagsInput', 'ui.bootstrap', 'ui.calendar'])
+app = angular.module 'app', [
+	'angular-meteor', 
+	'ui.router', 
+	'ngTagsInput', 
+	'ui.bootstrap', 
+	'ui.calendar', 
+	'ngFileUpload'
+]
+
+app.config ['$compileProvider', ($compileProvider) ->
+	$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/)
+]
 
 # routes
 userResolve = 

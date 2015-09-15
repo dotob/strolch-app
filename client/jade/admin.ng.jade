@@ -147,9 +147,14 @@
 						.panel-body
 							.row
 								.col-md-12
-									button.btn.btn-success.form-control(title="Alle Daten exportieren", ng-click="export()")
+									button.btn.btn-primary.form-control(title="Alle Daten exportieren", ng-click="doExport()")
 										i.fa.fa-plus.fa.fa-fw
 										| Alle Daten exportieren
+							.row
+								.col-md-12
+									a.btn.btn-success.top-space-10.form-control(ng-disabled="!exportUrl", title="Backup downloaden", download="strolch-app.json", ng-href="{{exportUrl}}")
+										i.fa.fa-plus.fa.fa-fw
+										| Backup downloaden
 
 					.panel.panel-primary
 						.panel-heading 
@@ -157,7 +162,9 @@
 						.panel-body
 							.row
 								.col-md-12
-									button.btn.btn-success.form-control(title="Import-Datei auswählen", ng-click="openFileDialog()")
-										i.fa.fa-plus.fa.fa-fw
-										| Import-Datei auswählen
+									.drop-box(ngf-drop, ngf-select, ngf-change="doImport($files)", ngf-drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}", ngf-multiple="false", ngf-allow-dir="false", ngf-drop-available="dropAvailable")
+										div Hier klicken um eine Import-Datei auszuwählen...
+										div
+											strong ODER
+										div(ng-show="dropAvailable") Eine Import-Datei hier droppen...
 

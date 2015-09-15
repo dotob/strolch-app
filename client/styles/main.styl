@@ -1,153 +1,166 @@
 body
-  padding-top: 70px
+	padding-top: 70px
 
 // do not show href url when printing
 @media print
-  a[href]:after
-    content: none
+	a[href]:after
+		content: none
 
 // this is for angular ui bootstrap, see https://angular-ui.github.io/bootstrap/#/getting_started
 .nav, .pagination, .carousel, .panel-title a 
-  cursor: pointer
+	cursor: pointer
 
 // show click mouse when over ng-click element
 [ng-click]
 [data-ng-click]
 [x-ng-click]
-  cursor: pointer
+	cursor: pointer
 
 .left-space-5
-  margin-left: 5px
+	margin-left: 5px
 
 .left-space-10
-  margin-left: 10px
+	margin-left: 10px
 
 .top-space-5
-  margin-top: 5px
+	margin-top: 5px
 
 .top-space-10
-  margin-top: 10px
+	margin-top: 10px
 
 #saveButton
-  width: 100%
+	width: 100%
 
 #settings
-  height: 100px
+	height: 100px
 
 #draw
-  width: 150px
+	width: 150px
 
 .prop-value
-  font-weight: bold
+	font-weight: bold
 
 .prop-name
-  color: "#333"
-  min-width: 80px
+	color: "#333"
+	min-width: 80px
 
 .bigger-text
-  font-weight: bold
+	font-weight: bold
 
 /* svg */
 .tz_circle
-  stroke: "yellow"
-  stroke-width: 1
-  fill: "transparent"
+	stroke: "yellow"
+	stroke-width: 1
+	fill: "transparent"
 
 .tag-start
-  margin-left: 3px
-  margin-right: 3px
+	margin-left: 3px
+	margin-right: 3px
 
 .tag-name
-  margin-right: 2px
-  
+	margin-right: 2px
+	
 .tag-edit
-  margin-top: 4px
-  
+	margin-top: 4px
+	
 .alle-table
-  margin: 3px
+	margin: 3px
 
 // do not show password change button
 #login-buttons-open-change-password
-  display: none
-  
+	display: none
+	
 .allergy-hint
-  margin-left: 10px
-  margin-right: 4px
-  
+	margin-left: 10px
+	margin-right: 4px
+	
 .add-hours-link
 .edit-family-link
-  margin-left: 5px
-  
+	margin-left: 5px
+	
 #yearPaging
-  width: 200px
-  margin-left: auto
-  
-  input
-    text-align: center
+	width: 200px
+	margin-left: auto
+	
+	input
+		text-align: center
 
 .hours-progress
-  margin-bottom: 0
+	margin-bottom: 0
 
 .hours-hours-column
-  width: 70%
-  vertical-align: middle !important
-  
+	width: 70%
+	vertical-align: middle !important
+	
 .hours-family-column
-  width: 30%
-  vertical-align: middle !important
-  
+	width: 30%
+	vertical-align: middle !important
+	
 .alle-action-buttons
-  width: 100px
+	width: 100px
 
 .family-name
-  font-weight: bold
-  font-size: large
+	font-weight: bold
+	font-size: large
 
 .emergency-contacts
-  padding: 5px
-  background-color: #ffdada
-  border: 1px solid #e3e3e3
-  border-radius: 4px
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+	padding: 5px
+	background-color: #ffdada
+	border: 1px solid #e3e3e3
+	border-radius: 4px
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
 
 .child
-  margin: 3px
-  padding: 4px
-  background-color: #d7d7d7
-  border: 1px solid #e3e3e3
-  border-radius: 3px
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+	margin: 3px
+	padding: 4px
+	background-color: #d7d7d7
+	border: 1px solid #e3e3e3
+	border-radius: 3px
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
 
 .ang-table
-  max-width: 1500px
-  
+	max-width: 1500px
+	
 #dateFrom
 #dateTo
-  margin-top: 33px
-  
+	margin-top: 33px
+	
 .event-radio
-  padding: 5px
-  
+	padding: 5px
+	
 .event-radio-label
-  padding: 7px
-  border-radius: 3px
+	padding: 7px
+	border-radius: 3px
 
 .event
-  padding: 5px
-  margin: 5px
-  
+	padding: 5px
+	margin: 5px
+	
 .eventCLOSED
 .eventJUBI
 .eventEVENT
-  color: #fff
-  
+	color: #fff
+	
 .eventCLOSED
-  background-color: #D46A6A
-  
+	background-color: #D46A6A
+	
 .eventJUBI
-  background-color: #699
-  
+	background-color: #699
+	
 .eventEVENT
-  background-color: #A5C663
+	background-color: #A5C663
+
+.drop-box
+	background: #F8F8F8
+	border: 5px dashed #DDD
+	height: 120px
+	text-align: center
+	padding-top: 25px
+ 
+.drop-box.dragover
+	border: 5px dashed blue
+ 
+.drop-box.dragover-err
+	border: 5px dashed red

@@ -11,6 +11,9 @@ share.Settings = new Mongo.Collection 'settings'
 
 # add created, updated etc fields
 share.Families.attachBehaviour 'timestampable'
+share.Hours.attachBehaviour 'timestampable'
+share.Settings.attachBehaviour 'timestampable'
+share.Events.attachBehaviour 'timestampable'
 
 onlyUsers = 
 	insert: (userId) ->
