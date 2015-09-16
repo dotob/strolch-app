@@ -10,7 +10,7 @@ angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParam
 	updateHours = () ->
 		$scope.kj = new KJ $scope.currentYear, $scope.settings
 		$scope.warningLimit = 0.5
-		$scope.hoursPerMonth = 2.5
+		$scope.hoursPerMonth = $scope.settings.hoursPerFamilyAndMonth/2
 		$scope.startOfKitaYear = $scope.kj.startDate()
 		$scope.endOfKitaYear = $scope.kj.endDate()
 
