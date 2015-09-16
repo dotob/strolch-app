@@ -2,6 +2,7 @@ _ = lodash
 
 angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
 	$scope.users = $scope.$meteorCollection Meteor.users
+	$scope.tags = $scope.$meteorCollection share.Tags
 	$scope.settings = $scope.$meteorObject share.Settings, {}
 
 	$scope.createUser = (newUserName, newUserPassword, newUserAdmin) ->
@@ -40,7 +41,55 @@ angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', (
 		json = $scope.reader.result
 		importData = JSON.parse json
 		console.log importData
-		# TODO: import data
+		if $window.confirm 'Import löscht alle vorhandenen Daten. Fortfahren?'
+			families = $scope.$meteorCollection share.Families
+			hours = $scope.$meteorCollection share.Hours
+			events = $scope.$meteorCollection share.Events
+			settings = $scope.$meteorCollection share.Settings
+			tags = $scope.$meteorCollection share.Tags
+			# remove all data
+			families.remove()
+			hours.remove()
+			events.remove()
+			settings.remove()
+			tags.remove()
+			# insert all, need to remove some nonimportable fields
+			count = 0
+			if importData.families
+				for i in importData.families
+					count++
+					$scope.cleanImportObject i
+				families.save importData.families
+			if importData.hours
+				for i in importData.hours
+					count++
+					$scope.cleanImportObject i
+					i.date = new Date(i.date)
+				hours.save importData.hours
+			if importData.events
+				for i in importData.events
+					count++
+					$scope.cleanImportObject i
+					i.start = new Date(i.start)
+					i.end = new Date(i.end)
+				events.save importData.events
+			if importData.settings
+				for i in importData.settings
+					count++
+					$scope.cleanImportObject i
+				settings.save importData.settings
+			if importData.tags
+				for i in importData.tags
+					count++
+					$scope.cleanImportObject i
+				tags.save importData.tags
+			$window.alert "#{count} Datensätze importiert"
+	
+	$scope.cleanImportObject = (o) ->
+		delete o.createdAt
+		delete o.createdBy
+		delete o.updatedAt
+		delete o.updatedBy
 	
 	$scope.doExport = () ->
 		console.log "start export"
@@ -49,7 +98,7 @@ angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', (
 			hours: $scope.$meteorCollection share.Hours
 			events: $scope.$meteorCollection share.Events
 			settings: $scope.$meteorCollection share.Settings
-			families: $scope.$meteorCollection share.Families
+			tags: $scope.$meteorCollection share.Tags
 		console.log "created export data"
 		console.log exportData
 		json = JSON.stringify exportData, null, 2
