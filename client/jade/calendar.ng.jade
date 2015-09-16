@@ -1,7 +1,7 @@
 .container-fluid
 	.row
 		.col-md-4.col-sm-12
-			.panel.panel-primary(ng-if="userIsAdmin")
+			.panel.panel-primary(ng-if="canEditEvents")
 				.panel-heading 
 					h3.panel-title Neuer Termin
 				.panel-body
@@ -61,7 +61,7 @@
 					.event(ng-repeat="event in events | filter:search", ng-class="'event' + event.type")
 						div 
 							strong {{ event.title }}
-							i.fa.fa-lg.fa-trash-o.pull-right(ng-click="deleteEvent(event)")
+							i.fa.fa-lg.fa-trash-o.pull-right(ng-if="canEditEvents", ng-click="deleteEvent(event)")
 						div {{ event.start | date:'dd.MM.yy HH:mm' }} - {{ event.end | date:'dd.MM.yy HH:mm' }}
 
 

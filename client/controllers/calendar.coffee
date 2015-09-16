@@ -1,8 +1,13 @@
 angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
 	$scope.newEventType = 'CLOSED'
 	$scope.events = $scope.$meteorCollection () -> share.Events.find()
+	$scope.settings = $scope.$meteorObject share.Settings, {}
+
 	$meteor.requireValidUser (user) ->
-		$scope.userIsAdmin = user?.profile?.isAdmin || false
+		userIsAdmin = user?.profile?.isAdmin || false
+		onlyAdmin = $scope.settings.onlyAdminCanEditEvents
+		$scope.canEditEvents = !onlyAdmin || userIsAdmin
+		console.log "user #{user.username} is admin: #{userIsAdmin} and onlyAdminCanEditEvents=#{onlyAdmin}"
 
 	# stuff for calendar
 	closedEvents = 

@@ -33,6 +33,17 @@
 											label(for="kitaYearStartMonth") Monat
 											input#kitaYearStartMonth.form-control(type='text', placeholder='Monat', ng-model="settings.kitaYearStartMonth") 
 
+					.panel.panel-primary
+						.panel-heading 
+							h3.panel-title Termine
+						.panel-body
+							.row
+								.col-md-12
+									.checkbox
+										label
+											input(type="checkbox", ng-model="settings.onlyAdminCanEditEvents")
+											| Nur Admin kann Termine anlegen und ändern
+
 
 				tab
 					tab-heading
