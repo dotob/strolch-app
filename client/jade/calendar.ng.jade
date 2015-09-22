@@ -46,7 +46,7 @@
 							.col-md-4
 								timepicker(ng-model="newTimeTo", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
 	
-						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent()", value="Speichern", ng-disabled="addEventForm.$invalid")
+						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent(newTitle, newEventType, newDateFrom, newDateTo, newTimeFrom, newTimeTo)", value="Speichern", ng-disabled="addEventForm.$invalid")
 
 			.panel.panel-primary
 				.panel-heading 
@@ -58,7 +58,7 @@
 								.input-group-addon
 									i.glyphicon.glyphicon-search
 								input.form-control(type="text", placeholder="Hier kannst du nach Terminen suchen", ng-model="search")
-					.event(ng-repeat="event in events | filter:search", ng-class="'event' + event.type")
+					.event(ng-repeat="event in events | orderBy:'-start' | filter:search", ng-class="'event' + event.type")
 						div 
 							strong {{ event.title }}
 							i.fa.fa-lg.fa-trash-o.pull-right(ng-if="canEditEvents", ng-click="deleteEvent(event)")

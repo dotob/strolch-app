@@ -4,6 +4,94 @@
 		"selected_items":
 		[
 			[
+				"use",
+				"userIsAdmin"
+			],
+			[
+				"re",
+				"readImportFileAndImport"
+			],
+			[
+				"import",
+				"importData"
+			],
+			[
+				"e",
+				"exportUrl"
+			],
+			[
+				"expo",
+				"exportBlob"
+			],
+			[
+				"export",
+				"exportUrl"
+			],
+			[
+				"eve",
+				"Events"
+			],
+			[
+				"sett",
+				"Settings"
+			],
+			[
+				"hou",
+				"Hours"
+			],
+			[
+				"all",
+				"allekinder"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"col",
+				"col-md-12"
+			],
+			[
+				"kit",
+				"kitaYearStartMonth"
+			],
+			[
+				"kita",
+				"kitaYearStartMonth"
+			],
+			[
+				"me",
+				"meteorCollection"
+			],
+			[
+				"admin",
+				"adminResolve"
+			],
+			[
+				"col-",
+				"col-md-6"
+			],
+			[
+				"add",
+				"addGroupForm"
+			],
+			[
+				"newt",
+				"newTagCanEdit"
+			],
+			[
+				"new",
+				"newTagCanEdit"
+			],
+			[
+				"ne",
+				"newUserAdmin"
+			],
+			[
+				"newu",
+				"newUserAdmin"
+			],
+			[
 				"std",
 				"stdoutMeteorMongo"
 			],
@@ -30,10 +118,6 @@
 			[
 				"hour",
 				"hoursSum"
-			],
-			[
-				"all",
-				"allHours"
 			],
 			[
 				"ma",
@@ -100,10 +184,6 @@
 				"title"
 			],
 			[
-				"col",
-				"col-md-3"
-			],
-			[
 				"stat",
 				"stateParams"
 			],
@@ -118,10 +198,6 @@
 			[
 				"s",
 				"selectedVersion"
-			],
-			[
-				"new",
-				"newDoc"
 			],
 			[
 				"unh",
@@ -146,10 +222,6 @@
 			[
 				"comm",
 				"comment"
-			],
-			[
-				"re",
-				"resolve"
 			],
 			[
 				"defer",
@@ -300,10 +372,6 @@
 				"TimeItem"
 			],
 			[
-				"hou",
-				"hours"
-			],
-			[
 				"is_b",
 				"is_bigger_than"
 			]
@@ -320,53 +388,99 @@
 			}
 		},
 		{
-			"file": "client/jade/add-hours.ng.jade",
+			"file": "client/jade/admin.ng.jade",
 			"settings":
 			{
-				"buffer_size": 1937,
+				"buffer_size": 6044,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/jade/tags.ng.jade",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/jade/calendar.ng.jade",
+			"settings":
+			{
+				"buffer_size": 3068,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/controllers/calendar.coffee",
+			"settings":
+			{
+				"buffer_size": 2445,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/jade/index.jade",
+			"settings":
+			{
+				"buffer_size": 2900,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/controllers/nav.coffee",
+			"settings":
+			{
+				"buffer_size": 331,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/controllers/hours.coffee",
+			"settings":
+			{
+				"buffer_size": 2031,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lib/config.coffee",
+			"settings":
+			{
+				"buffer_size": 1202,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/controllers/admin.coffee",
+			"settings":
+			{
+				"buffer_size": 3463,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server/server.coffee",
+			"settings":
+			{
+				"buffer_size": 1640,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "client/lib/app.coffee",
 			"settings":
 			{
-				"buffer_size": 2443,
+				"buffer_size": 2976,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/projects/CTB/vc/twin-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
+			"file": "client/styles/main.styl",
 			"settings":
 			{
-				"buffer_size": 961,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "      if (currrentADSignalInterpreter.TwlAuf && previousSpreaderSensorResponseObject != null && !previousSpreaderSensorResponseObject.TwlAuf) {\n        LOGGER.InfoFormat(\"|<AD-Signal>|: TWL-Opened\");\n        this.fireTWLStatusChanged(TWL.MITTE, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n        this.fireTWLStatusChanged(TWL.VORNE, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n        this.fireTWLStatusChanged(TWL.HINTEN, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n      }",
-			"settings":
-			{
-				"buffer_size": 544,
-				"line_ending": "Windows",
-				"name": "if (currrentADSignalInterpreter.TwlAuf && pr"
-			}
-		},
-		{
-			"file": "/D/Dropbox/Basti/programs/logmx/launcher.cfg",
-			"settings":
-			{
-				"buffer_size": 985,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program Files\\Java\\jre1.8.0_51\\bin\\;C:\\Ruby200\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files (x86)\\Novell\\ZENworks\\bin;C:\\Program Files (x86)\\Novell\\GroupWise;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Seapine\\TestTrack;C:\\Program Files (x86)\\Gow\\bin;C:\\Program Files (x86)\\VisualSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\DTS\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Go\\bin;d:\\Dropbox\\Basti\\programs\\putty\\,d:\\Dropbox\\Basti\\programs\\ffmpeg-20140919-git-33c752b-win64-static\\bin\\;c:\\Program Files\\apache-maven-3.2.3\\bin\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\GNU\\GnuPG\\pub;c:\\Python27\\;C:\\Program Files (x86)\\MiKTeX 2.9\\miktex\\bin\\;C:\\Users\\skraemer.INFORM\\AppData\\Local\\.meteor",
-			"settings":
-			{
-				"buffer_size": 1924,
-				"line_ending": "Windows",
-				"name": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program"
+				"buffer_size": 2428,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -464,11 +578,23 @@
 	},
 	"expanded_folders":
 	[
-		"/D/sync/_private/devel/kita-families-meteor",
-		"/D/sync/_private/devel/kita-families-meteor/client"
+		"/Users/basti/Development/meteor/strolch-app"
 	],
 	"file_history":
 	[
+		"/Users/basti/Development/meteor/strolch-app/client/jade/tags.ng.jade",
+		"/Users/basti/Development/meteor/strolch-app/client/jade/add-hours.ng.jade",
+		"/Users/basti/Development/meteor/strolch-app/client/controllers/alle.coffee",
+		"/Users/basti/Development/meteor/strolch-app/client/controllers/archived.coffee",
+		"/Users/basti/Development/meteor/strolch-app/client/controllers/nav.coffee",
+		"/Users/basti/Development/meteor/strolch-app/client/jade/alle.ng.jade",
+		"/Users/basti/Development/meteor/strolch-app/client/controllers/eine.coffee",
+		"/Users/basti/Development/meteor/strolch-app/client/controllers/admin.coffee",
+		"/Users/basti/Development/meteor/strolch-app/lib/kita-jahr.coffee",
+		"/Users/basti/Development/meteor/strolch-app/client/controllers/ang.coffee",
+		"/Users/basti/Development/meteor/strolch-app/client/controllers/tags.coffee",
+		"/D/Dropbox/Basti/programs/logmx/launcher.cfg",
+		"/D/projects/CTB/vc/twin-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
 		"/D/sync/TraPac/TraPac/sample_messages/woupdate.xml",
 		"/D/sync/_private/devel/kita-families-meteor/client/controllers/neu.coffee",
 		"/D/sync/_private/devel/ivo/server/gb20.json",
@@ -583,30 +709,18 @@
 		"/Users/basti/Development/web/mo-edit/client/controllers/login.coffee",
 		"/Users/basti/Development/web/mo-edit/client/views/index.jade",
 		"/Users/basti/Development/web/mo-edit/client/public/partials/list.html",
-		"/Users/basti/Development/web/mo-edit/mo-edit.sublime-project",
-		"/Users/basti/Development/web/mo-edit/index.coffee",
-		"/Users/basti/Development/web/mo-edit/client/public/index.html",
-		"/Users/basti/Development/web/mo-edit/client/services/socketio.coffee",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/jquery-ui/ui/i18n/datepicker-id.js",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pa-arab-pk.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/grunt/appveyor.yml",
-		"/Users/basti/Development/web/mo-edit/client/public/js/app.js",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pt-pt.js",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pl-pl.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/chai/lib/chai/utils/addProperty.js",
-		"/Users/basti/Development/web/mo-edit/client/services/auth.coffee",
-		"/Users/basti/tmp/textAngular/lib/globals.js",
-		"/Users/basti/tmp/textAngular/lib/factories.js"
+		"/Users/basti/Development/web/mo-edit/mo-edit.sublime-project"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 102.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -614,6 +728,54 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"onlyAdminCanEditEvents",
+			"userIsAdmin",
+			"canEditEvents",
+			"onlyAdminCanEditEvents",
+			"kitaYearStartDay",
+			"exportBlob",
+			"imports",
+			"images",
+			"Families",
+			"families",
+			"Families",
+			"exportUrl",
+			";",
+			"addImages",
+			"function",
+			", ",
+			"ngFileUpload",
+			"Images",
+			"images",
+			"Settings",
+			"Hours",
+			"Families",
+			"primary",
+			"KiTaJahr",
+			"Tags",
+			"meteor",
+			", '$meteor'",
+			"state",
+			".left-space-5\n  margin-left: 5px\n\n",
+			"\nuserResolve = \n	\"currentUser\": [\n		\"$meteor\", ($meteor) ->\n			userLoggedIn = $meteor.requireUser()\n			userLoggedIn\n	]",
+			"Monat",
+			"kitaYearStartDay",
+			"kitaYearStart",
+			"hoursPerFamilyAndMonth",
+			"button",
+			" ",
+			"<meta",
+			"<link",
+			", ng-true-value=\"'child'\"",
+			"user",
+			"pw",
+			"createNewUser",
+			"$scope.",
+			"newUserPassword",
+			"stateParams",
+			"Verschiedenes",
+			"name",
+			".left-space-5",
 			"java",
 			"skraemer",
 			"td",
@@ -693,55 +855,7 @@
 			"author.name",
 			"Author.name",
 			"author.name",
-			"author: chance.name()",
-			"log e",
-			"$rootScope.",
-			", ",
-			"		$scope.newChapter = (document) ->\n			# TODO\n",
-			"chapter",
-			"Chapter",
-			"chapter",
-			"checkbox",
-			"chapter",
-			"currentChapter",
-			"button",
-			"currentChapter",
-			"#chapter-list li\n	background: #eee",
-			"= module.exports.",
-			"\n		",
-			"\"",
-			"\n				",
-			"ks",
-			"keyedShortcut",
-			"from",
-			"lastOrDefault",
-			"ctb",
-			"_",
-			"ValidFrom",
-			"WholeDayExpansion",
-			"Key",
-			"testDate",
-			"allShortcuts",
-			"\"",
-			" { get; set; }",
-			"public ",
-			" { get; set; }",
-			"public ",
-			" = ",
-			"wdToFill",
-			"dateTime",
-			"wdToFill",
-			"Unknown",
-			" = ",
-			"require('./descriptionparser')",
-			"require('./stringparserutils')",
-			" { get; set; }",
-			"{ get; set; }",
-			"}\n",
-			"{ get; set; }",
-			"public",
-			"originalString",
-			"dayStartToken"
+			"author: chance.name()"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -759,7 +873,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 11,
 			"sheets":
 			[
 				{
@@ -775,8 +889,8 @@
 						"selection":
 						[
 							[
-								397,
-								397
+								4055,
+								4055
 							]
 						],
 						"settings":
@@ -784,28 +898,28 @@
 							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 2070.0,
+						"translation.x": 40.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/jade/add-hours.ng.jade",
+					"file": "client/jade/admin.ng.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1937,
+						"buffer_size": 6044,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								884,
-								884
+								498,
+								520
 							]
 						],
 						"settings":
@@ -813,92 +927,7 @@
 							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 138.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/lib/app.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2443,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1322,
-								1196
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 552.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/projects/CTB/vc/twin-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 961,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								62,
-								62
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 544,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								544,
-								544
-							]
-						],
-						"settings":
-						{
-							"auto_name": "if (currrentADSignalInterpreter.TwlAuf && pr",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
+						"translation.x": 395.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -906,12 +935,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/D/Dropbox/Basti/programs/logmx/launcher.cfg",
+					"buffer": 2,
+					"file": "client/jade/tags.ng.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 985,
+						"buffer_size": 668,
 						"regions":
 						{
 						},
@@ -924,7 +953,152 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "client/jade/calendar.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3068,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2689,
+								2689
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 807.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/controllers/calendar.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								560,
+								560
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/jade/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1962,
+								1962
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 353.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/controllers/nav.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								282,
+								282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "client/controllers/hours.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2031,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								430,
+								443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -934,31 +1108,149 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
+					"file": "lib/config.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1924,
+						"buffer_size": 1202,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								57,
-								61
+								1098,
+								1098
 							]
 						],
 						"settings":
 						{
-							"auto_name": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 213.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "client/controllers/admin.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "server/server.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1640,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								971,
+								1019
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "client/lib/app.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2155,
+								2155
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1137.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "client/styles/main.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2333,
+								2333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2831.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				}
 			]
@@ -1018,15 +1310,119 @@
 		[
 			[
 				"app",
-				"client\\lib\\app.coffee"
+				"client/lib/app.coffee"
+			],
+			[
+				"hours",
+				"client/controllers/hours.coffee"
+			],
+			[
+				"admin",
+				"client/jade/admin.ng.jade"
+			],
+			[
+				"nav",
+				"client/controllers/nav.coffee"
+			],
+			[
+				"cale",
+				"client/jade/calendar.ng.jade"
+			],
+			[
+				"calend",
+				"client/controllers/calendar.coffee"
+			],
+			[
+				"confi",
+				"lib/config.coffee"
+			],
+			[
+				"navc",
+				"client/controllers/nav.coffee"
+			],
+			[
+				"ind",
+				"client/jade/index.jade"
+			],
+			[
+				"tags",
+				"client/jade/tags.ng.jade"
+			],
+			[
+				"main",
+				"client/styles/main.styl"
+			],
+			[
+				"ang",
+				"client/controllers/ang.coffee"
+			],
+			[
+				"all",
+				"client/jade/alle.ng.jade"
+			],
+			[
+				"ein",
+				"client/jade/eine.ng.jade"
+			],
+			[
+				"eine",
+				"client/controllers/eine.coffee"
+			],
+			[
+				"al",
+				"client/jade/alle.ng.jade"
+			],
+			[
+				"serv",
+				"server/server.coffee"
+			],
+			[
+				"hour",
+				"client/controllers/hours.coffee"
+			],
+			[
+				"kit",
+				"lib/kita-jahr.coffee"
+			],
+			[
+				"conf",
+				"lib/config.coffee"
+			],
+			[
+				"cal",
+				"client/controllers/calendar.coffee"
+			],
+			[
+				"adm",
+				"client/jade/admin.ng.jade"
+			],
+			[
+				"hou",
+				"client/jade/add-hours.ng.jade"
+			],
+			[
+				"tag",
+				"client/jade/tags.ng.jade"
+			],
+			[
+				"serve",
+				"server/server.coffee"
+			],
+			[
+				"neu",
+				"client/controllers/neu.coffee"
+			],
+			[
+				"arch",
+				"client/controllers/archived.coffee"
+			],
+			[
+				"addh",
+				"client/controllers/addHours.coffee"
 			],
 			[
 				"add",
 				"client\\jade\\add-hours.ng.jade"
-			],
-			[
-				"ein",
-				"client\\jade\\eine.ng.jade"
 			],
 			[
 				"print",
@@ -1037,72 +1433,20 @@
 				"lib\\kita-jahr.coffee"
 			],
 			[
-				"neu",
-				"client\\controllers\\neu.coffee"
-			],
-			[
-				"main",
-				"client\\styles\\main.styl"
-			],
-			[
 				"server",
 				"server\\server.coffee"
-			],
-			[
-				"hour",
-				"client\\controllers\\hours.coffee"
-			],
-			[
-				"all",
-				"client\\controllers\\alle.coffee"
-			],
-			[
-				"arch",
-				"client\\controllers\\archived.coffee"
-			],
-			[
-				"ind",
-				"client\\jade\\index.jade"
-			],
-			[
-				"conf",
-				"lib\\config.coffee"
-			],
-			[
-				"serve",
-				"server\\server.coffee"
-			],
-			[
-				"ang",
-				"client\\jade\\ang.ng.jade"
 			],
 			[
 				"read",
 				"README.md"
 			],
 			[
-				"serv",
-				"server\\server.coffee"
-			],
-			[
-				"tags",
-				"client\\jade\\tags.ng.jade"
-			],
-			[
 				"fami",
 				"lib\\family.coffee"
 			],
 			[
-				"hours",
-				"client\\controllers\\hours.coffee"
-			],
-			[
 				"ad",
 				"client\\jade\\add-hours.ng.jade"
-			],
-			[
-				"tag",
-				"client\\jade\\tags.ng.jade"
 			],
 			[
 				"clien",
@@ -1273,10 +1617,6 @@
 				"client/filter/fromnow.coffee"
 			],
 			[
-				"nav",
-				"client/views/navbar.jade"
-			],
-			[
 				"test",
 				"test/timeitem_test.coffee"
 			],
@@ -1303,7 +1643,7 @@
 		[
 			[
 				"",
-				"T:\\Basti\\TSM-IF\\interface-trunk.sublime-workspace"
+				"~/Development/meteor/absentium/client/styles/sattelite.sublime-project"
 			]
 		],
 		"width": 380.0
