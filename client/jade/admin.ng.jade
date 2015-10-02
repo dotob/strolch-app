@@ -43,6 +43,38 @@
 										label
 											input(type="checkbox", ng-model="settings.onlyAdminCanEditEvents")
 											| Nur Admin kann Termine anlegen und ändern
+							.row
+								.col-md-12
+									h2 Terminarten
+							.row(ng-repeat="eventType in settings.eventTypes")
+								.col-md-3
+									.form-group
+										input.form-control(type='text', placeholder='Schlüssel', ng-model="eventType.key") 
+								.col-md-3
+									.form-group
+										input.form-control(type='text', placeholder='Password', ng-model="eventType.name") 
+								.col-md-3
+									.form-group
+										input.form-control(type='color', placeholder='Farbe', ng-model="eventType.color") 
+								.col-md-3
+									button.left-space-5.btn.btn-primary.pull-right(title="Löschen", ng-click="deleteEventType(eventType)")
+										i.fa.fa-plus.fa.fa-fw
+										| Löschen
+							
+							.row
+								.col-md-3
+									.form-group
+										input.form-control(type='text', placeholder='Schlüssel', ng-model="newEventTypeKey") 
+								.col-md-3
+									.form-group
+										input.form-control(type='text', placeholder='Name', ng-model="newEventTypeName") 
+								.col-md-3
+									.form-group
+										input.form-control(type='color', placeholder='Farbe', ng-model="newEventTypeColor") 
+								.col-md-3
+									button.left-space-5.btn.btn-primary.pull-right(title="Benutzer anlegen", ng-click="createEventType(newEventTypeKey, newEventTypeName, newEventTypeColor)")
+										i.fa.fa-plus.fa.fa-fw
+										| Anlegen
 
 
 				tab
