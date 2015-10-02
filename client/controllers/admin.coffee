@@ -30,6 +30,20 @@ angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', (
 		console.log "remove tag #{tag._id}"
 		$scope.tags.remove tag
 
+	$scope.createEventType = (key, name, color) ->
+		console.log "new event type: #{key}:#{name}:#{color}"
+		if !$scope.settings.eventTypes
+			$scope.settings.eventTypes = []
+		$scope.settings.eventTypes.push 
+			key: key
+			name: name
+			color: color
+
+	$scope.deleteEventType = (eventType) ->
+		console.log "delete eventType: #{eventType.key}:#{eventType.name}:#{eventType.color}"
+		_.remove $scope.settings.eventTypes, eventType
+		console.log $scope.settings.eventTypes
+
 	$scope.doImport = (files) ->
 		if files.length > 0
 			f = files[0]

@@ -70,14 +70,21 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		console.log "remove event: #{event.title}"
 		$scope.$meteorCollection(share.Events).remove event
 
-	$scope.addEvent = () ->
+	$scope.addEvent = (newTitle, newEventType, newDateFrom, newDateToEntered, newDateTo, newTimeFrom, newTimeTo) ->
+		console.log "create new event: #{newTitle}, #{newDateFrom} #{newTimeFrom} - #{newDateTo} #{newTimeTo}, #{newEventType}"
+		if newDateToEntered
+			endDate = new Date newDateTo.getFullYear(), newDateTo.getMonth(), newDateTo.getDate(), newTimeTo.getHours(), newTimeTo.getMinutes()
+		else
+			endDate = null
 		e = 
-			title: $scope.newTitle
-			start: new Date $scope.newDateFrom.getFullYear(), $scope.newDateFrom.getMonth(), $scope.newDateFrom.getDate(), $scope.newTimeFrom.getHours(), $scope.newTimeFrom.getMinutes()
-			end: new Date $scope.newDateTo.getFullYear(), $scope.newDateTo.getMonth(), $scope.newDateTo.getDate(), $scope.newTimeTo.getHours(), $scope.newTimeTo.getMinutes()
-			type: $scope.newEventType 
+			title: newTitle
+			start: new Date newDateFrom.getFullYear(), newDateFrom.getMonth(), newDateFrom.getDate(), newTimeFrom.getHours(), newTimeFrom.getMinutes()
+			end: endDate
+			type: newEventType 
 		console.log e
-		$scope.$meteorCollection(share.Events).save(e).then (inserts) ->
-			e = _.first(inserts)
-			console.log "inserted new event with id: #{e._id}"
+		$scope.$meteorCollection(share.Events).save(e).then (inserts, e) ->
+			if e 
+				console.log e
+			i = _.first(inserts)
+			console.log "inserted new event with id: #{i._id}"
 ]

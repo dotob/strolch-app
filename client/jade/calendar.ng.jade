@@ -11,18 +11,11 @@
 						.form-group
 							div
 								label Terminart
-							.radio-inline
+							.radio-inline(ng-repeat="eventType in settings.eventTypes")
 								label.event-radio
-									input(type="radio", name="optionsEventType", value="CLOSED", ng-model="newEventType")
-									span.eventCLOSED.event-radio-label Schließzeit
-							.radio-inline
-								label.event-radio
-									input(type="radio", name="optionsEventType", value="EVENT", ng-model="newEventType")
-									span.eventEVENT.event-radio-label Event
-							.radio-inline
-								label.event-radio
-									input(type="radio", name="optionsEventType", value="JUBI", ng-model="newEventType")
-									span.eventJUBI.event-radio-label Jubiläum
+									input(type="radio", name="optionsEventType", value="{{key}}", ng-model="newEventType")
+									span.eventCLOSED.event-radio-label {{ name }}
+
 						.row
 							.col-md-2
 								label Von
@@ -36,7 +29,10 @@
 								timepicker(ng-model="newTimeFrom", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
 						.row
 							.col-md-2
-								label Bis
+								label
+									input(type="checkbox", ng-model="newDateToEntered")
+									| Bis
+
 							.col-md-6
 								#dateTo.input-group
 									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close", ng-required)
@@ -46,7 +42,7 @@
 							.col-md-4
 								timepicker(ng-model="newTimeTo", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
 	
-						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent()", value="Speichern", ng-disabled="addEventForm.$invalid")
+						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent(newTitle, newEventType, newDateFrom, newDateToEntered, newDateTo, newTimeFrom, newTimeTo)", value="Speichern", ng-disabled="addEventForm.$invalid")
 
 			.panel.panel-primary
 				.panel-heading 
@@ -58,11 +54,12 @@
 								.input-group-addon
 									i.glyphicon.glyphicon-search
 								input.form-control(type="text", placeholder="Hier kannst du nach Terminen suchen", ng-model="search")
-					.event(ng-repeat="event in events | filter:search", ng-class="'event' + event.type")
+					.event(ng-repeat="event in events | orderBy:'-start' | filter:search", ng-class="'event' + event.type")
 						div 
 							strong {{ event.title }}
 							i.fa.fa-lg.fa-trash-o.pull-right(ng-if="canEditEvents", ng-click="deleteEvent(event)")
-						div {{ event.start | date:'dd.MM.yy HH:mm' }} - {{ event.end | date:'dd.MM.yy HH:mm' }}
+						div(ng-if="event.start!=event.end && event.end") {{ event.start | date:'dd.MM.yy HH:mm' }} - {{ event.end | date:'dd.MM.yy HH:mm' }}
+						div(ng-if="!event.end") {{ event.start | date:'dd.MM.yy HH:mm' }}
 
 
 
