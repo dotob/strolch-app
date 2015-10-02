@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"for",
+				"forin	Array Comprehension"
+			],
+			[
+				"tag",
+				"tags"
+			],
+			[
 				"std",
 				"stdoutMeteorMongo"
 			],
@@ -320,10 +328,66 @@
 			}
 		},
 		{
-			"file": "client/jade/add-hours.ng.jade",
+			"file": "client/controllers/admin.coffee",
 			"settings":
 			{
-				"buffer_size": 1937,
+				"buffer_size": 3463,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/jade/admin.ng.jade",
+			"settings":
+			{
+				"buffer_size": 6044,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/styles/main.styl",
+			"settings":
+			{
+				"buffer_size": 2428,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/controllers/archived.coffee",
+			"settings":
+			{
+				"buffer_size": 848,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/controllers/calendar.coffee",
+			"settings":
+			{
+				"buffer_size": 2935,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/projects/svgplot.js/README.md",
+			"settings":
+			{
+				"buffer_size": 123,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/tmp/de.js",
+			"settings":
+			{
+				"buffer_size": 2111,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/controllers/nav.coffee",
+			"settings":
+			{
+				"buffer_size": 331,
 				"line_ending": "Windows"
 			}
 		},
@@ -331,42 +395,16 @@
 			"file": "client/lib/app.coffee",
 			"settings":
 			{
-				"buffer_size": 2443,
+				"buffer_size": 2976,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/projects/CTB/vc/twin-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
+			"file": "client/jade/index.jade",
 			"settings":
 			{
-				"buffer_size": 961,
+				"buffer_size": 2900,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "      if (currrentADSignalInterpreter.TwlAuf && previousSpreaderSensorResponseObject != null && !previousSpreaderSensorResponseObject.TwlAuf) {\n        LOGGER.InfoFormat(\"|<AD-Signal>|: TWL-Opened\");\n        this.fireTWLStatusChanged(TWL.MITTE, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n        this.fireTWLStatusChanged(TWL.VORNE, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n        this.fireTWLStatusChanged(TWL.HINTEN, true, currrentADSignalInterpreter.ADConverterResponse, timeStamp);\n      }",
-			"settings":
-			{
-				"buffer_size": 544,
-				"line_ending": "Windows",
-				"name": "if (currrentADSignalInterpreter.TwlAuf && pr"
-			}
-		},
-		{
-			"file": "/D/Dropbox/Basti/programs/logmx/launcher.cfg",
-			"settings":
-			{
-				"buffer_size": 985,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program Files\\Java\\jre1.8.0_51\\bin\\;C:\\Ruby200\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files (x86)\\Novell\\ZENworks\\bin;C:\\Program Files (x86)\\Novell\\GroupWise;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Seapine\\TestTrack;C:\\Program Files (x86)\\Gow\\bin;C:\\Program Files (x86)\\VisualSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\110\\DTS\\Binn\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Go\\bin;d:\\Dropbox\\Basti\\programs\\putty\\,d:\\Dropbox\\Basti\\programs\\ffmpeg-20140919-git-33c752b-win64-static\\bin\\;c:\\Program Files\\apache-maven-3.2.3\\bin\\;C:\\Program Files\\nodejs\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\GNU\\GnuPG\\pub;c:\\Python27\\;C:\\Program Files (x86)\\MiKTeX 2.9\\miktex\\bin\\;C:\\Users\\skraemer.INFORM\\AppData\\Local\\.meteor",
-			"settings":
-			{
-				"buffer_size": 1924,
-				"line_ending": "Windows",
-				"name": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program"
 			}
 		}
 	],
@@ -405,10 +443,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 127.0,
-		"last_filter": "instal",
+		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"refor",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
 			[
 				"instal",
 				"Package Control: Install Package"
@@ -416,10 +466,6 @@
 			[
 				"remo",
 				"Package Control: Remove Package"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
 			],
 			[
 				"inden",
@@ -464,11 +510,25 @@
 	},
 	"expanded_folders":
 	[
-		"/D/sync/_private/devel/kita-families-meteor",
-		"/D/sync/_private/devel/kita-families-meteor/client"
+		"/D/sync/_private/devel/strolch-app"
 	],
 	"file_history":
 	[
+		"/D/projects/syncrotess/test/reporting/lpt/assets/draw_xt_diagram.coffee",
+		"/D/sync/_private/devel/strolch-app/.meteor/local/build/programs/web.browser/packages/planettraining_jquery-fullcalendar.js",
+		"/D/sync/DHL/testsamples/lft/lft.html",
+		"/D/sync/DHL/testsamples/autotest/hub-demo-AT-results_OK/transform.bat",
+		"/D/vm/gs2-termopt01/gs2-termopt01.vmx",
+		"/D/sync/_private/devel/strolch-app/README.md",
+		"/D/sync/TraPac/MSC/output/create_msc_diagrams.coffee",
+		"/C/Users/skraemer.INFORM/Downloads/strolch-app.json",
+		"/D/Dropbox/kleine_strolche_it/Neue-IT.txt",
+		"/D/sync/_private/devel/message-control-chart-utils/web-sequence-diagrams/readme.md",
+		"/D/sync/_private/devel/message-control-chart-utils/web-sequence-diagrams/create_pdf.bat",
+		"/D/sync/_private/devel/strolch-app/client/jade/add-hours.ng.jade",
+		"/D/sync/_private/devel/strolch-app/client/lib/app.coffee",
+		"/D/projects/CTB/vc/twin-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
+		"/D/Dropbox/Basti/programs/logmx/launcher.cfg",
 		"/D/sync/TraPac/TraPac/sample_messages/woupdate.xml",
 		"/D/sync/_private/devel/kita-families-meteor/client/controllers/neu.coffee",
 		"/D/sync/_private/devel/ivo/server/gb20.json",
@@ -499,7 +559,6 @@
 		"/D/sync/_private/devel/kita-families-meteor/custom.semantic.json",
 		"/D/sync/_private/devel/kita-families-meteor/definitions/behaviors/colorize.js",
 		"/D/projects/run/ctb-trunk/schema_plugin_master.xml.cs",
-		"/D/sync/TraPac/MSC/output/create_msc_diagrams.coffee",
 		"/D/sync/_private/devel/kita-families-meteor/getDataFromProdToLocal.coffee",
 		"/D/tmp/moni/MONI.2015-07-30.log",
 		"/D/sync/_private/devel/moni/README.md",
@@ -582,25 +641,11 @@
 		"/Users/basti/Development/web/mo-edit/client/public/partials/edit.html",
 		"/Users/basti/Development/web/mo-edit/client/controllers/login.coffee",
 		"/Users/basti/Development/web/mo-edit/client/views/index.jade",
-		"/Users/basti/Development/web/mo-edit/client/public/partials/list.html",
-		"/Users/basti/Development/web/mo-edit/mo-edit.sublime-project",
-		"/Users/basti/Development/web/mo-edit/index.coffee",
-		"/Users/basti/Development/web/mo-edit/client/public/index.html",
-		"/Users/basti/Development/web/mo-edit/client/services/socketio.coffee",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/jquery-ui/ui/i18n/datepicker-id.js",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pa-arab-pk.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/grunt/appveyor.yml",
-		"/Users/basti/Development/web/mo-edit/client/public/js/app.js",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pt-pt.js",
-		"/Users/basti/Development/web/mo-edit/client/public/bower/angular-i18n/angular-locale_pl-pl.js",
-		"/Users/basti/Development/web/mo-edit/node_modules/chai/lib/chai/utils/addProperty.js",
-		"/Users/basti/Development/web/mo-edit/client/services/auth.coffee",
-		"/Users/basti/tmp/textAngular/lib/globals.js",
-		"/Users/basti/tmp/textAngular/lib/factories.js"
+		"/Users/basti/Development/web/mo-edit/client/public/partials/list.html"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
@@ -614,6 +659,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"crane",
+			"januar",
+			"Wednesday",
+			"ToolsPCRETest_WagonNumber",
+			"lft.html",
+			" \n   \n   \n   \n   \n   \n \n ",
+			"ToolsPCRETest_WagonNumber",
+			"beschreibung",
+			"Expected-Outcome",
+			"Description",
+			"png",
+			"cleanImportObject",
+			"date",
+			"cleanImportObject",
+			"updated",
+			"updatedAt",
+			"for",
+			"save",
+			"if",
+			"importData",
+			"push",
+			"f",
+			"families",
+			"meteorCollection",
+			"Settings",
+			"=",
+			":",
+			"{}\n",
 			"java",
 			"skraemer",
 			"td",
@@ -713,35 +786,7 @@
 			"\n				",
 			"ks",
 			"keyedShortcut",
-			"from",
-			"lastOrDefault",
-			"ctb",
-			"_",
-			"ValidFrom",
-			"WholeDayExpansion",
-			"Key",
-			"testDate",
-			"allShortcuts",
-			"\"",
-			" { get; set; }",
-			"public ",
-			" { get; set; }",
-			"public ",
-			" = ",
-			"wdToFill",
-			"dateTime",
-			"wdToFill",
-			"Unknown",
-			" = ",
-			"require('./descriptionparser')",
-			"require('./stringparserutils')",
-			" { get; set; }",
-			"{ get; set; }",
-			"}\n",
-			"{ get; set; }",
-			"public",
-			"originalString",
-			"dayStartToken"
+			"from"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -759,7 +804,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -785,56 +830,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2070.0,
+						"translation.y": 2222.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "client/jade/add-hours.ng.jade",
+					"file": "client/controllers/admin.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1937,
+						"buffer_size": 3463,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								884,
-								884
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 138.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "client/lib/app.coffee",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2443,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1322,
-								1196
+								1094,
+								1094
 							]
 						],
 						"settings":
@@ -843,88 +859,62 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 552.0,
+						"translation.y": 870.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/jade/admin.ng.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5512,
+								5512
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4008.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/D/projects/CTB/vc/twin-trunk/Client/VCClient/bin/Debug/VC_USER.ini",
+					"file": "client/styles/main.styl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 961,
+						"buffer_size": 2428,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								62,
-								62
+								373,
+								270
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 544,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								544,
-								544
-							]
-						],
-						"settings":
-						{
-							"auto_name": "if (currrentADSignalInterpreter.TwlAuf && pr",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/D/Dropbox/Basti/programs/logmx/launcher.cfg",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 985,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Stylus/Stylus.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -934,31 +924,204 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 4,
+					"file": "client/controllers/archived.coffee",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1924,
+						"buffer_size": 848,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								57,
-								61
+								771,
+								723
 							]
 						],
 						"settings":
 						{
-							"auto_name": "C:\\Program Files (x86)\\MSBuild\\12.0\\bin;c:\\Program",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/controllers/calendar.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2935,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1528,
+								1528
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 367.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/D/projects/svgplot.js/README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 123,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/D/tmp/de.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1445,
+								1654
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 20866.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "client/controllers/nav.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "client/lib/app.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "client/jade/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1949,
+								1960
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1017,8 +1180,40 @@
 		"selected_items":
 		[
 			[
+				"cal",
+				"client\\controllers\\calendar.coffee"
+			],
+			[
+				"re",
+				"README.md"
+			],
+			[
+				"main",
+				"client\\styles\\main.styl"
+			],
+			[
+				"adm",
+				"client\\jade\\admin.ng.jade"
+			],
+			[
 				"app",
 				"client\\lib\\app.coffee"
+			],
+			[
+				"arch",
+				"client\\controllers\\archived.coffee"
+			],
+			[
+				"ind",
+				"client\\jade\\index.jade"
+			],
+			[
+				"nav",
+				"client\\controllers\\nav.coffee"
+			],
+			[
+				"admin",
+				"client\\controllers\\admin.coffee"
 			],
 			[
 				"add",
@@ -1041,10 +1236,6 @@
 				"client\\controllers\\neu.coffee"
 			],
 			[
-				"main",
-				"client\\styles\\main.styl"
-			],
-			[
 				"server",
 				"server\\server.coffee"
 			],
@@ -1055,14 +1246,6 @@
 			[
 				"all",
 				"client\\controllers\\alle.coffee"
-			],
-			[
-				"arch",
-				"client\\controllers\\archived.coffee"
-			],
-			[
-				"ind",
-				"client\\jade\\index.jade"
 			],
 			[
 				"conf",
@@ -1241,10 +1424,6 @@
 				"package.json"
 			],
 			[
-				"re",
-				"README.md"
-			],
-			[
 				"route",
 				"server/routes.coffee"
 			],
@@ -1273,10 +1452,6 @@
 				"client/filter/fromnow.coffee"
 			],
 			[
-				"nav",
-				"client/views/navbar.jade"
-			],
-			[
 				"test",
 				"test/timeitem_test.coffee"
 			],
@@ -1303,7 +1478,7 @@
 		[
 			[
 				"",
-				"T:\\Basti\\TSM-IF\\interface-trunk.sublime-workspace"
+				"D:\\projects\\svgplot.js\\svgplotjs.sublime-project"
 			]
 		],
 		"width": 380.0
