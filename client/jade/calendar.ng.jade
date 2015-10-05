@@ -14,7 +14,7 @@
 							.radio-inline(ng-repeat="eventType in settings.eventTypes")
 								label.event-radio
 									input(type="radio", name="optionsEventType", value="{{eventType.key}}", ng-model="$parent.newEventType")
-									span.event-radio-label(ng-style="bgColorStyle(eventType)") {{ eventType.name }}
+									span.event-radio-label(ng-style="bgColorStyle(eventType.key)") {{ eventType.name }}
 
 						.row
 							.col-md-2
@@ -27,19 +27,23 @@
 											i.glyphicon.glyphicon-calendar
 							.col-md-4
 								timepicker(ng-model="newTimeFrom", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
+						
 						.row
-							.col-md-2
+							.col-md-12
 								label
 									input(type="checkbox", ng-model="newDateToEntered")
 									span#to-checkbox Bis
+										small.text-muted.left-space-5 Aktivieren um einen Termin mit Endedatum anzulegen
 
-							.col-md-6
+						.row
+							.col-md-2
+							.col-md-6(ng-show="newDateToEntered")
 								#dateTo.input-group
-									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close", ng-disabled="!newDateToEntered")
+									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close")
 									span.input-group-btn
 										button.btn.btn-default(ng-click="openTo($event)", ng-disabled="!newDateToEntered")
 											i.glyphicon.glyphicon-calendar
-							.col-md-4
+							.col-md-4(ng-show="newDateToEntered")
 								timepicker(ng-model="newTimeTo", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false", ng-disabled="!newDateToEntered")
 	
 						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent(newTitle, newEventType, newDateFrom, newDateToEntered, newDateTo, newTimeFrom, newTimeTo)", value="Speichern", ng-disabled="addEventForm.$invalid")
@@ -54,7 +58,7 @@
 								.input-group-addon
 									i.glyphicon.glyphicon-search
 								input.form-control(type="text", placeholder="Hier kannst du nach Terminen suchen", ng-model="search")
-					.event(ng-repeat="event in events | orderBy:'-start' | filter:search", ng-style="bgColorStyle(event.type)")
+					.event(ng-repeat="event in events | orderBy:'-start' | filter:search", ng-style="bgColorStyle(event.type.key)")
 						div 
 							strong {{ event.title }}
 							i.fa.fa-lg.fa-trash-o.pull-right(ng-if="canEditEvents", ng-click="deleteEvent(event)")

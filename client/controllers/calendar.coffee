@@ -26,6 +26,7 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 	$scope.eventSources = [closedEvents, eventEvents, jubiEvents]
 	$scope.calendarConfig =
 		calendar:
+			weekNumbers: true
 			dayNames: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"]
 			dayNamesShort: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
 			monthNames: ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"]
@@ -46,9 +47,17 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 
 	# stuff for datepicker
 	$scope.newDateFrom = new Date()
-	$scope.newDateTo = new Date()
+	
 	$scope.newTimeFrom = new Date()
+	$scope.newTimeFrom.setMinutes(0)
+	
+	$scope.newDateTo = new Date()
+	$scope.newDateTo.setDate($scope.newTimeFrom.getDate() + 1)
+	
 	$scope.newTimeTo = new Date()
+	$scope.newTimeTo.setHours($scope.newTimeFrom.getHours() + 1)
+	$scope.newTimeTo.setMinutes(0)
+
 	$scope.format = 'dd.MM.yyyy'
 	$scope.openedFrom = false
 	$scope.openedTo = false
@@ -66,7 +75,8 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		$event.stopPropagation()
 		$scope.openedTo = true
 
-	$scope.bgColorStyle = (eventType) ->
+	$scope.bgColorStyle = (eventTypeKey) ->
+		eventType = _.find $scope.settings.eventTypes, (et) -> et.key == eventTypeKey
 		{"background-color": eventType.color}
 
 	$scope.deleteEvent = (event) ->
