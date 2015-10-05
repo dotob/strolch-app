@@ -38,6 +38,8 @@ angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', (
 			key: key
 			name: name
 			color: color
+		$scope.newEventTypeName = ""
+		$scope.newEventTypeKey = ""
 
 	$scope.deleteEventType = (eventType) ->
 		console.log "delete eventType: #{eventType.key}:#{eventType.name}:#{eventType.color}"

@@ -1,7 +1,7 @@
 angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
-	$scope.newEventType = 'CLOSED'
 	$scope.events = $scope.$meteorCollection () -> share.Events.find()
 	$scope.settings = $scope.$meteorObject share.Settings, {}
+	$scope.newEventType = $scope.settings.eventTypes?[0].key
 
 	$meteor.requireValidUser (user) ->
 		userIsAdmin = user?.profile?.isAdmin || false
@@ -66,11 +66,15 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		$event.stopPropagation()
 		$scope.openedTo = true
 
+	$scope.bgColorStyle = (eventType) ->
+		{"background-color": eventType.color}
+
 	$scope.deleteEvent = (event) ->
 		console.log "remove event: #{event.title}"
 		$scope.$meteorCollection(share.Events).remove event
 
 	$scope.addEvent = (newTitle, newEventType, newDateFrom, newDateToEntered, newDateTo, newTimeFrom, newTimeTo) ->
+		et = _.find $scope.settings.eventTypes, (et) -> et.key == newEventType
 		console.log "create new event: #{newTitle}, #{newDateFrom} #{newTimeFrom} - #{newDateTo} #{newTimeTo}, #{newEventType}"
 		if newDateToEntered
 			endDate = new Date newDateTo.getFullYear(), newDateTo.getMonth(), newDateTo.getDate(), newTimeTo.getHours(), newTimeTo.getMinutes()
@@ -80,11 +84,8 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 			title: newTitle
 			start: new Date newDateFrom.getFullYear(), newDateFrom.getMonth(), newDateFrom.getDate(), newTimeFrom.getHours(), newTimeFrom.getMinutes()
 			end: endDate
-			type: newEventType 
-		console.log e
-		$scope.$meteorCollection(share.Events).save(e).then (inserts, e) ->
-			if e 
-				console.log e
+			type: et 
+		$scope.$meteorCollection(share.Events).save(e).then (inserts) ->
 			i = _.first(inserts)
 			console.log "inserted new event with id: #{i._id}"
 ]
