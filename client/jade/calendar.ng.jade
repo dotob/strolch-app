@@ -58,7 +58,7 @@
 								.input-group-addon
 									i.glyphicon.glyphicon-search
 								input.form-control(type="text", placeholder="Hier kannst du nach Terminen suchen", ng-model="search")
-					.event(ng-repeat="event in events | orderBy:'-start' | filter:search", ng-style="bgColorStyle(event.type.key)")
+					.event(ng-repeat="event in events | orderBy:'-start' | filter:search", ng-style="bgColorStyle(event.type)")
 						div 
 							strong {{ event.title }}
 							i.fa.fa-lg.fa-trash-o.pull-right(ng-if="canEditEvents", ng-click="deleteEvent(event)")

@@ -10,20 +10,13 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		console.log "user #{user.username} is admin: #{userIsAdmin} and onlyAdminCanEditEvents=#{onlyAdmin}"
 
 	# stuff for calendar
-	closedEvents = 
-		textColor: '#fff'
-		color: '#D46A6A'
-		events: $scope.$meteorCollection () -> share.Events.find {type: 'CLOSED'}
-	eventEvents = 
-		textColor: '#fff'
-		color: '#A5C663'
-		events: $scope.$meteorCollection () -> share.Events.find {type: 'EVENT'}
-	jubiEvents = 
-		textColor: '#fff'
-		color: '#699'
-		events: $scope.$meteorCollection () -> share.Events.find {type: 'JUBI'}
+	$scope.eventSources	= []
+	for et in $scope.settings.eventTypes
+		$scope.eventSources.push
+			textColor: '#fff'
+			color: et.color
+			events: $scope.$meteorCollection () -> share.Events.find {type: et.key}
 
-	$scope.eventSources = [closedEvents, eventEvents, jubiEvents]
 	$scope.calendarConfig =
 		calendar:
 			weekNumbers: true
@@ -84,7 +77,6 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		$scope.$meteorCollection(share.Events).remove event
 
 	$scope.addEvent = (newTitle, newEventType, newDateFrom, newDateToEntered, newDateTo, newTimeFrom, newTimeTo) ->
-		et = _.find $scope.settings.eventTypes, (et) -> et.key == newEventType
 		console.log "create new event: #{newTitle}, #{newDateFrom} #{newTimeFrom} - #{newDateTo} #{newTimeTo}, #{newEventType}"
 		if newDateToEntered
 			endDate = new Date newDateTo.getFullYear(), newDateTo.getMonth(), newDateTo.getDate(), newTimeTo.getHours(), newTimeTo.getMinutes()
@@ -94,7 +86,7 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 			title: newTitle
 			start: new Date newDateFrom.getFullYear(), newDateFrom.getMonth(), newDateFrom.getDate(), newTimeFrom.getHours(), newTimeFrom.getMinutes()
 			end: endDate
-			type: et 
+			type: newEventType
 		$scope.$meteorCollection(share.Events).save(e).then (inserts) ->
 			i = _.first(inserts)
 			console.log "inserted new event with id: #{i._id}"
