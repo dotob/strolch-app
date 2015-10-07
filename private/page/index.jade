@@ -44,21 +44,21 @@ html(lang='en')
 						i.fa.fa-female.fa-lg
 						i.fa.fa-child.fa-lg
 						i.fa.fa-male.fa-lg
-						span strolch-app
+						span(style="margin-left: 5px;") strolch-app
 				.navbar-collapse.collapse
 					ul.nav.navbar-nav
 						li.active
-							a(href='#home') Home
+							a(href='#home') Start
 						li
-							a(href='#services') Services
+							a(href='#services') Besonderes
 						li
 							a(href='#features') Features
 						li
-							a(href='#pricing') Pricing
+							a(href='#pricing') Preis
 						li
-							a(href='#clients') Clients
+							a(href='#clients') Kundenstimmen
 						li
-							a(href='#contact') Contact
+							a(href='#contact') Kontakt
 				// /.navbar-collapse
 		// Main jumbotron for a primary marketing message or call to action
 		#home.jumbotron
@@ -73,7 +73,7 @@ html(lang='en')
 							p
 								| Die strolch-app ist eine von KiTas für KiTas entwickelte Web-App, die den Alltag von Eltern und Team erleichtert.
 							p
-								a.btn.btn-success.btn-lg
+								a(href='#services').btn.btn-success.btn-lg
 									| Mehr erfahren
 									i.icon.icon-angle-right
 		#services.container
@@ -121,7 +121,7 @@ html(lang='en')
 						| erleichtern - die strolch-app schafft Überblick und Aktualität wo bisher Papierkrieg und Emailchaos 
 						| herrschten
 				.row.inner-page
-					.col-md-8.col-md-push-4.lazy-container.loaded
+					.col-md-12.lazy-container.loaded
 						h2
 							| Die 
 							strong Features
@@ -131,147 +131,130 @@ html(lang='en')
 									.feature-box-icon
 										i.icon-group
 									.feature-box-info
-										h4.shorter Customer Support
-										p.tall Lorem ipsum dolor sit amet, consectetur adip.
+										h4.shorter Adressübersicht
+										p.tall Von den Eltern selbst gepflegte Kontaktdaten. Immer Aktuell. Immer erreichbar.
 								.feature-box
 									.feature-box-icon
 										i.icon-file
 									.feature-box-info
-										h4.shorter HTML5 / CSS3 / JS
-										p.tall Lorem ipsum dolor sit amet, adip.
+										h4.shorter Terminübersicht
+										p.tall Alle KiTa-Termine als Liste und in der Kalenderansicht. Da verpasst man nichts mehr.
 								.feature-box
 									.feature-box-icon
 										i.icon-google-plus
 									.feature-box-info
-										h4.shorter 500+ Google Fonts
-										p.tall Lorem ipsum dolor sit amet, consectetur adip.
+										h4.shorter Stundenliste
+										p.tall Es werden Elternstunden geleistet? Dann könen diese jetzt einfach eingegeben und sichtbar gemacht werden.
 								.feature-box
 									.feature-box-icon
 										i.icon-adjust
 									.feature-box-info
-										h4.shorter Colors
-										p.tall Lorem ipsum dolor sit amet, consectetur adip.
+										h4.shorter Gruppenübersicht
+										p.tall Jahrgangs-/Gruppenübersicht zur Erleichterung der Aufnamheentscheidung und Gruppenzusammenstellung.
 							.col-md-6
 								.feature-box
 									.feature-box-icon
 										i.icon-film
 									.feature-box-info
-										h4.shorter Sliders
-										p.tall Lorem ipsum dolor sit amet, consectetur.
+										h4.shorter Druckübersicht
+										p.tall Kontaktdaten als druckbare Version für den direkten Zugruff in den Gruppen.
 								.feature-box
 									.feature-box-icon
 										i.icon-magic.small.user
 									.feature-box-info
-										h4.shorter Icons
-										p.tall Lorem ipsum dolor sit amet, consectetur adip.
+										h4.shorter Schnell und aktuell
+										p.tall Durch die eingesetzte Technik sind die Daten dank automatischer Speicherung und Live-Update überall direkt aktuell.
 								.feature-box
 									.feature-box-icon
 										i.icon-reorder
 									.feature-box-info
-										h4.shorter Buttons
-										p.tall Lorem ipsum dolor sit, consectetur adip.
+										h4.shorter OpenSource
+										p.tall Dank OpenSource kann die strolch-app erweitert und selbstgehostet werden. Trotzdem gibt es die Möglichkeit die strolch-app hosten und warten zu lassen.
 								.feature-box
 									.feature-box-icon
 										i.icon-desktop
 									.feature-box-info
-										h4.shorter Lightbox
-										p.tall Lorem sit amet, consectetur adip.
-					.col-md-4.col-md-pull-8
-						.list-group
-							a.list-group-item.active(href='#')
-								h4.list-group-item-heading List group item heading
-								p.list-group-item-text
-									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-									| tellus ac cursus commodo, tortor
-							a.list-group-item(href='#')
-								h4.list-group-item-heading List group item heading
-								p.list-group-item-text
-									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-									| tellus ac cursus commodo, tortor
-							a.list-group-item(href='#')
-								h4.list-group-item-heading List group item heading
-								p.list-group-item-text
-									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-									| tellus ac cursus commodo, tortor
-							a.list-group-item(href='#')
-								h4.list-group-item-heading List group item heading
-								p.list-group-item-text
-									| Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-									| tellus ac cursus commodo, tortor
+										h4.shorter Charity
+										p.tall Ein Teil der Erlöse kommt wieder den Kindern zugute.
 		section#pricing.pricing
 			.container
 				.row
 					.col-md-12.pricing-intro
-						h2.page-headline.large.text-center Tell your projects awesome story.
+						h2.page-headline.large.text-center OpenSource und Selbhosting zum Selbstkostenpreis oder Rundum-Sorglos Paket?
 						p.text-center
-							| Tell your projects awesome story. Tell your projects awesome story. Tell your
-							| projects awesome story. Tell your projects awesome story.
+							| Es gibt verschiedene Möglichkeiten die strolch-app zu Betreiben. Selber machen oder selber zahlen:
 			.container
 				.row.pricing-table
 					.col-md-4
 						.panel.panel-danger
 							.panel-heading
-								h3.text-center DEV PLAN
+								h3.text-center HACKER PLAN
 							.panel-body.text-center
 								p.lead(style='font-size:40px')
-									strong $10 / month
+									strong free
 							ul.list-group.list-group-flush.text-center
 								li.list-group-item
 									i.icon-ok.text-danger
-									|  Personal use
+									|  Selbsthosting
 								li.list-group-item
 									i.icon-ok.text-danger
-									|  Unlimited projects
+									|  Selbstbackup
 								li.list-group-item
 									i.icon-ok.text-danger
-									|  27/7 support
+									|  Selbstupdate
+								li.list-group-item
+									i.icon-ok.text-danger
+									|  Selbstsupport
 							.panel-footer
 								a.btn.btn-lg.btn-block.btn-danger(href='https://creativemarket.com/artlabs/12114-Bootstrap-3.0.-pricing-tables-flat')
-									| BUY
-									| NOW!
+									| DOWNLOADEN
 					.col-md-4
 						.panel.panel-info
+							.panel-heading
+								h3.text-center SIMPLE PLAN
+							.panel-body.text-center
+								p.lead(style='font-size:40px')
+									strong €10 / Monat
+							ul.list-group.list-group-flush.text-center
+								li.list-group-item
+									i.icon-ok.text-danger
+									|  Hosting bei Meteor.com
+								li.list-group-item
+									i.icon-ok.text-danger
+									|  Backup per Eigendownload
+								li.list-group-item
+									i.icon-ok.text-danger
+									|  Regelmäßige Updates
+								li.list-group-item
+									i.icon-ok.text-danger
+									|  EMail-Support
+							.panel-footer
+								a.btn.btn-lg.btn-block.btn-info(href='#')
+									| KAUFEN
+					.col-md-4
+						.panel.panel-success
 							.panel-heading
 								h3.text-center PRO PLAN
 							.panel-body.text-center
 								p.lead(style='font-size:40px')
-									strong $10 / month
+									strong €10 / Monat
 							ul.list-group.list-group-flush.text-center
 								li.list-group-item
 									i.icon-ok.text-danger
-									|  Personal use
+									|  Hosting auf virtuellem Server
 								li.list-group-item
 									i.icon-ok.text-danger
-									|  Unlimited projects
+									|  Regelmäßige Updates
 								li.list-group-item
 									i.icon-ok.text-danger
-									|  27/7 support
+									|  Backup auf dem Server und per EMail
+								li.list-group-item
+									i.icon-ok.text-danger
+									|  EMail-Support
 							.panel-footer
-								a.btn.btn-lg.btn-block.btn-info(href='https://creativemarket.com/artlabs/12114-Bootstrap-3.0.-pricing-tables-flat')
-									| BUY
-									| NOW!
-					.col-md-4
-						.panel.panel-success
-							.panel-heading
-								h3.text-center FREE PLAN
-							.panel-body.text-center
-								p.lead(style='font-size:40px')
-									strong $10 / month
-							ul.list-group.list-group-flush.text-center
-								li.list-group-item
-									i.icon-ok.text-danger
-									|  Personal use
-								li.list-group-item
-									i.icon-ok.text-danger
-									|  Unlimited projects
-								li.list-group-item
-									i.icon-ok.text-danger
-									|  27/7 support
-							.panel-footer
-								a.btn.btn-lg.btn-block.btn-success(href='https://creativemarket.com/artlabs/12114-Bootstrap-3.0.-pricing-tables-flat')
-									| BUY
-									| NOW!
-		section.gray
+								a.btn.btn-lg.btn-block.btn-success(href='#')
+									| KAUFEN
+		section.gray.hidden
 			.container
 				.row
 					.col-md-12
@@ -286,8 +269,8 @@ html(lang='en')
 									.col-lg-8.col-md-8.col-sm-6.col-xs-12
 										.clients-title
 											h3.title
-												| Our 
-												span Clients
+												| Wers 
+												span benutzt 
 											.carousel-controls.pull-right
 												a.prev.btn-mini(data-slide='prev', href='#client-carousel')
 													i.icon-angle-left
@@ -302,36 +285,20 @@ html(lang='en')
 														.col-lg-3.col-md-3.col-sm-3.col-xs-6.item.animate_afc.d1.animate_start
 															.item-inner
 																a(style='cursor: pointer;')
-																	img(src='images/logo-1.png', alt='Upportdash')
+																	img(src='images/strolche.jpg', alt='KiTa Kleine Strolche Aachen')
 														.col-lg-3.col-md-3.col-sm-3.col-xs-6.item.animate_afc.d2.animate_start
 															.item-inner
-																a(style='cursor: pointer;')
+																a.hidden(style='cursor: pointer;')
 																	img(src='images/logo-2.png', alt='Upportdash')
 														.col-lg-3.col-md-3.col-sm-3.col-xs-6.item.animate_afc.d3.animate_start
 															.item-inner
-																a(style='cursor: pointer;')
+																a.hidden(style='cursor: pointer;')
 																	img(src='images/logo-3.png', alt='Upportdash')
 														.col-lg-3.col-md-3.col-sm-3.col-xs-6.item.animate_afc.d4.animate_start
 															.item-inner
-																a(style='cursor: pointer;')
+																a.hidden(style='cursor: pointer;')
 																	img(src='images/logo-4.png', alt='Upportdash')
-													.item
-														.col-lg-3.col-md-3.col-sm-3.col-xs-6.item
-															.item-inner
-																a(style='cursor: pointer;')
-																	img(src='images/logo-5.png', alt='Upportdash')
-														.col-lg-3.col-md-3.col-sm-3.col-xs-6.item
-															.item-inner
-																a(style='cursor: pointer;')
-																	img(src='images/logo-4.png', alt='Upportdash')
-														.col-lg-3.col-md-3.col-sm-3.col-xs-6.item
-															.item-inner
-																a(style='cursor: pointer;')
-																	img(src='images/logo-3.png', alt='Upportdash')
-														.col-lg-3.col-md-3.col-sm-3.col-xs-6.item
-															.item-inner
-																a(style='cursor: pointer;')
-																	img(src='images/logo-2.png', alt='Upportdash')
+
 									.col-lg-4.col-md-4.col-sm-6.col-xs-12
 										// Testimonials Widget Start
 										.row
@@ -339,8 +306,8 @@ html(lang='en')
 												.col-lg-12.col-md-12.col-sm-12.col-xs-12
 													.testimonials-title
 														h3.title
-															| Client 
-															span Testimonials
+															| Kunden 
+															span Meinungen
 														.carousel-controls.pull-right
 															a.prev.btn-mini(data-slide='prev', href='#testimonials-carousel')
 																i.icon-angle-left
@@ -350,120 +317,114 @@ html(lang='en')
 												.clearfix
 												#testimonials-carousel.testimonials-carousel.slide.animate_afr.d5.animate_start
 													.carousel-inner
-														.item
-															.col-lg-12.col-md-12.col-sm-12.col-xs-12
-																.testimonial.item
-																	p
-																		| Lorem Ipsum is simply dummy text of the printing and
-																		| typesetting industry. Lorem Ipsum has been the
-																		| industry's standard dummy text ever since the 1500s,
-																		| when an unknown printer took a galley of type.
-																	.testimonials-arrow
-																	.author
-																		.testimonial-image
-																			img(src='images/team-member-1.jpg', alt='')
-																		.testimonial-author-info
-																			a(style='cursor: pointer;')
-																				| Monica Sing/a> Template
-																				| Eden
 														.item.active
 															.col-lg-12.col-md-12.col-sm-12.col-xs-12
 																.testimonial.item
 																	p
-																		| Lorem Ipsum is simply dummy text of the printing and
-																		| typesetting industry. Lorem Ipsum has been the
-																		| industry's standard dummy text ever since the 1500s,
-																		| when an unknown printer took a galley of type.
+																		| Danke der strolch-app muss ich nun nicht mehr 
+																		| die Kontaktdaten aller Eltern pflegen und per 
+																		| Email verteilen. 
+																		| Die Jahrgangs-/Gruppenübersicht erleichtert und
+																		| im Team die Arbiete bei der Gruppenaufteilung.
 																	.testimonials-arrow
 																	.author
 																		.testimonial-image
 																			img(src='images/team-member-2.jpg', alt='')
 																		.testimonial-author-info
-																			a(href='#') John Doe
-																			|  Template Eden
+																			a(href='#') Remo Schwabe
+																			| Leitung - Kleine Strolche
 														.item
 															.col-lg-12.col-md-12.col-sm-12.col-xs-12
 																.testimonial.item
 																	p
-																		| Lorem Ipsum is simply dummy text of the printing and
-																		| typesetting industry. Lorem Ipsum has been the
-																		| industry's standard dummy text ever since the 1500s,
-																		| when an unknown printer took a galley of type.
+																		| Seit dem ich in der strolch-app selber meine
+																		| Kontaktdaten pflegen kann habe ich keine Sorge 
+																		| mehr, dass ich durch falsche Daten nicht erreichbar 
+																		| bin wenn meine Kind etwas passiert.
 																	.testimonials-arrow
 																	.author
 																		.testimonial-image
 																			img(src='images/team-member-3.jpg', alt='')
 																		.testimonial-author-info
-																			a(style='cursor: pointer;') Carol Johansen
-																			|                                                                     Template Eden
+																			a(href='#') Christina Fritz
+																			| Vorstand - Kleine Strolche
+														.item
+															.col-lg-12.col-md-12.col-sm-12.col-xs-12
+																.testimonial.item
+																	p
+																		| Mit der Elternarbeitsstundenübersicht
+																		| kann ich nun viel einfacher die meine Arbeitsstunden
+																		| eintragen und sehen wie viel die anderen Eltern machen.
+																	.testimonials-arrow
+																	.author
+																		.testimonial-image
+																			img(src='images/team-member-3.jpg', alt='')
+																		.testimonial-author-info
+																			a(href='#') Katja Krämer
+																			| Mutter - Kleine Strolche
 		section#contact.contact
 			.container
 				.row
 					.col-md-6
 						#contactSuccess.alert.alert-success.hidden
-							strong Success!
-							|  Your message has been sent to us.
+							strong Erfolg!
+							|  Die Nachricht wurde an uns gesendet.
 						#contactError.alert.alert-error.hidden
-							strong Error!
-							|  There was an error sending your message.
+							strong Fehler!
+							|  Beim Versenden ist ein Fehler aufgetreten.
 						h2.short
-							strong Contact
-							|  Us
+							| Nehmen Sie 
+							strong Kontakt
+							|  auf
 						form.clearfix(accept-charset='utf-8', method='get', action='#')
 							.row
 								.col-sm-6.form-group
 									label(for='name') Name
 									input#name.form-control.input-lg(type='text', placeholder='', value='', name='name')
 								.col-sm-6.form-group
-									label(for='email') Email Address
+									label(for='email') Email Adresse
 									input#email.form-control.input-lg(type='email', placeholder='', value='', name='email')
 							.row
 								.col-sm-12.form-group
-									label(for='message') Message
+									label(for='message') Nachricht
 									textarea#message.form-control(rows='4', name='message')
-							button.btn.btn-success.btn-xlg(type='submit') Send Message
+							button.btn.btn-success.btn-xlg(type='submit') Abschicken
 					.col-md-offset-1.col-md-5
 						br
 						h4.pull-top
 							| Get in 
 							strong touch
 						p
-							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet
-							| varius. In eu ipsum vitae velit congue iaculis vitae at risus.
+							| Schreiben Sie ein Nachricht. Fragen uns nach Features oder Betriebsmöglichkeiten.
 						hr
 						h4
-							| The 
-							strong Office
+							| Unsere 
+							strong Kontakdaten
 						ul.unstyled
 							li
 								i.icon-map-marker
-								strong Address:
-								|  1234 Street Name, City Name, United
-								|                         States
-							li
-								i.icon-phone
-								strong Phone:
-								|  (123) 456-7890
+								strong Adresse:
+								|  Aachen
 							li
 								i.icon-envelope
-								strong Email:
-								a(href='mailto:mail@example.com') mail@example.com
+								strong Email: 
+								a(href='mailto:sk@dotob.de') sk@dotob.de
 		footer#footer
 			.container
 				.row
 					.footer-ribbon(style='right: 0')
 						h3.title(style='margin: 0;padding: 5px 10px')
-							| Thank 
-							span You
+							| Vielen 
+							span Dank
 			.footer-copyright
 				.container
 					.row
-						.col-md-2
+						.col-md-2.hidden
 							a.logo(href='index.html')
 								img(src='images/expose-logo.png', alt='Template Eden')
 						.col-md-5
-							p © Copyright 2013 by Template Eden. All Rights Reserved.
-						.col-md-5
+							p © Copyright 2015 by dotob.
+						.col-md-5.hidden
 							nav#footer-menu
 								ul
 									li
