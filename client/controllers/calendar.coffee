@@ -52,8 +52,9 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 	$scope.newTimeTo.setMinutes(0)
 
 	$scope.format = 'dd.MM.yyyy'
-	$scope.openedFrom = false
-	$scope.openedTo = false
+	$scope.status = 
+		openedFrom: false
+		openedTo: false
 
 	$scope.dateOptions =
 		formatYear: 'yy'
@@ -62,11 +63,12 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 	$scope.openFrom = ($event) ->
 		$event.preventDefault()
 		$event.stopPropagation()
-		$scope.openedFrom = true
+		$scope.status.openedFrom = true
+
 	$scope.openTo = ($event) ->
 		$event.preventDefault()
 		$event.stopPropagation()
-		$scope.openedTo = true
+		$scope.status.openedTo = true
 
 	$scope.bgColorStyle = (eventTypeKey) ->
 		eventType = _.find $scope.settings.eventTypes, (et) -> et.key == eventTypeKey
@@ -77,6 +79,8 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		$scope.$meteorCollection(share.Events).remove event
 
 	$scope.addEvent = (newTitle, newEventType, newDateFrom, newDateToEntered, newDateTo, newTimeFrom, newTimeTo) ->
+		$scope.openedFrom = false
+		$scope.openedTo = false
 		console.log "create new event: #{newTitle}, #{newDateFrom} #{newTimeFrom} - #{newDateTo} #{newTimeTo}, #{newEventType}"
 		if newDateToEntered
 			endDate = new Date newDateTo.getFullYear(), newDateTo.getMonth(), newDateTo.getDate(), newTimeTo.getHours(), newTimeTo.getMinutes()

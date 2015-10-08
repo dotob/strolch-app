@@ -21,7 +21,7 @@
 								label Von
 							.col-md-6
 								#dateFrom.input-group
-									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateFrom", is-open="openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
+									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateFrom", is-open="status.openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
 									span.input-group-btn
 										button.btn.btn-default(ng-click="openFrom($event)")
 											i.glyphicon.glyphicon-calendar
@@ -39,7 +39,7 @@
 							.col-md-2
 							.col-md-6(ng-show="newDateToEntered")
 								#dateTo.input-group
-									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="openedTo", datepicker-options="dateOptions", close-text="Close")
+									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="status.openedTo", datepicker-options="dateOptions", close-text="Close")
 									span.input-group-btn
 										button.btn.btn-default(ng-click="openTo($event)", ng-disabled="!newDateToEntered")
 											i.glyphicon.glyphicon-calendar

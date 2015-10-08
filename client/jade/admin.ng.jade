@@ -59,8 +59,8 @@
 											label(for="etColor") Farbe
 											input#etColor.form-control.color-picker(type='color', placeholder='Farbe', ng-model="eventType.color") 
 								.col-md-3
-									button.left-space-5.btn.btn-primary.pull-right(title="Löschen", ng-click="deleteEventType(eventType)")
-										i.fa.fa-plus.fa.fa-fw
+									button.left-space-5.btn.btn-danger.pull-right(title="Löschen", ng-click="$parent.deleteEventType(eventType)", disabled)
+										i.fa.fa-trash.fa.fa-fw
 										| Löschen
 
 							.row

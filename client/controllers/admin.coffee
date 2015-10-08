@@ -34,6 +34,7 @@ angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', (
 		console.log "new event type: #{key}:#{name}:#{color}"
 		if !$scope.settings.eventTypes
 			$scope.settings.eventTypes = []
+		console.log $scope.settings.eventTypes	
 		$scope.settings.eventTypes.push 
 			key: key
 			name: name
@@ -43,7 +44,10 @@ angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', (
 
 	$scope.deleteEventType = (eventType) ->
 		console.log "delete eventType: #{eventType.key}:#{eventType.name}:#{eventType.color}"
-		_.remove $scope.settings.eventTypes, eventType
+		ets = angular.copy $scope.settings.eventTypes
+		_.remove ets, (et) -> et.key == eventType.key
+		$scope.settings.eventTypes = ets
+		console.log ets
 		console.log $scope.settings.eventTypes
 
 	$scope.doImport = (files) ->
