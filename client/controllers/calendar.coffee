@@ -1,5 +1,5 @@
 angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
-	$scope.events = $scope.$meteorCollection () -> share.Events.find()
+	$scope.events = $scope.$meteorCollection () -> share.Events.find { start: {$gte: new Date()} }
 	$scope.settings = $scope.$meteorObject share.Settings, {}
 	$scope.newEventType = $scope.settings.eventTypes?[0].key
 
