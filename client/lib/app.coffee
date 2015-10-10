@@ -98,6 +98,7 @@ angular.module('app').config ['$stateProvider', '$urlRouterProvider', '$location
 		.state 'login',
 			url: '/login'
 			templateUrl: 'client/jade/login.html'
+			controller: 'loginCtrl'
 			
 	$urlRouterProvider.otherwise '/'
 	$locationProvider.html5Mode true
