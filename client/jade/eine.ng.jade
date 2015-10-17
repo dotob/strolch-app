@@ -107,7 +107,13 @@
 							input#kindNachname.form-control(type='text', placeholder='Nachname', ng-model="family.kinder[idx].nachname") 
 						.form-group
 							label(for='kindGeburtstag') Geburtstag (tt.mm.jj)
-							input#kindGeburtstag.form-control(type='text', placeholder='Geburtstag (tt.mm.jj)', ng-model="family.kinder[idx].dob") 
+							//- input#kindGeburtstag.form-control(type='text', placeholder='Geburtstag (tt.mm.jj)', ng-model="family.kinder[idx].dob") 
+							#dateTo.input-group
+								input.form-control(type="text", datepicker-popup="{{format}}", ng-model="family.kinder[idx].dob", is-open="status.opened[idx]", datepicker-options="dateOptions", close-text="Close")
+								span.input-group-btn
+									button.btn.btn-default(ng-click="openDob($event, idx)")
+										i.glyphicon.glyphicon-calendar
+
 						//- .form-group
 						//- 	label.text-danger(for='kindAllergies') Allergiehinweise 
 						//- 	input#kindAllergies.form-control(type='text', placeholder='Allergiehinweise', ng-model="family.kinder[idx].allergies") 

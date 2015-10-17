@@ -19,4 +19,18 @@ angular.module('app').controller 'eineCtrl', ['$scope', '$meteor', '$stateParams
 			$scope.family.kinder['1'] = $scope.family.kinder['2']
 			delete $scope.family.kinder['2']
 
+	$scope.format = 'dd.MM.yyyy'
+	$scope.status = 
+		opened: [false, false, false]
+
+	$scope.dateOptions =
+		formatYear: 'yy'
+		startingDay: 1
+
+	$scope.openDob = ($event, idx) ->
+		$event.preventDefault()
+		$event.stopPropagation()
+		$scope.status.opened[idx] = true
+
+
 ]

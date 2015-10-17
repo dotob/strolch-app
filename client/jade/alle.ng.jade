@@ -69,7 +69,7 @@
 									i(ng-if="kind.gender=='f'").fa.fa-venus.fa-fw
 									strong(ng-if="getFamilyNameCount(family)==2") {{ kind.nachname }}, 
 									strong {{ kind.vorname }} 
-									span.text-muted ( {{ kind.dob }}, 
+									span.text-muted ( {{ kind.dob | date:'dd.MM.yyyy' }}, 
 									span {{ dob2age(kind.dob) }}
 									span.text-muted  )
 									span.fa.fa-exclamation-triangle.fa-fw(ng-show="kind.hasAllergies", title="Hat Allergien")
