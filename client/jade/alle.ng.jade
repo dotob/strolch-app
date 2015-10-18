@@ -26,7 +26,7 @@
 				.col-md-9
 					.row
 						.col-md-6
-							div.top-space-10(ng-if="family.mama.nachname")
+							.top-space-10(ng-if="family.mama.vorname")
 								i.fa.fa-female.fa-fw
 								strong(ng-if="getFamilyNameCount(family)==2") {{ family.mama.nachname }}, 
 								strong {{ family.mama.vorname }}
@@ -41,7 +41,7 @@
 								i.fa.fa-envelope-o.fa-fw
 								a(href="mailto:{{ family.mama.email }}") {{ family.mama.email }}
 						.col-md-6
-							div.top-space-10(ng-if="family.papa.nachname")
+							.top-space-10(ng-if="family.papa.vorname")
 								i.fa.fa-male.fa-fw
 								strong(ng-if="getFamilyNameCount(family)==2") {{ family.papa.nachname }}, 
 								strong {{ family.papa.vorname }}
