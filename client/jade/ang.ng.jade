@@ -32,7 +32,7 @@
 							ul.list-unstyled
 								li.child(ng-repeat='k in g.kids')
 									div {{ k.vorname }} {{ k.nachname }}
-									div {{ k.dob }}
+									div {{ k.dob | date:'dd.MM.yy' }}
 						td
 						td
 						td
