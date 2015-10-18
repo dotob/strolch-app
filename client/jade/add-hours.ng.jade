@@ -48,7 +48,7 @@
 										strong {{ hoursSum }}
 									td
 							tbody
-								tr(ng-repeat='hour in hours | filter:{ family: familyId }')
+								tr(ng-repeat='hour in hours | filter:{ family: familyId} | orderBy: date')
 									td {{hour.activity}}
 									td {{hour.date | date : format}}
 									td {{hour.hours}}
