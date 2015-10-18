@@ -15,4 +15,19 @@ angular.module('app').controller 'neuCtrl', ['$scope', '$state', ($scope, $state
 			id = _.first(inserts)._id
 			console.log "inserted new family with id:#{id}"
 			$state.go 'eine', {id: id}
+
+	$scope.format = 'dd.MM.yyyy'
+	$scope.status = 
+		opened: [false, false, false]
+
+	$scope.dateOptions =
+		formatYear: 'yy'
+		startingDay: 1
+		initDate: new Date()
+
+	$scope.openDob = ($event, idx) ->
+		$event.preventDefault()
+		$event.stopPropagation()
+		$scope.status.opened[idx] = true
+
 ]

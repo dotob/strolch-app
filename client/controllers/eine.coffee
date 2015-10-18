@@ -26,6 +26,7 @@ angular.module('app').controller 'eineCtrl', ['$scope', '$meteor', '$stateParams
 	$scope.dateOptions =
 		formatYear: 'yy'
 		startingDay: 1
+		initDate: new Date()
 
 	$scope.openDob = ($event, idx) ->
 		$event.preventDefault()
