@@ -18,7 +18,7 @@ angular.module('app').controller 'alleCtrl', ['$scope', '$meteor', '$window', ($
 			if typeof kind.dob == 'string'
 				console.log "convert dob-string (#{dob}) of #{kind.vorname} #{kind.nachname} to date"
 				dobMoment = moment(kind.dob, "DD.MM.YY")
-				kind.dob = dobMoment.doDate()
+				kind.dob = dobMoment.toDate()
 			else
 				dobMoment = moment(dob.toISOString())
 			now = moment()
