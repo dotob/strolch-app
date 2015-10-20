@@ -14,7 +14,7 @@
 							.radio-inline(ng-repeat="eventType in settings.eventTypes")
 								label.event-radio
 									input(type="radio", name="optionsEventType", value="{{eventType.key}}", ng-model="$parent.newEventType")
-									span.event-radio-label(ng-style="bgColorStyle(eventType.key)") {{ eventType.name }}
+									span.event-radio-label(ng-style="colorStyle(eventType)") {{ eventType.name }}
 
 						.row
 							.col-md-2

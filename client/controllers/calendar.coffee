@@ -12,8 +12,11 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 	# stuff for calendar
 	$scope.eventSources	= []
 	for et in $scope.settings.eventTypes
+		colors = tinycolor(et.color).splitcomplement()
+		someColors = colors.map (t) -> t.toHexString()
+		readableColor = tinycolor.mostReadable(et.color, someColors, {includeFallbackColors:true, level:"AAA", size:"small"}).toHexString()
 		$scope.eventSources.push
-			textColor: '#fff'
+			textColor: readableColor
 			color: et.color
 			events: $scope.$meteorCollection () -> share.Events.find {type: et.key}
 
@@ -73,6 +76,13 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 	$scope.bgColorStyle = (eventTypeKey) ->
 		eventType = _.find $scope.settings.eventTypes, (et) -> et.key == eventTypeKey
 		{"background-color": eventType.color}
+
+	$scope.colorStyle = (et) ->
+		colors = tinycolor(et.color).splitcomplement()
+		someColors = colors.map (t) -> t.toHexString()
+		readableColor = tinycolor.mostReadable(et.color, someColors, {includeFallbackColors:true, level:"AAA", size:"small"}).toHexString()
+		console.log "readableColor: #{et.color} => #{readableColor}"
+		{ "color": readableColor, "background-color": et.color}
 
 	$scope.deleteEvent = (event) ->
 		console.log "remove event: #{event.title}"

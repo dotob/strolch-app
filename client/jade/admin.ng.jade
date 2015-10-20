@@ -58,6 +58,8 @@
 										.form-group
 											label(for="etColor") Farbe
 											input#etColor.form-control.color-picker(type='color', placeholder='Farbe', ng-model="eventType.color") 
+										.form-group
+											label.sampleColoring(ng-style="sampleColors(eventType.color)") Beispiel
 								.col-md-3
 									button.left-space-5.btn.btn-danger.pull-right(title="Löschen", ng-click="$parent.deleteEventType(eventType)", disabled)
 										i.fa.fa-trash.fa.fa-fw
@@ -78,6 +80,9 @@
 										.form-group
 											label(for="etColor") Farbe
 											input.form-control.color-picker(type='color', placeholder='Farbe', ng-model="newEventTypeColor") 
+										.form-group
+											label.sampleColoring(ng-style="sampleColors(newEventTypeColor)") Beispiel
+
 								.col-md-3
 									button.left-space-5.btn.btn-primary.pull-right(title="Terminart anlegen", ng-click="createEventType(newEventTypeKey, newEventTypeName, newEventTypeColor)")
 										i.fa.fa-plus.fa.fa-fw

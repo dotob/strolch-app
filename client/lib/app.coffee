@@ -31,6 +31,7 @@ adminResolve =
 	"currentUser": [
 		"$meteor", ($meteor) ->
 			hasAdmin = Meteor.users.findOne {'profile.isAdmin': true}
+			console.log "adminresolve: #{hasAdmin}"
 			if !hasAdmin
 				return true
 			else
