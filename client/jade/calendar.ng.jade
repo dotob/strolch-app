@@ -7,26 +7,26 @@
 				.panel-body
 					form(name="addEventForm", novalidate)
 						.form-group
-							input#activity.form-control(type='text', placeholder='Titel', ng-model="newTitle", ng-required) 
+							input#activity.form-control(type='text', placeholder='Titel', ng-model="editEvent.title", ng-required) 
 						.form-group
 							div
 								label Terminart
 							.radio-inline(ng-repeat="eventType in settings.eventTypes")
 								label.event-radio
-									input(type="radio", name="optionsEventType", value="{{eventType.key}}", ng-model="$parent.newEventType")
-									span.event-radio-label(ng-style="colorStyle(eventType)") {{ eventType.name }}
+									input(type="radio", name="optionsEventType", value="{{eventType.key}}", ng-model="$parent.editEvent.type")
+									span.event-radio-label(ng-style="colorStyle(eventType.color)") {{ eventType.name }}
 
 						.row
 							.col-md-2
 								label Von
 							.col-md-6
 								#dateFrom.input-group
-									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateFrom", is-open="status.openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
+									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="editEvent.start", is-open="status.openedFrom", datepicker-options="dateOptions", close-text="Close", ng-required)
 									span.input-group-btn
 										button.btn.btn-default(ng-click="openFrom($event)")
 											i.glyphicon.glyphicon-calendar
 							.col-md-4
-								timepicker(ng-model="newTimeFrom", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
+								timepicker(ng-model="editEvent.start", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false")
 						
 						.row
 							.col-md-12
@@ -39,14 +39,14 @@
 							.col-md-2
 							.col-md-6(ng-show="newDateToEntered")
 								#dateTo.input-group
-									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="newDateTo", is-open="status.openedTo", datepicker-options="dateOptions", close-text="Close")
+									input.form-control(type="text", datepicker-popup="{{format}}", ng-model="editEvent.end", is-open="status.openedTo", datepicker-options="dateOptions", close-text="Close")
 									span.input-group-btn
 										button.btn.btn-default(ng-click="openTo($event)", ng-disabled="!newDateToEntered")
 											i.glyphicon.glyphicon-calendar
 							.col-md-4(ng-show="newDateToEntered")
-								timepicker(ng-model="newTimeTo", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false", ng-disabled="!newDateToEntered")
+								timepicker(ng-model="editEvent.end", hour-step="1", minute-step="15", show-meridian="false", show-spinners="false", ng-disabled="!newDateToEntered")
 	
-						input.btn.btn-primary.form-control(type="submit", ng-click="addEvent(newTitle, newEventType, newDateFrom, newDateToEntered, newDateTo, newTimeFrom, newTimeTo)", value="Speichern", ng-disabled="addEventForm.$invalid")
+						input.btn.btn-primary.form-control(type="submit", ng-click="saveEvent(newDateToEntered)", value="Speichern", ng-disabled="addEventForm.$invalid")
 
 			.panel.panel-primary
 				.panel-heading 
@@ -58,10 +58,11 @@
 								.input-group-addon
 									i.glyphicon.glyphicon-search
 								input.form-control(type="text", placeholder="Hier kannst du nach Terminen suchen", ng-model="search")
-					.event(ng-repeat="event in events | orderBy:'-start' | filter:search", ng-style="bgColorStyle(event.type)")
+					.event(ng-repeat="event in events | orderBy:'start' | filter:search", ng-style="bgColorStyle(event.type)")
 						div 
 							strong {{ event.title }}
 							i.fa.fa-lg.fa-trash-o.pull-right(ng-if="canEditEvents", ng-click="deleteEvent(event)")
+							i.fa.fa-lg.fa-pencil.pull-right(ng-if="canEditEvents", ng-click="editExistingEvent(event)")
 						div(ng-if="event.start!=event.end && event.end") {{ event.start | date:'dd.MM.yy HH:mm' }} - {{ event.end | date:'dd.MM.yy HH:mm' }}
 						div(ng-if="!event.end") {{ event.start | date:'dd.MM.yy HH:mm' }}
 

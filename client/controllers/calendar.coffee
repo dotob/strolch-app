@@ -1,8 +1,25 @@
 angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
-	$scope.events = $scope.$meteorCollection () -> share.Events.find { start: {$gte: new Date()} }
+	yesterday = new Date()
+	yesterday.setDate(yesterday.getDate()-1)
+	$scope.events = $scope.$meteorCollection () -> share.Events.find { start: {$gte: yesterday} }
 	$scope.settings = $scope.$meteorObject share.Settings, {}
-	$scope.newEventType = $scope.settings.eventTypes?[0].key
 
+	$scope.setEditEvent = () ->
+		newTimeFrom = new Date()
+		newTimeFrom.setMinutes(0)
+		newTimeTo = new Date()
+		newTimeTo.setHours(newTimeFrom.getHours() + 1)
+		newTimeTo.setMinutes(0)
+
+		$scope.editEvent =
+			title: ''
+			start: newTimeFrom
+			end: newTimeTo
+			type: $scope.settings.eventTypes?[0].key
+		console.log $scope.editEvent
+
+	# startup functions
+	$scope.setEditEvent()
 	$meteor.requireValidUser (user) ->
 		userIsAdmin = user?.profile?.isAdmin || false
 		onlyAdmin = $scope.settings.onlyAdminCanEditEvents
@@ -41,19 +58,6 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 				center: ''
 				right: 'today prev,next'
 
-	# stuff for datepicker
-	$scope.newDateFrom = new Date()
-	
-	$scope.newTimeFrom = new Date()
-	$scope.newTimeFrom.setMinutes(0)
-	
-	$scope.newDateTo = new Date()
-	$scope.newDateTo.setDate($scope.newTimeFrom.getDate() + 1)
-	
-	$scope.newTimeTo = new Date()
-	$scope.newTimeTo.setHours($scope.newTimeFrom.getHours() + 1)
-	$scope.newTimeTo.setMinutes(0)
-
 	$scope.format = 'dd.MM.yyyy'
 	$scope.status = 
 		openedFrom: false
@@ -77,31 +81,32 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		eventType = _.find $scope.settings.eventTypes, (et) -> et.key == eventTypeKey
 		{"background-color": eventType.color}
 
-	$scope.colorStyle = (et) ->
-		colors = tinycolor(et.color).splitcomplement()
+	$scope.colorStyle = (color) ->
+		colors = tinycolor(color).splitcomplement()
 		someColors = colors.map (t) -> t.toHexString()
-		readableColor = tinycolor.mostReadable(et.color, someColors, {includeFallbackColors:true, level:"AAA", size:"small"}).toHexString()
-		console.log "readableColor: #{et.color} => #{readableColor}"
-		{ "color": readableColor, "background-color": et.color}
+		mostReadable = tinycolor.mostReadable(color, someColors, {includeFallbackColors: true, level: "AA", size: "small"})
+		readableColor = mostReadable?.toHexString() || '#fff'
+		#console.log "readableColor: #{color} => #{readableColor}"
+		{ "color": readableColor, "background-color": color}
+
+	$scope.editExistingEvent = (event) ->
+		$scope.editEvent = event
 
 	$scope.deleteEvent = (event) ->
 		console.log "remove event: #{event.title}"
 		$scope.$meteorCollection(share.Events).remove event
 
-	$scope.addEvent = (newTitle, newEventType, newDateFrom, newDateToEntered, newDateTo, newTimeFrom, newTimeTo) ->
-		$scope.openedFrom = false
-		$scope.openedTo = false
-		console.log "create new event: #{newTitle}, #{newDateFrom} #{newTimeFrom} - #{newDateTo} #{newTimeTo}, #{newEventType}"
-		if newDateToEntered
-			endDate = new Date newDateTo.getFullYear(), newDateTo.getMonth(), newDateTo.getDate(), newTimeTo.getHours(), newTimeTo.getMinutes()
+	$scope.saveEvent = (newDateToEntered) ->
+		#console.log "create new event: #{newTitle}, #{newDateFrom} #{newTimeFrom} - #{newDateTo} #{newTimeTo}, #{newEventType}"
+		if !newDateToEntered
+			$scope.editEvent.end = null
+		if !$scope.editEvent._id
+			$scope.$meteorCollection(share.Events).save($scope.editEvent).then (inserts) ->
+				i = _.first(inserts)
+				console.log "inserted new event with id: #{i._id}"
+				$scope.setEditEvent()
 		else
-			endDate = null
-		e = 
-			title: newTitle
-			start: new Date newDateFrom.getFullYear(), newDateFrom.getMonth(), newDateFrom.getDate(), newTimeFrom.getHours(), newTimeFrom.getMinutes()
-			end: endDate
-			type: newEventType
-		$scope.$meteorCollection(share.Events).save(e).then (inserts) ->
-			i = _.first(inserts)
-			console.log "inserted new event with id: #{i._id}"
+			$scope.setEditEvent()
+
+
 ]

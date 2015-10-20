@@ -70,7 +70,7 @@
 									strong(ng-if="getFamilyNameCount(family)==2") {{ kind.nachname }}, 
 									strong {{ kind.vorname }} 
 									span.text-muted ( {{ kind.dob | date:'dd.MM.yyyy' }}, 
-									span {{ dob2age(kind.dob) }}
+									span {{ dob2age(kind.dob, kind) }}
 									span.text-muted  )
 									span.fa.fa-exclamation-triangle.fa-fw(ng-show="kind.hasAllergies", title="Hat Allergien")
 									span.left-space-5.label.label-default(ng-repeat="tag in kind.tags") {{ tag.name }}

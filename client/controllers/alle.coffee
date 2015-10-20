@@ -14,8 +14,11 @@ angular.module('app').controller 'alleCtrl', ['$scope', '$meteor', '$window', ($
 			family.archived = true
 	
 	$scope.dob2age = (dob, kind) ->
-		now = moment()
-		dobMoment = moment(dob)
-		age = moment.duration(now.diff(dobMoment)).years()
-		if age == 1 then "1 Jahr alt" else "#{age} Jahre alt"
+		if dob
+			now = moment()
+			dobMoment = moment(dob.toISOString())
+			age = moment.duration(now.diff(dobMoment)).years()
+			if age == 1 then "1 Jahr alt" else "#{age} Jahre alt"
+		else
+			"n/a"
 ]

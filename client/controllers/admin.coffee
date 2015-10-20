@@ -7,11 +7,8 @@ angular.module('app').controller 'adminCtrl', ['$scope', '$meteor', '$window', (
 	$scope.newEventTypeColor = '#000'
 
 	$scope.sampleColors = (color) ->
-		console.log "input color: #{color}"
 		colors = tinycolor(color).splitcomplement()
-		console.log colors
 		someColors = colors.map (t) -> t.toHexString()
-		console.log someColors
 		mostReadable = tinycolor.mostReadable(color, someColors, {includeFallbackColors: true, level: "AA", size: "small"})
 		readableColor = mostReadable?.toHexString() || '#fff'
 		console.log "readableColor: #{color} => #{readableColor}"
