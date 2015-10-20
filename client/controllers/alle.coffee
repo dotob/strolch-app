@@ -15,8 +15,13 @@ angular.module('app').controller 'alleCtrl', ['$scope', '$meteor', '$window', ($
 	
 	$scope.dob2age = (dob, kind) ->
 		if dob
+			if typeof kind.dob == 'string'
+				console.log "convert dob-string (#{dob}) of #{kind.vorname} #{kind.nachname} to date"
+				dobMoment = moment(kind.dob, "DD.MM.YY")
+				kind.dob = dobMoment.doDate()
+			else
+				dobMoment = moment(dob.toISOString())
 			now = moment()
-			dobMoment = moment(dob.toISOString())
 			age = moment.duration(now.diff(dobMoment)).years()
 			if age == 1 then "1 Jahr alt" else "#{age} Jahre alt"
 		else
