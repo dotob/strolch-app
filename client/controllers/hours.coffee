@@ -24,13 +24,13 @@ angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParam
 
 		console.log "kitajahr: #{$scope.startOfKitaYear.format()} => #{$scope.endOfKitaYear.format()}"
 
-		allHours = $scope.$meteorCollection () -> share.Hours.find
+		$scope.allHours = $scope.$meteorCollection () -> share.Hours.find
 			date:
 				$gte: $scope.startOfKitaYear.toDate()
 				$lt:  $scope.endOfKitaYear.toDate()
 
 		$scope.hours = []
-		for k, v of _.groupBy(allHours, (h) -> h.family)
+		for k, v of _.groupBy($scope.allHours, (h) -> h.family)
 			hoursSum = _.sum(v, (h) -> h.hours)
 			th = $scope.monthsOfKitaYear * share.parentCount($meteor.object(share.Families, k)) * $scope.hoursPerMonth
 			$scope.hours.push
@@ -38,8 +38,6 @@ angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParam
 				hours: hoursSum
 				targetHours: th
 				severity: if hoursSum < th*$scope.warningLimit then 'warning' else 'info'
-
-		console.log $scope.hours
 
 		max = _.max $scope.hours, (h) -> h.hours
 
@@ -50,7 +48,7 @@ angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParam
 		ny = "#{$scope.currentYear+1}".substring 2 
 		$scope.currentYearString = "#{$scope.currentYear}/#{ny}"
 
-		$scope.hoursSum = _.sum allHours, (h) -> h.hours
+		$scope.hoursSum = _.sum $scope.allHours, (h) -> h.hours
 
 	updateHours()
 

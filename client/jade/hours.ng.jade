@@ -3,7 +3,7 @@
 		.col-md-12
 			.panel.panel-primary
 				.panel-heading
-					h3.panel-title.pull-left Stundenübersicht
+					h3.panel-title.pull-left Stundenübersicht nach Familie
 					#yearPaging.input-group
 						span.input-group-btn
 							button.btn.btn-info(ng-click="goToPreviousYear()")
@@ -29,12 +29,12 @@
 						table.table.table-bordered.table-striped.table-condensed
 							thead
 								tr
-									td.hours-family-column
+									th.hours-family-column
 										a(href='#', ng-click="sortType = 'familyName'; sortReverse = !sortReverse")
 											| Familie 
 											span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'familyName' && sortReverse")
 											span.glyphicon.glyphicon-chevron-up(ng-show="sortType == 'familyName' && !sortReverse")
-									td.hours-hours-column
+									th.hours-hours-column
 										a(href='#', ng-click="sortType = 'hours'; sortReverse = !sortReverse")
 											| Stundenzahl
 											span.glyphicon.glyphicon-chevron-down(ng-show="sortType == 'hours' && sortReverse")
@@ -50,4 +50,33 @@
 									td.hours-family-column {{ hour.familyName }}
 									td.hours-hours-column
 										progressbar.hours-progress(value="hour.hoursPercentage", type="{{hour.severity}}") {{ hour.hours }}
+
+	.row
+		.col-md-12
+			.panel.panel-primary
+				.panel-heading
+					h3.panel-title Stundenübersicht nach Datum
+				.panel-body
+
+					form
+						.form-group
+							.input-group
+								.input-group-addon
+									i.glyphicon.glyphicon-search
+								input.form-control(type="text", placeholder="Hier kannst du suchen...", ng-model="searchByDate")
+
+					.table-responsive
+						table.table.table-bordered.table-striped.table-condensed
+							thead
+								tr
+									th Familie
+									th Datum
+									th Tätigkeit
+									th Stundenzahl
+							tbody
+								tr(ng-repeat="hour in allHours | orderBy:'-date' | filter:searchByDate")
+									td {{ hour.familyName }}
+									td {{ hour.date | date:'dd.MM.yyyy' }}
+									td {{ hour.activity }}
+									td.right-align-column {{ hour.hours }}
 

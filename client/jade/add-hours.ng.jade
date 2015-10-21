@@ -23,7 +23,7 @@
 						.form-group
 							label(for='hours') Stundenzahl 
 							input#hours.form-control(type='number', placeholder='Stunden', ng-model="newHours", min="0", max="100", ng-required) 
-							p.help-block Hier bitte nur ganzzahlige Stunden eintragen
+							//- p.help-block Hier bitte nur ganzzahlige Stunden eintragen
 
 						input.btn.btn-primary.form-control(type="submit", ng-click="addHours(newWork, newDate, newHours)", value="Speichern", ng-disabled="addHoursForm.$invalid")
 	.row
