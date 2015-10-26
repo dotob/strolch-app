@@ -59,12 +59,11 @@
 									i.glyphicon.glyphicon-search
 								input.form-control(type="text", placeholder="Hier kannst du nach Terminen suchen", ng-model="search")
 					.event(ng-repeat="event in events | orderBy:'start' | filter:search", ng-style="bgColorStyle(event.type)")
-						div 
+						div(ng-style="colorStyle(event)")
 							strong {{ event.title }}
 							i.fa.fa-lg.fa-trash-o.pull-right(ng-if="canEditEvents", ng-click="deleteEvent(event)")
 							i.fa.fa-lg.fa-pencil.pull-right(ng-if="canEditEvents", ng-click="editExistingEvent(event)")
-						div(ng-if="event.start!=event.end && event.end") {{ event.start | date:'dd.MM.yy HH:mm' }} - {{ event.end | date:'dd.MM.yy HH:mm' }}
-						div(ng-if="!event.end") {{ event.start | date:'dd.MM.yy HH:mm' }}
+						div(ng-style="colorStyle(event)") {{ eventDateString(event) }}
 
 
 

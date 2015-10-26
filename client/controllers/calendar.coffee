@@ -1,8 +1,28 @@
-angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', ($scope, $meteor, $window) ->
+_ = lodash
+
+angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window', '$filter', ($scope, $meteor, $window, $filter) ->
 	yesterday = new Date()
 	yesterday.setDate(yesterday.getDate()-1)
 	$scope.events = $scope.$meteorCollection () -> share.Events.find { start: {$gte: yesterday} }
 	$scope.settings = $scope.$meteorObject share.Settings, {}
+
+	$scope.colorStyle = (colorOrEvent) ->
+		if typeof(colorOrEvent) != 'string' 
+			eventType = _.find $scope.settings.eventTypes, (et) -> et.key == colorOrEvent.type
+			color = eventType.color
+		else
+			color = colorOrEvent
+
+		if tinycolor(color).isLight()
+			readableColor = '#000000'
+		else
+			readableColor = '#ffffff'
+		# colors = tinycolor(color).splitcomplement()
+		# someColors = colors.map (t) -> t.toHexString()
+		# mostReadable = tinycolor.mostReadable(color, someColors, {includeFallbackColors: true, level: "AA", size: "small"})
+		# readableColor = mostReadable?.toHexString() || '#fff'
+		#console.log "readableColor: #{color} => #{readableColor} (#{mostReadable})"
+		{ "color": readableColor, "background-color": color}
 
 	$scope.setEditEvent = () ->
 		newTimeFrom = new Date()
@@ -16,7 +36,7 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 			start: newTimeFrom
 			end: newTimeTo
 			type: $scope.settings.eventTypes?[0].key
-		console.log $scope.editEvent
+		#console.log $scope.editEvent
 
 	# startup functions
 	$scope.setEditEvent()
@@ -29,9 +49,8 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 	# stuff for calendar
 	$scope.eventSources	= []
 	for et in $scope.settings.eventTypes
-		colors = tinycolor(et.color).splitcomplement()
-		someColors = colors.map (t) -> t.toHexString()
-		readableColor = tinycolor.mostReadable(et.color, someColors, {includeFallbackColors:true, level:"AAA", size:"small"}).toHexString()
+		style = $scope.colorStyle(et.color)
+		readableColor = style["color"]
 		$scope.eventSources.push
 			textColor: readableColor
 			color: et.color
@@ -81,13 +100,19 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 		eventType = _.find $scope.settings.eventTypes, (et) -> et.key == eventTypeKey
 		{"background-color": eventType.color}
 
-	$scope.colorStyle = (color) ->
-		colors = tinycolor(color).splitcomplement()
-		someColors = colors.map (t) -> t.toHexString()
-		mostReadable = tinycolor.mostReadable(color, someColors, {includeFallbackColors: true, level: "AA", size: "small"})
-		readableColor = mostReadable?.toHexString() || '#fff'
-		#console.log "readableColor: #{color} => #{readableColor}"
-		{ "color": readableColor, "background-color": color}
+	$scope.eventDateString = (event) ->
+		fd = $filter('date')
+		if event.end && event.end != event.start
+			if event.start.getMonth() == event.end.getMonth() && event.start.getDate() == event.end.getDate()
+				es = fd(event.start, "dd.MM.yy HH:mm")
+				ee = fd(event.end, "HH:mm")
+				"#{es} - #{ee}"
+			else
+				es = fd(event.start, "dd.MM.yy HH:mm")
+				ee = fd(event.end, "dd.MM.yy HH:mm")
+				"#{es} - #{ee}"
+		else
+			fd(event.start, "dd.MM.yy HH:mm")
 
 	$scope.editExistingEvent = (event) ->
 		$scope.editEvent = event
@@ -107,6 +132,4 @@ angular.module('app').controller 'calendarCtrl', ['$scope', '$meteor', '$window'
 				$scope.setEditEvent()
 		else
 			$scope.setEditEvent()
-
-
 ]
