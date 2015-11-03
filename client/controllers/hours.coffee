@@ -4,7 +4,7 @@ angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParam
 	KJ = share.KiTaJahr
 	$scope.settings = $scope.$meteorObject share.Settings, {}
 	$scope.currentYear = KJ.current $scope.settings
-	$scope.sortType = 'hours'
+	$scope.sortType = 'hoursPercentage'
 	$scope.sortReverse = true
 
 	updateHours = () ->
