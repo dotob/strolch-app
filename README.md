@@ -22,3 +22,9 @@ Die strolch-app bietet Eltern die Möglichkeit ihre Daten selber zu pflegen und 
 ![Termine](doc/calendar.png)
 ![Gruppen-Jahrgangs-Übersicht](doc/ang.png)
 ![Gruppen verwalten](doc/gruppen.png)
+
+# Future/TODO
+- Planungsgruppen für ANG
+- ang date fix
+- ang link to edit
+
