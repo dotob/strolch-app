@@ -8,6 +8,13 @@ Meteor.methods
 	setPassword: (id, pw) ->
 		Accounts.setPassword id, pw
 
+# publish
+Meteor.publish 'families'
+Meteor.publish 'tags'
+Meteor.publish 'hours'
+Meteor.publish 'events'
+Meteor.publish 'settings'
+
 # fix tags 
 share.Tags.after.update (userId, tag) ->
 	share.Families.update({'mama.tags._id': tag._id}, {$set: {'mama.tags.$.name': tag.name}}, {multi: true})
