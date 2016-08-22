@@ -27,7 +27,7 @@ angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParam
 		$scope.allHours = $scope.$meteorCollection () -> share.Hours.find
 			date:
 				$gte: $scope.startOfKitaYear.toDate()
-				$lt:  $scope.endOfKitaYear.toDate()
+				$lte:  $scope.endOfKitaYear.toDate()
 
 		$scope.hours = []
 		for k, v of _.groupBy($scope.allHours, (h) -> h.family)
@@ -45,7 +45,7 @@ angular.module('app').controller 'hoursCtrl', ['$scope', '$meteor', '$stateParam
 			#h.hoursPercentage = 100.0 / (max.hours / h.hours)
 			h.hoursPercentage = 100.0 / (h.targetHours / h.hours)
 
-		ny = "#{$scope.currentYear+1}".substring 2 
+		ny = "#{$scope.currentYear+1}".substring 2
 		$scope.currentYearString = "#{$scope.currentYear}/#{ny}"
 
 		$scope.hoursSum = _.sum $scope.allHours, (h) -> h.hours
